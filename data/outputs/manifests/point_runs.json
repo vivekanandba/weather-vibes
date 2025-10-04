@@ -1,0 +1,66 @@
+{
+  "bangalore": {
+    "file_count": 9,
+    "first_range": "2000-2002",
+    "last_range": "2024-2024",
+    "parameters": [
+      "T2M",
+      "T2M_MIN",
+      "T2M_MAX",
+      "RH2M",
+      "PRECTOTCORR",
+      "WS2M",
+      "ALLSKY_SFC_SW_DWN",
+      "CLRSKY_SFC_SW_DWN",
+      "T2MDEW"
+    ]
+  },
+  "ooty": {
+    "file_count": 9,
+    "first_range": "2000-2002",
+    "last_range": "2024-2024",
+    "parameters": [
+      "T2M",
+      "T2M_MIN",
+      "T2M_MAX",
+      "RH2M",
+      "PRECTOTCORR",
+      "WS2M",
+      "ALLSKY_SFC_SW_DWN",
+      "CLRSKY_SFC_SW_DWN",
+      "T2MDEW"
+    ]
+  },
+  "coorg": {
+    "file_count": 9,
+    "first_range": "2000-2002",
+    "last_range": "2024-2024",
+    "parameters": [
+      "T2M",
+      "T2M_MIN",
+      "T2M_MAX",
+      "RH2M",
+      "PRECTOTCORR",
+      "WS2M",
+      "ALLSKY_SFC_SW_DWN",
+      "CLRSKY_SFC_SW_DWN",
+      "T2MDEW"
+    ]
+  },
+  "goa": {
+    "file_count": 9,
+    "first_range": "2000-2002",
+    "last_range": "2024-2024",
+    "parameters": [
+      "T2M",
+      "T2M_MIN",
+      "T2M_MAX",
+      "RH2M",
+      "PRECTOTCORR",
+      "WS2M",
+      "ALLSKY_SFC_SW_DWN",
+      "CLRSKY_SFC_SW_DWN",
+      "T2MDEW"
+    ]
+  }
+}

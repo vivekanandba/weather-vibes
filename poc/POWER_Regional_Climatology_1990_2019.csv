@@ -1,0 +1,19 @@
+-BEGIN HEADER-
+NASA/POWER Source Native Resolution Climatology in LST
+20-year Meteorological and Solar Monthly & Annual Climatologies (January 2001 - December 2020) 
+Location: Regional 
+Elevation from MERRA-2: Average for 0.5 x 0.625 degree lat/lon region = na meters
+The value for missing source data that cannot be computed or is outside of the sources availability range: -999 
+Parameter(s): 
+ALLSKY_SFC_SW_DWN     SRB V4/CERES SYN1deg All Sky Surface Shortwave Downward Irradiance (W m-2) 
+Message(s): 
+The requested parameters are retrieved from a pre-computed climatological period (January 2001 - December 2020) 
+-END HEADER-
+PARAMETER,LAT,LON,JAN,FEB,MAR,APR,MAY,JUN,JUL,AUG,SEP,OCT,NOV,DEC,ANN
+ALLSKY_SFC_SW_DWN,12.5,76.5,229.43,259.78,273.27,272.75,253.54,208.86,187.31,191.82,216.26,211.45,200.91,204.14,225.54
+ALLSKY_SFC_SW_DWN,12.5,77.5,228.97,261.69,275.29,274.86,259.25,222.0,198.26,200.83,220.45,209.38,194.32,198.02,228.37
+ALLSKY_SFC_SW_DWN,12.5,78.5,217.18,255.58,271.96,274.78,253.88,231.22,213.41,215.92,221.31,202.45,182.14,181.98,226.59
+ALLSKY_SFC_SW_DWN,13.5,76.5,228.63,259.82,275.35,278.57,266.09,221.25,193.9,195.91,213.31,213.97,203.32,205.65,229.42
+ALLSKY_SFC_SW_DWN,13.5,77.5,229.56,262.01,277.56,282.02,270.69,234.25,207.1,207.17,219.3,214.58,200.26,202.29,233.68
+ALLSKY_SFC_SW_DWN,13.5,78.5,218.03,255.84,272.28,279.99,264.59,235.9,214.73,214.88,220.07,207.57,188.18,185.16,229.55
+

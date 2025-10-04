@@ -1,0 +1,64 @@
+# Bounding boxes (north, west, south, east) for extraction runs
+areas:
+  south_india:
+    name: South India Core
+    bounding_box: [20.0, 72.0, 6.0, 86.0]
+    description: Primary focus region including Western Ghats and Bangalore
+  western_ghats:
+    name: Western Ghats Ridge
+    bounding_box: [19.0, 72.5, 8.0, 78.0]
+    description: High elevation band used for misty and stargazing vibes
+  bangalore_buffer:
+    name: Bangalore 200km Buffer
+    center: [12.9716, 77.5946]
+    radius_km: 200
+    bounding_box: [14.8, 75.5, 11.1, 79.7]
+    description: Approximate box used for event planner use-cases
+  bangalore_core_point:
+    name: Bangalore City Core
+    center: [12.9716, 77.5946]
+    description: Representative grid point for Bangalore-based personas
+  ooty_point:
+    name: Ooty Hill Station
+    center: [11.4064, 76.6932]
+    description: High-elevation Western Ghats location for misty vibes
+  coorg_point:
+    name: Coorg Highlands
+    center: [12.4244, 75.7382]
+    description: Plantation region relevant to rain and cozy vibes
+  goa_coast_point:
+    name: Goa Coastal Strip
+    center: [15.2993, 74.1240]
+    description: Coastal destination for beach-day scenarios
+  bandipur_point:
+    name: Bandipur National Park
+    center: [11.6570, 76.6480]
+    description: Wildlife hotspot for safari planning
+  munnar_point:
+    name: Munnar Hill Station
+    center: [10.0889, 77.0595]
+    description: High-altitude tea estate region for misty vibes
+  mysore_point:
+    name: Mysore Heritage City
+    center: [12.2958, 76.6394]
+    description: Cultural city used for festival and event planning
+  hampi_point:
+    name: Hampi Ruins
+    center: [15.3350, 76.4600]
+    description: Dry zone heritage site for clear-sky adventures
+  pondicherry_point:
+    name: Pondicherry Coast
+    center: [11.9416, 79.8083]
+    description: Coastal getaway for beach and wellness vibes
+  kodaikanal_point:
+    name: Kodaikanal Hills
+    center: [10.2381, 77.4892]
+    description: Hill station for cozy rainy retreats
+  chikmagalur_point:
+    name: Chikmagalur Highlands
+    center: [13.3186, 75.7553]
+    description: Coffee plantation region with mild temperatures
+  wayanad_point:
+    name: Wayanad Rainforest
+    center: [11.6854, 76.1320]
+    description: Rainforest district for monsoon experiences

@@ -1,0 +1,45 @@
+# NASA POWER parameter configuration for Weather Vibes ingestion
+# Each entry defines the parameter id, aggregation, and usage notes.
+parameters:
+  - id: T2M
+    aggregation: mean
+    description: Near-surface air temperature at 2 meters (°C)
+    tags: [comfort, mildness, advisor]
+  - id: T2M_MIN
+    aggregation: min
+    description: Daily minimum 2m air temperature (°C)
+    tags: [comfort, advisor]
+  - id: T2M_MAX
+    aggregation: max
+    description: Daily maximum 2m air temperature (°C)
+    tags: [comfort, advisor]
+  - id: RH2M
+    aggregation: mean
+    description: Relative humidity at 2 meters (%)
+    tags: [clarity, comfort]
+  - id: PRECTOTCORR
+    aggregation: sum
+    description: Corrected total precipitation (mm/day)
+    tags: [rain, cozy, agriculture]
+  - id: WS2M
+    aggregation: mean
+    description: Wind speed at 2 meters (m/s)
+    tags: [comfort, advisor]
+  - id: ALLSKY_SFC_SW_DWN
+    aggregation: mean
+    description: All-sky surface shortwave downward irradiance (kWh/m^2/day)
+    tags: [sunshine, clarity]
+  - id: CLRSKY_SFC_SW_DWN
+    aggregation: mean
+    description: Clear-sky surface shortwave downward irradiance (kWh/m^2/day)
+    tags: [cloud_fraction]
+  - id: T2MDEW
+    aggregation: mean
+    description: Dew point temperature at 2 meters (°C)
+    tags: [comfort, fog]
+
+options:
+  community: ag
+  temporal: daily
+  units: metric
+  max_year_span: 3  # chunk downloads by this many years per request

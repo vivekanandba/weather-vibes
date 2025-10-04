@@ -1,0 +1,160 @@
+{
+  "generated_at": "2025-10-04T15:58:11.346108Z",
+  "parameters": [
+    "T2M",
+    "T2M_MIN",
+    "T2M_MAX",
+    "RH2M",
+    "PRECTOTCORR",
+    "WS2M",
+    "ALLSKY_SFC_SW_DWN",
+    "CLRSKY_SFC_SW_DWN",
+    "T2MDEW"
+  ],
+  "areas": {
+    "south_india": {
+      "name": "South India Core",
+      "type": "region"
+    },
+    "western_ghats": {
+      "name": "Western Ghats Ridge",
+      "type": "region"
+    },
+    "bangalore_buffer": {
+      "name": "Bangalore 200km Buffer",
+      "type": "region"
+    },
+    "bangalore_core_point": {
+      "name": "Bangalore City Core",
+      "type": "point",
+      "raw_files": 9,
+      "raw_total_bytes": 1377916,
+      "first_range": "2000-2002",
+      "last_range": "2024-2024",
+      "monthly_chunks": 9,
+      "monthly_summary_csv": "outputs/bangalore_core_point/monthly/bangalore_core_point__monthly_summary.csv",
+      "monthly_summary_bytes": 52553
+    },
+    "ooty_point": {
+      "name": "Ooty Hill Station",
+      "type": "point",
+      "raw_files": 9,
+      "raw_total_bytes": 1379280,
+      "first_range": "2000-2002",
+      "last_range": "2024-2024",
+      "monthly_chunks": 9,
+      "monthly_summary_csv": "outputs/ooty_point/monthly/ooty_point__monthly_summary.csv",
+      "monthly_summary_bytes": 52541
+    },
+    "coorg_point": {
+      "name": "Coorg Highlands",
+      "type": "point",
+      "raw_files": 9,
+      "raw_total_bytes": 1381459,
+      "first_range": "2000-2002",
+      "last_range": "2024-2024",
+      "monthly_chunks": 9,
+      "monthly_summary_csv": "outputs/coorg_point/monthly/coorg_point__monthly_summary.csv",
+      "monthly_summary_bytes": 52358
+    },
+    "goa_coast_point": {
+      "name": "Goa Coastal Strip",
+      "type": "point",
+      "raw_files": 9,
+      "raw_total_bytes": 1378491,
+      "first_range": "2000-2002",
+      "last_range": "2024-2024",
+      "monthly_chunks": 9,
+      "monthly_summary_csv": "outputs/goa_coast_point/monthly/goa_coast_point__monthly_summary.csv",
+      "monthly_summary_bytes": 52200
+    },
+    "bandipur_point": {
+      "name": "Bandipur National Park",
+      "type": "point",
+      "raw_files": 9,
+      "raw_total_bytes": 1379279,
+      "first_range": "2000-2002",
+      "last_range": "2024-2024",
+      "monthly_chunks": 9,
+      "monthly_summary_csv": "outputs/bandipur_point/monthly/bandipur_point__monthly_summary.csv",
+      "monthly_summary_bytes": 52541
+    },
+    "munnar_point": {
+      "name": "Munnar Hill Station",
+      "type": "point",
+      "raw_files": 9,
+      "raw_total_bytes": 1381282,
+      "first_range": "2000-2002",
+      "last_range": "2024-2024",
+      "monthly_chunks": 9,
+      "monthly_summary_csv": "outputs/munnar_point/monthly/munnar_point__monthly_summary.csv",
+      "monthly_summary_bytes": 52682
+    },
+    "mysore_point": {
+      "name": "Mysore Heritage City",
+      "type": "point",
+      "raw_files": 9,
+      "raw_total_bytes": 1378598,
+      "first_range": "2000-2002",
+      "last_range": "2024-2024",
+      "monthly_chunks": 9,
+      "monthly_summary_csv": "outputs/mysore_point/monthly/mysore_point__monthly_summary.csv",
+      "monthly_summary_bytes": 52919
+    },
+    "hampi_point": {
+      "name": "Hampi Ruins",
+      "type": "point",
+      "raw_files": 9,
+      "raw_total_bytes": 1376676,
+      "first_range": "2000-2002",
+      "last_range": "2024-2024",
+      "monthly_chunks": 9,
+      "monthly_summary_csv": "outputs/hampi_point/monthly/hampi_point__monthly_summary.csv",
+      "monthly_summary_bytes": 52144
+    },
+    "pondicherry_point": {
+      "name": "Pondicherry Coast",
+      "type": "point",
+      "raw_files": 9,
+      "raw_total_bytes": 1380851,
+      "first_range": "2000-2002",
+      "last_range": "2024-2024",
+      "monthly_chunks": 9,
+      "monthly_summary_csv": "outputs/pondicherry_point/monthly/pondicherry_point__monthly_summary.csv",
+      "monthly_summary_bytes": 51973
+    },
+    "kodaikanal_point": {
+      "name": "Kodaikanal Hills",
+      "type": "point",
+      "raw_files": 9,
+      "raw_total_bytes": 1380159,
+      "first_range": "2000-2002",
+      "last_range": "2024-2024",
+      "monthly_chunks": 9,
+      "monthly_summary_csv": "outputs/kodaikanal_point/monthly/kodaikanal_point__monthly_summary.csv",
+      "monthly_summary_bytes": 52449
+    },
+    "chikmagalur_point": {
+      "name": "Chikmagalur Highlands",
+      "type": "point",
+      "raw_files": 9,
+      "raw_total_bytes": 1379512,
+      "first_range": "2000-2002",
+      "last_range": "2024-2024",
+      "monthly_chunks": 9,
+      "monthly_summary_csv": "outputs/chikmagalur_point/monthly/chikmagalur_point__monthly_summary.csv",
+      "monthly_summary_bytes": 52355
+    },
+    "wayanad_point": {
+      "name": "Wayanad Rainforest",
+      "type": "point",
+      "raw_files": 9,
+      "raw_total_bytes": 1380972,
+      "first_range": "2000-2002",
+      "last_range": "2024-2024",
+      "monthly_chunks": 9,
+      "monthly_summary_csv": "outputs/wayanad_point/monthly/wayanad_point__monthly_summary.csv",
+      "monthly_summary_bytes": 52702
+    }
+  }
+}

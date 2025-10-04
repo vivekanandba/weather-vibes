@@ -1,0 +1,157 @@
+{
+  "stargazing": {
+    "name": "Perfect Stargazing Night",
+    "description": "Clear skies with low humidity for optimal star viewing",
+    "parameters": [
+      {
+        "id": "CLOUD_AMT",
+        "weight": 0.6,
+        "scoring": "low_is_better",
+        "min": 0,
+        "max": 100
+      },
+      {
+        "id": "RH2M",
+        "weight": 0.4,
+        "scoring": "low_is_better",
+        "min": 0,
+        "max": 100
+      }
+    ]
+  },
+  "beach_day": {
+    "name": "Ideal Beach Day",
+    "description": "Warm, sunny weather with minimal rain",
+    "parameters": [
+      {
+        "id": "ALLSKY_SFC_SW_DWN",
+        "weight": 0.4,
+        "scoring": "high_is_better",
+        "min": 0,
+        "max": 10
+      },
+      {
+        "id": "T2M",
+        "weight": 0.4,
+        "scoring": "optimal_range",
+        "optimal_min": 24,
+        "optimal_max": 32,
+        "falloff_rate": 2
+      },
+      {
+        "id": "PRECTOTCORR",
+        "weight": 0.2,
+        "scoring": "low_is_better",
+        "min": 0,
+        "max": 50
+      }
+    ]
+  },
+  "cozy_rain": {
+    "name": "Cozy Rainy Day",
+    "description": "Gentle rain with comfortable temperature",
+    "parameters": [
+      {
+        "id": "PRECTOTCORR",
+        "weight": 0.5,
+        "scoring": "optimal_range",
+        "optimal_min": 5,
+        "optimal_max": 20,
+        "falloff_rate": 1.5
+      },
+      {
+        "id": "T2M",
+        "weight": 0.3,
+        "scoring": "optimal_range",
+        "optimal_min": 18,
+        "optimal_max": 25,
+        "falloff_rate": 2
+      },
+      {
+        "id": "WS2M",
+        "weight": 0.2,
+        "scoring": "low_is_better",
+        "min": 0,
+        "max": 20
+      }
+    ]
+  },
+  "kite_flying": {
+    "name": "Perfect Kite Flying Weather",
+    "description": "Moderate wind with clear skies",
+    "parameters": [
+      {
+        "id": "WS2M",
+        "weight": 0.5,
+        "scoring": "optimal_range",
+        "optimal_min": 4,
+        "optimal_max": 10,
+        "falloff_rate": 1.5
+      },
+      {
+        "id": "CLOUD_AMT",
+        "weight": 0.3,
+        "scoring": "low_is_better",
+        "min": 0,
+        "max": 100
+      },
+      {
+        "id": "PRECTOTCORR",
+        "weight": 0.2,
+        "scoring": "low_is_better",
+        "min": 0,
+        "max": 50
+      }
+    ]
+  },
+  "hiking": {
+    "name": "Ideal Hiking Conditions",
+    "description": "Comfortable temperature with minimal rain",
+    "parameters": [
+      {
+        "id": "T2M",
+        "weight": 0.4,
+        "scoring": "optimal_range",
+        "optimal_min": 15,
+        "optimal_max": 25,
+        "falloff_rate": 2
+      },
+      {
+        "id": "PRECTOTCORR",
+        "weight": 0.3,
+        "scoring": "low_is_better",
+        "min": 0,
+        "max": 50
+      },
+      {
+        "id": "RH2M",
+        "weight": 0.3,
+        "scoring": "optimal_range",
+        "optimal_min": 40,
+        "optimal_max": 70,
+        "falloff_rate": 2
+      }
+    ]
+  },
+  "fashion_stylist": {
+    "name": "AI Fashion Stylist",
+    "type": "advisor",
+    "description": "Weather-appropriate outfit recommendations",
+    "parameters": ["T2M", "ALLSKY_SFC_SW_DWN", "PRECTOTCORR", "WS2M"],
+    "logic": "fashion_rules"
+  },
+  "crop_advisor": {
+    "name": "Crop & Farming Advisor",
+    "type": "advisor",
+    "description": "Optimal conditions for crop growth",
+    "parameters": ["T2M", "PRECTOTCORR", "T2M_MIN", "T2M_MAX", "RH2M"],
+    "logic": "crop_rules"
+  },
+  "mood_predictor": {
+    "name": "Climate Mood Predictor",
+    "type": "advisor",
+    "description": "Wellness suggestions based on weather",
+    "parameters": ["T2M", "ALLSKY_SFC_SW_DWN", "PRECTOTCORR", "RH2M"],
+    "logic": "mood_rules"
+  }
+}
