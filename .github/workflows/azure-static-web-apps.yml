@@ -31,7 +31,7 @@ jobs:
       - name: Build app
         run: |
           cd client
-          NEXT_PUBLIC_API_BASE_URL=https://weather-vibes-api.whitewave-6eaae7b5.eastus.azurecontainerapps.io npm run build
+          npm run build
         env:
           NEXT_PUBLIC_API_BASE_URL: https://weather-vibes-api.whitewave-6eaae7b5.eastus.azurecontainerapps.io
       - name: Build And Deploy
