@@ -25,7 +25,14 @@ curl -X POST https://weather-vibes-api.whitewave-6eaae7b5.eastus.azurecontainera
 
 ## 📸 **Project Showcase**
 
-### 🎥 **Demo Video**
+### 🎥 **Demo Videos**
+
+**YouTube Demo:**
+Watch our Weather Vibes presentation on YouTube:
+
+[![Weather Vibes YouTube Demo](https://img.youtube.com/vi/0agQKuCrW9A/maxresdefault.jpg)](https://www.youtube.com/watch?v=0agQKuCrW9A)
+
+**GitHub Demo Video:**
 Watch Weather Vibes in action with our comprehensive demo:
 
 https://github.com/vivekanandba/weather-vibes/assets/weather-vibes/Weather_Vibes-NotebookLLM.mp4
