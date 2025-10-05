@@ -17,7 +17,7 @@ class Settings(BaseSettings):
     geotiff_cache_size: int = 100
 
     # CORS Configuration
-    cors_origins: List[str] = ["http://localhost:3000", "https://weather-vibes-app.azurestaticapps.net"]
+    cors_origins: List[str] = ["http://localhost:3000", "https://victorious-forest-09f551a0f.1.azurestaticapps.net"]
 
     # API Configuration
     api_prefix: str = "/api"
