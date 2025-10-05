@@ -149,3 +149,4 @@ Update `NEXT_PUBLIC_API_BASE_URL` in `.env.local` to point to your backend.
 - Ensure backend is running on the correct port
 - Check `NEXT_PUBLIC_API_BASE_URL` in `.env.local`
 - Verify CORS is configured on backend
+<!-- Test frontend deployment -->
