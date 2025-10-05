@@ -3,7 +3,9 @@ from app.models.requests import AdvisorRequest
 from app.models.responses import AdvisorResponse
 from app.core.vibe_engine import get_vibe_engine
 from app.services.data_service import get_data_service
-from app.core.advisors import fashion_rules, crop_advisor, mood_predictor
+from app.core.advisors import crop_advisor, mood_predictor
+from app.core.advisors.fashion_rules import fashion_rules
+from typing import List
 import logging
 
 # Configure logging
@@ -98,15 +100,19 @@ async def get_advisor_recommendations(request: AdvisorRequest):
         logger.info(f"Using advisor function: {advisor_func}")
 
         try:
-            recommendations = advisor_func(
+            advisor_result = advisor_func(
                 parameter_values, request.additional_params or {}
             )
-            logger.info(f"Generated {len(recommendations)} recommendations")
+            logger.info(f"Generated advisor result: {type(advisor_result)}")
         except Exception as e:
             logger.error(f"Error generating recommendations: {str(e)}")
             raise HTTPException(
                 status_code=500, detail=f"Error generating recommendations: {str(e)}"
             )
+
+        # Transform advisor result to list of recommendations
+        recommendations = _transform_advisor_result_to_recommendations(advisor_result, request.advisor_type)
+        logger.info(f"Transformed to {len(recommendations)} recommendations")
 
         logger.info("Creating response")
         response = AdvisorResponse(
@@ -135,3 +141,83 @@ async def get_advisor_recommendations(request: AdvisorRequest):
     except Exception as e:
         logger.error(f"Unexpected error in advisor endpoint: {str(e)}", exc_info=True)
         raise HTTPException(status_code=500, detail=f"Internal error: {str(e)}")
+
+
+def _transform_advisor_result_to_recommendations(advisor_result: dict, advisor_type: str) -> List[dict]:
+    """
+    Transform advisor result to list of Recommendation objects.
+    
+    Args:
+        advisor_result: The result from the advisor function
+        advisor_type: The type of advisor (fashion, crop, mood)
+        
+    Returns:
+        List of recommendation dictionaries
+    """
+    from app.models.responses import Recommendation
+    
+    recommendations = []
+    
+    if advisor_type == "fashion":
+        # Transform fashion advisor result
+        if "outfit_recommendations" in advisor_result:
+            for outfit in advisor_result["outfit_recommendations"]:
+                recommendations.append(Recommendation(
+                    item=outfit.get("name", "Outfit"),
+                    icon="👕",
+                    description=f"Comfort: {outfit.get('comfort_score', 0)}/100, Style: {outfit.get('style_score', 0)}/100"
+                ))
+        
+        if "accessory_recommendations" in advisor_result:
+            for accessory in advisor_result["accessory_recommendations"]:
+                recommendations.append(Recommendation(
+                    item=accessory.get("name", "Accessory"),
+                    icon="🎒",
+                    description=accessory.get("reason", "")
+                ))
+    
+    elif advisor_type == "crop":
+        # Transform crop advisor result
+        if "alerts" in advisor_result:
+            for alert in advisor_result["alerts"]:
+                recommendations.append(Recommendation(
+                    item=alert.get("message", "Alert"),
+                    icon="⚠️",
+                    description=f"Priority: {alert.get('priority', 'medium')}"
+                ))
+        
+        if "actionable_recommendations" in advisor_result:
+            for rec in advisor_result["actionable_recommendations"]:
+                recommendations.append(Recommendation(
+                    item=rec.get("title", "Recommendation"),
+                    icon="🌱",
+                    description=rec.get("description", "")
+                ))
+    
+    elif advisor_type == "mood":
+        # Transform mood advisor result
+        if "activity_suggestions" in advisor_result:
+            for activity in advisor_result["activity_suggestions"]:
+                recommendations.append(Recommendation(
+                    item=activity.get("name", "Activity"),
+                    icon="🎯",
+                    description=f"Suitability: {activity.get('suitability', 'medium')}"
+                ))
+        
+        if "wellness_suggestions" in advisor_result:
+            for suggestion in advisor_result["wellness_suggestions"]:
+                recommendations.append(Recommendation(
+                    item=suggestion,
+                    icon="💡",
+                    description="Wellness tip"
+                ))
+    
+    # If no specific recommendations found, create generic ones
+    if not recommendations:
+        recommendations.append(Recommendation(
+            item="Weather Analysis Complete",
+            icon="✅",
+            description="Analysis completed successfully"
+        ))
+    
+    return recommendations

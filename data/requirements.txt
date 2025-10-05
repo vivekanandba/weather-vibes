@@ -1,0 +1,36 @@
+# Requirements for Weather Vibes Data Pipeline
+# NASA POWER API data processing and GeoTIFF generation
+
+# Core data analysis packages
+numpy>=1.21.0
+pandas>=1.3.0
+scipy>=1.7.0
+
+# Geographic data processing
+geopandas>=0.12.0
+rasterio>=1.3.0
+shapely>=2.0.0
+pyproj>=3.4.0
+
+# HTTP requests and API handling
+requests>=2.25.0
+urllib3>=1.26.0
+
+# Configuration and YAML handling
+PyYAML>=6.0
+pydantic>=2.0.0
+
+# Data serialization
+h5py>=3.7.0
+
+# Logging and utilities
+structlog>=22.0.0
+
+# Testing
+pytest>=7.0.0
+pytest-cov>=4.0.0
+
+# Development tools
+black>=22.0.0
+flake8>=5.0.0
+mypy>=1.0.0
