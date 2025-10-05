@@ -23,6 +23,25 @@ curl -X POST https://weather-vibes-api.whitewave-6eaae7b5.eastus.azurecontainera
   -d '{"vibe": "stargazing", "center_lat": 12.9716, "center_lon": 77.5946, "radius_km": 50, "month": 7, "year": 2023}'
 ```
 
+## 📸 **Project Showcase**
+
+### 🎥 **Demo Video**
+Watch Weather Vibes in action with our comprehensive demo:
+
+https://github.com/vivekanandba/weather-vibes/assets/weather-vibes/Weather_Vibes-NotebookLLM.mp4
+
+### 👥 **Team Photos**
+
+**Real Team Photo:**
+Our development team working on Weather Vibes:
+
+![Weather Vibes Team](media/WhatsApp%20Image%202025-10-05%20at%2023.27.54.jpeg)
+
+**AI-Generated Team Photo:**
+AI-generated representation of our Weather Vibes development team:
+
+![AI Generated Weather Vibes Team](media/Gemini_Generated_Image_jmt1lwjmt1lwjmt1.png)
+
 ## 🎯 Project Overview
 
 Weather Vibes helps users discover the perfect weather conditions for their desired activities by combining NASA weather data with intelligent recommendations. Whether you're planning a beach day, hiking trip, or outdoor photography session, Weather Vibes tells you the best time and place to go.
