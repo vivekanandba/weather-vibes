@@ -1,32 +1,92 @@
 'use client';
 
-import {
-  Box,
-  VStack,
-  Heading,
-  Text,
-  Button,
-  
-} from '@chakra-ui/react';
+import { Box, VStack, Heading, Text, Button } from '@chakra-ui/react';
 import { useState } from 'react';
-import { useVibeStore } from '../stores/useVibeStore';
-import { useLocationStore } from '../stores/useLocationStore';
+import { useVibeStore } from '../../../stores/useVibeStore';
+import { useLocationStore } from '../../../stores/useLocationStore';
+import { useTimeStore } from '../../../stores/useTimeStore';
+import { advisorService } from '../../../services/advisorService';
+import { AdvisorRequest } from '../../../types/api';
+import { toaster } from '../../ui/toaster';
 
 export default function AdvisorPanel() {
   const { selectedVibe } = useVibeStore();
   const { center } = useLocationStore();
+  const { selectedMonth } = useTimeStore();
   const [isLoading, setIsLoading] = useState(false);
 
   const handleGetAdvice = async () => {
     if (!selectedVibe || selectedVibe.type !== 'advisor') {
-      alert('Please select an AI advisor from the vibe menu');
+      toaster.create({
+        title: 'No advisor selected',
+        description: 'Please select an AI advisor from the vibe menu',
+        type: 'warning',
+        duration: 3000,
+        closable: true,
+      });
+      return;
+    }
+
+    if (!selectedMonth) {
+      toaster.create({
+        title: 'No month selected',
+        description: 'Please select a month to get recommendations',
+        type: 'warning',
+        duration: 3000,
+        closable: true,
+      });
       return;
     }
 
     setIsLoading(true);
-    // TODO: Call advisorService.getRecommendations() with API integration
-    console.log('Feature in progress: This will show AI-powered recommendations');
-    setIsLoading(false);
+
+    try {
+      // Map vibe ID to advisor type
+      const advisorTypeMap: Record<string, string> = {
+        fashion_stylist: 'fashion',
+        crop_advisor: 'crop',
+        mood_predictor: 'mood',
+      };
+
+      const advisorType = advisorTypeMap[selectedVibe.id];
+      if (!advisorType) {
+        throw new Error(`Unknown advisor type: ${selectedVibe.id}`);
+      }
+
+      const request: AdvisorRequest = {
+        advisor_type: advisorType,
+        lat: center[1], // center is [lon, lat]
+        lon: center[0],
+        month: selectedMonth,
+      };
+
+      const response = await advisorService.getRecommendations(request);
+
+      toaster.create({
+        title: 'Recommendations ready!',
+        description: `Got ${response.recommendations.length} personalized recommendations`,
+        type: 'success',
+        duration: 5000,
+        closable: true,
+      });
+
+      // TODO: Display recommendations in the UI
+      console.log('Advisor recommendations:', response);
+    } catch (error: unknown) {
+      console.error('Error fetching recommendations:', error);
+      const description =
+        (error as { response?: { data?: { detail?: string } } })?.response?.data?.detail ||
+        'Failed to get recommendations. Please try again.';
+      toaster.create({
+        title: 'Error',
+        description,
+        type: 'error',
+        duration: 5000,
+        closable: true,
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -39,12 +99,14 @@ export default function AdvisorPanel() {
       borderRadius="md"
       boxShadow="lg"
       w="300px"
-      zIndex={10}
+      zIndex={1000}
       maxH="80vh"
       overflowY="auto"
     >
       <VStack gap={4} alignItems="stretch">
-        <Heading size="md">🤖 AI Advisors</Heading>
+        <Heading size="md" color="gray.500">
+          🤖 AI Advisors
+        </Heading>
         <Text fontSize="sm" color="gray.600">
           Get personalized recommendations based on weather conditions
         </Text>
@@ -53,14 +115,14 @@ export default function AdvisorPanel() {
           <Text fontSize="xs" fontWeight="medium" color="gray.600" mb={1}>
             Current Location
           </Text>
-          <Text fontSize="sm">
+          <Text fontSize="sm" color="gray.700">
             {center[1].toFixed(4)}°N, {center[0].toFixed(4)}°E
           </Text>
         </Box>
 
         {selectedVibe?.type === 'advisor' && (
           <Box bg="brand.50" p={3} borderRadius="md">
-            <Text fontSize="sm" fontWeight="medium">
+            <Text fontSize="sm" fontWeight="medium" color="gray.700">
               {selectedVibe.icon} {selectedVibe.name}
             </Text>
             <Text fontSize="xs" color="gray.600" mt={1}>

@@ -2,7 +2,7 @@
 
 import { Box, Flex, Heading, IconButton } from '@chakra-ui/react';
 import { HamburgerIcon } from '@chakra-ui/icons';
-import { useUIStore } from '../stores/useUIStore';
+import { useUIStore } from '../../stores/useUIStore';
 
 export default function Header() {
   const { isSidebarOpen, setSidebarOpen } = useUIStore();
@@ -22,10 +22,7 @@ export default function Header() {
     >
       <Flex justify="space-between" alignItems="center">
         <Flex alignItems="center" gap={3}>
-          <IconButton
-            aria-label="Toggle sidebar"
-            onClick={() => setSidebarOpen(!isSidebarOpen)}
-          >
+          <IconButton aria-label="Toggle sidebar" onClick={() => setSidebarOpen(!isSidebarOpen)}>
             <HamburgerIcon />
           </IconButton>
           <Heading size="md" color="blue.600">

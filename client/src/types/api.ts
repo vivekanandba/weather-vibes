@@ -1,61 +1,85 @@
+// Backend API Types - matching server models
+
 export interface WhereRequest {
-  vibeId: string;
+  vibe: string;
   month: number;
   year?: number;
-  bounds: {
-    north: number;
-    south: number;
-    east: number;
-    west: number;
-  };
+  center_lat: number;
+  center_lon: number;
+  radius_km: number;
+  resolution?: number;
+}
+
+export interface LocationScore {
+  lat: number;
+  lon: number;
+  score: number;
 }
 
 export interface WhereResponse {
-  heatmapData: {
-    type: 'FeatureCollection';
-    features: Array<{
-      type: 'Feature';
-      geometry: {
-        type: 'Point';
-        coordinates: [number, number];
-      };
-      properties: {
-        score: number;
-      };
-    }>;
+  vibe: string;
+  month: number;
+  scores: LocationScore[];
+  max_score: number;
+  min_score: number;
+  metadata: {
+    center: { lat: number; lon: number };
+    radius_km: number;
+    resolution_km: number;
+    num_points: number;
+    vibe_name: string;
   };
-  topLocations: Array<{
-    name: string;
-    coordinates: [number, number];
-    score: number;
-  }>;
 }
 
 export interface WhenRequest {
-  vibeId: string;
-  location: [number, number];
+  vibe: string;
+  lat: number;
+  lon: number;
   year?: number;
 }
 
+export interface MonthlyScore {
+  month: number;
+  month_name: string;
+  score: number;
+}
+
 export interface WhenResponse {
-  monthlyScores: Array<{
-    month: number;
-    score: number;
-    details?: Record<string, unknown>;
-  }>;
+  vibe: string;
+  location: { lat: number; lon: number };
+  monthly_scores: MonthlyScore[];
+  best_month: number;
+  worst_month: number;
+  metadata: {
+    year?: number;
+    num_months: number;
+    vibe_name: string;
+  };
 }
 
 export interface AdvisorRequest {
-  advisorId: string;
-  location: [number, number];
-  date?: string;
+  advisor_type: string;
+  lat: number;
+  lon: number;
+  month: number;
+  year?: number;
+  additional_params?: Record<string, unknown>;
+}
+
+export interface Recommendation {
+  item: string;
+  icon: string;
+  description?: string;
 }
 
 export interface AdvisorResponse {
-  type: string;
-  recommendations: Array<{
-    item: string;
-    icon?: string;
-    description?: string;
-  }>;
+  advisor_type: string;
+  location: { lat: number; lon: number };
+  recommendations: Recommendation[];
+  metadata: {
+    month: number;
+    year?: number;
+    advisor_name: string;
+  };
+  raw_data?: Record<string, unknown>;
 }

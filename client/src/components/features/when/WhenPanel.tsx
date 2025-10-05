@@ -1,17 +1,13 @@
 'use client';
 
-import {
-  Box,
-  VStack,
-  Heading,
-  Text,
-  Button,
-  
-} from '@chakra-ui/react';
+import { Box, VStack, Heading, Text, Button } from '@chakra-ui/react';
 import { useState } from 'react';
-import { useVibeStore } from '../stores/useVibeStore';
-import { useLocationStore } from '../stores/useLocationStore';
-import { useUIStore } from '../stores/useUIStore';
+import { useVibeStore } from '../../../stores/useVibeStore';
+import { useLocationStore } from '../../../stores/useLocationStore';
+import { useUIStore } from '../../../stores/useUIStore';
+import { whenService } from '../../../services/whenService';
+import { WhenRequest } from '../../../types/api';
+import { toaster } from '../../ui/toaster';
 
 export default function WhenPanel() {
   const { selectedVibe } = useVibeStore();
@@ -21,15 +17,55 @@ export default function WhenPanel() {
 
   const handleFindBestTimes = async () => {
     if (!selectedVibe) {
-      alert('Please select a vibe to find best times');
+      toaster.create({
+        title: 'No vibe selected',
+        description: 'Please select a vibe to find best times',
+        type: 'warning',
+        duration: 3000,
+        closable: true,
+      });
       return;
     }
 
     setIsLoading(true);
-    // TODO: Call whenService.getMonthlyScores() with API integration
-    console.log('Feature in progress: This will show monthly scores in a calendar');
-    setIsLoading(false);
-    setCalendarModalOpen(true);
+
+    try {
+      const request: WhenRequest = {
+        vibe: selectedVibe.id,
+        lat: center[1], // center is [lon, lat]
+        lon: center[0],
+      };
+
+      const response = await whenService.getMonthlyScores(request);
+
+      toaster.create({
+        title: 'Best times found!',
+        description: `Best month: ${
+          response.monthly_scores.find((m) => m.month === response.best_month)?.month_name
+        } (score: ${response.monthly_scores.find((m) => m.month === response.best_month)?.score.toFixed(2)})`,
+        type: 'success',
+        duration: 5000,
+        closable: true,
+      });
+
+      // TODO: Update calendar modal with monthly scores
+      console.log('Monthly scores:', response);
+      setCalendarModalOpen(true);
+    } catch (error: unknown) {
+      console.error('Error fetching monthly scores:', error);
+      const description =
+        (error as { response?: { data?: { detail?: string } } })?.response?.data?.detail ||
+        'Failed to find best times. Please try again.';
+      toaster.create({
+        title: 'Error',
+        description,
+        type: 'error',
+        duration: 5000,
+        closable: true,
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -42,10 +78,12 @@ export default function WhenPanel() {
       borderRadius="md"
       boxShadow="lg"
       w="300px"
-      zIndex={10}
+      zIndex={1000}
     >
       <VStack gap={4} alignItems="stretch">
-        <Heading size="md">📅 When</Heading>
+        <Heading size="md" color="gray.500">
+          📅 When
+        </Heading>
         <Text fontSize="sm" color="gray.600">
           Find the best times for your selected vibe at this location
         </Text>
@@ -54,17 +92,12 @@ export default function WhenPanel() {
           <Text fontSize="xs" fontWeight="medium" color="gray.600" mb={1}>
             Current Location
           </Text>
-          <Text fontSize="sm">
+          <Text fontSize="sm" color="gray.700">
             {center[1].toFixed(4)}°N, {center[0].toFixed(4)}°E
           </Text>
         </Box>
 
-        <Button
-          colorScheme="brand"
-          onClick={handleFindBestTimes}
-          loading={isLoading}
-          disabled={!selectedVibe}
-        >
+        <Button colorScheme="brand" onClick={handleFindBestTimes} loading={isLoading} disabled={!selectedVibe}>
           Find Best Times
         </Button>
 

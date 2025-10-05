@@ -1,21 +1,11 @@
 'use client';
 
-import {
-  Box,
-  Text,
-  HStack,
-} from '@chakra-ui/react';
-import {
-  MenuRoot,
-  MenuTrigger,
-  MenuContent,
-  MenuItem,
-  MenuSeparator,
-} from '@chakra-ui/react';
+import { Box, Text, HStack } from '@chakra-ui/react';
+import { MenuRoot, MenuTrigger, MenuContent, MenuItem, MenuSeparator } from '@chakra-ui/react';
 import { Button } from '@chakra-ui/react';
 import { ChevronDownIcon } from '@chakra-ui/icons';
-import { useVibeStore } from '../stores/useVibeStore';
-import { getStandardVibes, getAdvisorVibes } from '../config/vibes';
+import { useVibeStore } from '../../stores/useVibeStore';
+import { getStandardVibes, getAdvisorVibes } from '../../config/vibes';
 
 export default function VibeSelector() {
   const { selectedVibe, setSelectedVibe } = useVibeStore();
@@ -45,15 +35,13 @@ export default function VibeSelector() {
           </Text>
         </Box>
         {standardVibes.map((vibe) => (
-          <MenuItem
-            key={vibe.id}
-            value={vibe.id}
-            onClick={() => setSelectedVibe(vibe)}
-          >
+          <MenuItem key={vibe.id} value={vibe.id} onClick={() => setSelectedVibe(vibe)}>
             <HStack gap={2}>
               <Text fontSize="lg">{vibe.icon}</Text>
               <Box>
-                <Text fontWeight="medium">{vibe.name}</Text>
+                <Text fontWeight="medium" color="gray.700">
+                  {vibe.name}
+                </Text>
                 {vibe.description && (
                   <Text fontSize="xs" color="gray.600">
                     {vibe.description}
@@ -72,15 +60,13 @@ export default function VibeSelector() {
           </Text>
         </Box>
         {advisorVibes.map((vibe) => (
-          <MenuItem
-            key={vibe.id}
-            value={vibe.id}
-            onClick={() => setSelectedVibe(vibe)}
-          >
+          <MenuItem key={vibe.id} value={vibe.id} onClick={() => setSelectedVibe(vibe)}>
             <HStack gap={2}>
               <Text fontSize="lg">{vibe.icon}</Text>
               <Box>
-                <Text fontWeight="medium">{vibe.name}</Text>
+                <Text fontWeight="medium" color="gray.700">
+                  {vibe.name}
+                </Text>
                 {vibe.description && (
                   <Text fontSize="xs" color="gray.600">
                     {vibe.description}

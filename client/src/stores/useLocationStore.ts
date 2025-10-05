@@ -3,7 +3,7 @@ import { create } from 'zustand';
 interface LocationStore {
   center: [number, number];
   zoom: number;
-  bounds: [[number, number], [number, number]] | null;
+  bounds: [[number, number], [number, number]];
   setCenter: (center: [number, number]) => void;
   setZoom: (zoom: number) => void;
   setBounds: (bounds: [[number, number], [number, number]]) => void;
@@ -12,7 +12,10 @@ interface LocationStore {
 export const useLocationStore = create<LocationStore>((set) => ({
   center: [77.5946, 12.9716], // Default to Bangalore [lng, lat]
   zoom: 10,
-  bounds: null,
+  bounds: [
+    [77.0, 12.5],
+    [78.0, 13.5],
+  ], // Default bounds around Bangalore
   setCenter: (center) => set({ center }),
   setZoom: (zoom) => set({ zoom }),
   setBounds: (bounds) => set({ bounds }),
