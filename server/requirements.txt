@@ -8,3 +8,11 @@ geopandas>=0.14.0
 numpy>=1.24.0
 shapely>=2.0.0
 python-multipart>=0.0.6
+pytest>=7.0.0
+httpx>=0.24.0
+pandas>=1.5.0
+fiona>=1.8.0
+pyproj>=3.4.0
+# Azure dependencies
+azure-storage-blob>=12.19.0
+azure-identity>=1.15.0

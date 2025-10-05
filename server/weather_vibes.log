@@ -5550,3 +5550,998 @@
 2025-10-05 15:01:27,843 - app.api.routes.advisor - INFO - Generated 3 recommendations
 2025-10-05 15:01:27,844 - app.api.routes.advisor - INFO - Creating response
 2025-10-05 15:01:27,844 - app.api.routes.advisor - INFO - Advisor endpoint completed successfully. Returning 3 recommendations
+2025-10-05 17:34:22,753 - app.main - INFO - ==================================================
+2025-10-05 17:34:22,754 - app.main - INFO - Starting Weather Vibes API...
+2025-10-05 17:34:22,754 - app.main - INFO - ==================================================
+2025-10-05 17:34:22,754 - app.main - INFO - Loading vibe dictionary...
+2025-10-05 17:34:22,754 - app.main - INFO - ✓ Loaded 8 vibes
+2025-10-05 17:34:22,754 - app.main - INFO - Initializing data service (path: ../data)...
+2025-10-05 17:34:22,754 - app.services.data_service - INFO - Initializing DataService with path: ../data
+2025-10-05 17:34:22,754 - app.services.data_service - INFO - Loading available locations
+2025-10-05 17:34:22,755 - app.services.data_service - DEBUG - Processing location: bangalore_core
+2025-10-05 17:34:22,755 - app.services.data_service - DEBUG - Found 9 JSON files for bangalore_core
+2025-10-05 17:34:22,758 - app.services.data_service - DEBUG - Processing location: mysore
+2025-10-05 17:34:22,759 - app.services.data_service - DEBUG - Found 9 JSON files for mysore
+2025-10-05 17:34:22,762 - app.services.data_service - DEBUG - Processing location: wayanad
+2025-10-05 17:34:22,762 - app.services.data_service - DEBUG - Found 9 JSON files for wayanad
+2025-10-05 17:34:22,764 - app.services.data_service - DEBUG - Processing location: chikmagalur
+2025-10-05 17:34:22,765 - app.services.data_service - DEBUG - Found 9 JSON files for chikmagalur
+2025-10-05 17:34:22,768 - app.services.data_service - DEBUG - Processing location: pondicherry
+2025-10-05 17:34:22,770 - app.services.data_service - DEBUG - Found 9 JSON files for pondicherry
+2025-10-05 17:34:22,776 - app.services.data_service - DEBUG - Processing location: kodaikanal
+2025-10-05 17:34:22,777 - app.services.data_service - DEBUG - Found 9 JSON files for kodaikanal
+2025-10-05 17:34:22,778 - app.services.data_service - DEBUG - Processing location: goa_coast
+2025-10-05 17:34:22,778 - app.services.data_service - DEBUG - Found 9 JSON files for goa_coast
+2025-10-05 17:34:22,781 - app.services.data_service - DEBUG - Processing location: hampi
+2025-10-05 17:34:22,781 - app.services.data_service - DEBUG - Found 9 JSON files for hampi
+2025-10-05 17:34:22,784 - app.services.data_service - DEBUG - Processing location: ooty
+2025-10-05 17:34:22,784 - app.services.data_service - DEBUG - Found 9 JSON files for ooty
+2025-10-05 17:34:22,786 - app.services.data_service - DEBUG - Processing location: bandipur
+2025-10-05 17:34:22,786 - app.services.data_service - DEBUG - Found 9 JSON files for bandipur
+2025-10-05 17:34:22,789 - app.services.data_service - DEBUG - Processing location: munnar
+2025-10-05 17:34:22,789 - app.services.data_service - DEBUG - Found 9 JSON files for munnar
+2025-10-05 17:34:22,792 - app.services.data_service - DEBUG - Processing location: coorg
+2025-10-05 17:34:22,792 - app.services.data_service - DEBUG - Found 9 JSON files for coorg
+2025-10-05 17:34:22,795 - app.services.data_service - INFO - Loaded 12 point locations
+2025-10-05 17:34:22,795 - app.services.data_service - INFO - DataService initialized with 12 locations
+2025-10-05 17:34:22,795 - app.main - INFO - ✓ Data service initialized
+2025-10-05 17:34:22,795 - app.main - INFO - ==================================================
+2025-10-05 17:34:22,795 - app.main - INFO - Server ready at http://0.0.0.0:8000
+2025-10-05 17:34:22,795 - app.main - INFO - API docs at http://0.0.0.0:8000/docs
+2025-10-05 17:34:22,795 - app.main - INFO - ==================================================
+2025-10-05 17:39:11,822 - app.main - INFO - Shutting down Weather Vibes API...
+2025-10-05 17:39:14,081 - app.main - INFO - ==================================================
+2025-10-05 17:39:14,082 - app.main - INFO - Starting Weather Vibes API...
+2025-10-05 17:39:14,082 - app.main - INFO - ==================================================
+2025-10-05 17:39:14,082 - app.main - INFO - Loading vibe dictionary...
+2025-10-05 17:39:14,082 - app.main - INFO - ✓ Loaded 8 vibes
+2025-10-05 17:39:14,082 - app.main - INFO - Initializing data service (path: ../data)...
+2025-10-05 17:39:14,082 - app.services.data_service - INFO - Initializing DataService with path: ../data
+2025-10-05 17:39:14,082 - app.services.data_service - INFO - Loading available locations
+2025-10-05 17:39:14,083 - app.services.data_service - DEBUG - Processing location: bangalore_core
+2025-10-05 17:39:14,083 - app.services.data_service - DEBUG - Found 9 JSON files for bangalore_core
+2025-10-05 17:39:14,085 - app.services.data_service - DEBUG - Processing location: mysore
+2025-10-05 17:39:14,087 - app.services.data_service - DEBUG - Found 9 JSON files for mysore
+2025-10-05 17:39:14,091 - app.services.data_service - DEBUG - Processing location: wayanad
+2025-10-05 17:39:14,091 - app.services.data_service - DEBUG - Found 9 JSON files for wayanad
+2025-10-05 17:39:14,093 - app.services.data_service - DEBUG - Processing location: chikmagalur
+2025-10-05 17:39:14,094 - app.services.data_service - DEBUG - Found 9 JSON files for chikmagalur
+2025-10-05 17:39:14,096 - app.services.data_service - DEBUG - Processing location: pondicherry
+2025-10-05 17:39:14,097 - app.services.data_service - DEBUG - Found 9 JSON files for pondicherry
+2025-10-05 17:39:14,100 - app.services.data_service - DEBUG - Processing location: kodaikanal
+2025-10-05 17:39:14,101 - app.services.data_service - DEBUG - Found 9 JSON files for kodaikanal
+2025-10-05 17:39:14,103 - app.services.data_service - DEBUG - Processing location: goa_coast
+2025-10-05 17:39:14,103 - app.services.data_service - DEBUG - Found 9 JSON files for goa_coast
+2025-10-05 17:39:14,107 - app.services.data_service - DEBUG - Processing location: hampi
+2025-10-05 17:39:14,112 - app.services.data_service - DEBUG - Found 9 JSON files for hampi
+2025-10-05 17:39:14,115 - app.services.data_service - DEBUG - Processing location: ooty
+2025-10-05 17:39:14,117 - app.services.data_service - DEBUG - Found 9 JSON files for ooty
+2025-10-05 17:39:14,122 - app.services.data_service - DEBUG - Processing location: bandipur
+2025-10-05 17:39:14,123 - app.services.data_service - DEBUG - Found 9 JSON files for bandipur
+2025-10-05 17:39:14,127 - app.services.data_service - DEBUG - Processing location: munnar
+2025-10-05 17:39:14,129 - app.services.data_service - DEBUG - Found 9 JSON files for munnar
+2025-10-05 17:39:14,134 - app.services.data_service - DEBUG - Processing location: coorg
+2025-10-05 17:39:14,136 - app.services.data_service - DEBUG - Found 9 JSON files for coorg
+2025-10-05 17:39:14,140 - app.services.data_service - INFO - Loaded 12 point locations
+2025-10-05 17:39:14,140 - app.services.data_service - INFO - DataService initialized with 12 locations
+2025-10-05 17:39:14,140 - app.main - INFO - ✓ Data service initialized
+2025-10-05 17:39:14,140 - app.main - INFO - ==================================================
+2025-10-05 17:39:14,140 - app.main - INFO - Server ready at http://0.0.0.0:8000
+2025-10-05 17:39:14,140 - app.main - INFO - API docs at http://0.0.0.0:8000/docs
+2025-10-05 17:39:14,140 - app.main - INFO - ==================================================
+2025-10-05 17:39:16,828 - app.main - INFO - ==================================================
+2025-10-05 17:39:16,828 - app.main - INFO - Starting Weather Vibes API...
+2025-10-05 17:39:16,828 - app.main - INFO - ==================================================
+2025-10-05 17:39:16,828 - app.main - INFO - Loading vibe dictionary...
+2025-10-05 17:39:16,829 - app.main - INFO - ✓ Loaded 8 vibes
+2025-10-05 17:39:16,829 - app.main - INFO - Initializing data service (path: ../data)...
+2025-10-05 17:39:16,829 - app.services.data_service - INFO - Initializing DataService with path: ../data
+2025-10-05 17:39:16,829 - app.services.data_service - INFO - Loading available locations
+2025-10-05 17:39:16,829 - app.services.data_service - DEBUG - Processing location: bangalore_core
+2025-10-05 17:39:16,830 - app.services.data_service - DEBUG - Found 9 JSON files for bangalore_core
+2025-10-05 17:39:16,831 - app.services.data_service - DEBUG - Processing location: mysore
+2025-10-05 17:39:16,832 - app.services.data_service - DEBUG - Found 9 JSON files for mysore
+2025-10-05 17:39:16,833 - app.services.data_service - DEBUG - Processing location: wayanad
+2025-10-05 17:39:16,834 - app.services.data_service - DEBUG - Found 9 JSON files for wayanad
+2025-10-05 17:39:16,834 - app.services.data_service - DEBUG - Processing location: chikmagalur
+2025-10-05 17:39:16,835 - app.services.data_service - DEBUG - Found 9 JSON files for chikmagalur
+2025-10-05 17:39:16,837 - app.services.data_service - DEBUG - Processing location: pondicherry
+2025-10-05 17:39:16,837 - app.services.data_service - DEBUG - Found 9 JSON files for pondicherry
+2025-10-05 17:39:16,839 - app.services.data_service - DEBUG - Processing location: kodaikanal
+2025-10-05 17:39:16,839 - app.services.data_service - DEBUG - Found 9 JSON files for kodaikanal
+2025-10-05 17:39:16,840 - app.services.data_service - DEBUG - Processing location: goa_coast
+2025-10-05 17:39:16,840 - app.services.data_service - DEBUG - Found 9 JSON files for goa_coast
+2025-10-05 17:39:16,842 - app.services.data_service - DEBUG - Processing location: hampi
+2025-10-05 17:39:16,842 - app.services.data_service - DEBUG - Found 9 JSON files for hampi
+2025-10-05 17:39:16,845 - app.services.data_service - DEBUG - Processing location: ooty
+2025-10-05 17:39:16,845 - app.services.data_service - DEBUG - Found 9 JSON files for ooty
+2025-10-05 17:39:16,847 - app.services.data_service - DEBUG - Processing location: bandipur
+2025-10-05 17:39:16,847 - app.services.data_service - DEBUG - Found 9 JSON files for bandipur
+2025-10-05 17:39:16,849 - app.services.data_service - DEBUG - Processing location: munnar
+2025-10-05 17:39:16,849 - app.services.data_service - DEBUG - Found 9 JSON files for munnar
+2025-10-05 17:39:16,851 - app.services.data_service - DEBUG - Processing location: coorg
+2025-10-05 17:39:16,852 - app.services.data_service - DEBUG - Found 9 JSON files for coorg
+2025-10-05 17:39:16,854 - app.services.data_service - INFO - Loaded 12 point locations
+2025-10-05 17:39:16,854 - app.services.data_service - INFO - DataService initialized with 12 locations
+2025-10-05 17:39:16,854 - app.main - INFO - ✓ Data service initialized
+2025-10-05 17:39:16,854 - app.main - INFO - ==================================================
+2025-10-05 17:39:16,854 - app.main - INFO - Server ready at http://0.0.0.0:8000
+2025-10-05 17:39:16,854 - app.main - INFO - API docs at http://0.0.0.0:8000/docs
+2025-10-05 17:39:16,854 - app.main - INFO - ==================================================
+2025-10-05 17:39:16,862 - app.main - INFO - Shutting down Weather Vibes API...
+2025-10-05 17:39:16,889 - app.main - INFO - Health check endpoint accessed
+2025-10-05 17:40:12,553 - app.api.routes.where - INFO - Where endpoint called with request: vibe='stargazing' month=10 year=None start_date=None end_date=None center_lat=12.9716 center_lon=77.5946 radius_km=100.0 resolution=5.0
+2025-10-05 17:40:12,554 - app.api.routes.where - INFO - Initializing vibe engine and data service
+2025-10-05 17:40:12,554 - app.api.routes.where - INFO - Services initialized successfully
+2025-10-05 17:40:12,554 - app.api.routes.where - INFO - Validating date parameters
+2025-10-05 17:40:12,554 - app.api.routes.where - INFO - Getting vibe configuration
+2025-10-05 17:40:12,554 - app.api.routes.where - INFO - Vibe config: {'name': 'Perfect Stargazing Night', 'description': 'Clear skies with low humidity for optimal star viewing', 'parameters': [{'id': 'CLRSKY_SFC_SW_DWN', 'weight': 0.5, 'scoring': 'high_is_better', 'min': 0, 'max': 10}, {'id': 'RH2M', 'weight': 0.3, 'scoring': 'low_is_better', 'min': 0, 'max': 100}, {'id': 'PRECTOTCORR', 'weight': 0.2, 'scoring': 'low_is_better', 'min': 0, 'max': 50}]}
+2025-10-05 17:40:12,554 - app.api.routes.where - INFO - Required parameters: ['CLRSKY_SFC_SW_DWN', 'RH2M', 'PRECTOTCORR']
+2025-10-05 17:40:12,554 - app.api.routes.where - INFO - Determining time parameters
+2025-10-05 17:40:12,554 - app.api.routes.where - INFO - Using single month mode: 10
+2025-10-05 17:40:12,554 - app.api.routes.where - INFO - Final time parameters - month: 10, year: 2025, start_date: None, end_date: None
+2025-10-05 17:40:12,554 - app.api.routes.where - INFO - Getting grid data for first parameter
+2025-10-05 17:40:12,554 - app.api.routes.where - INFO - First parameter: CLRSKY_SFC_SW_DWN
+2025-10-05 17:40:12,555 - app.services.data_service - DEBUG - Getting value for CLRSKY_SFC_SW_DWN at (12.972, 77.595), month=10, year=2025, start_date=None, end_date=None
+2025-10-05 17:40:12,556 - app.services.data_service - DEBUG - Finding nearest location for (12.972, 77.595)
+2025-10-05 17:40:12,556 - app.services.data_service - DEBUG - Nearest location: bangalore_core (distance: 0.0000)
+2025-10-05 17:40:12,557 - app.services.data_service - DEBUG - Loading data for location: bangalore_core
+2025-10-05 17:40:12,557 - app.services.data_service - DEBUG - Loading 9 files for bangalore_core
+2025-10-05 17:40:12,561 - app.services.data_service - DEBUG - Loading file: bangalore_core_point__2012-2014__20251004T154202Z.json
+2025-10-05 17:40:12,568 - app.services.data_service - DEBUG - Loading file: bangalore_core_point__2021-2023__20251004T154209Z.json
+2025-10-05 17:40:12,596 - app.services.data_service - DEBUG - Loading file: bangalore_core_point__2000-2002__20251004T154150Z.json
+2025-10-05 17:40:12,599 - app.services.data_service - DEBUG - Loading file: bangalore_core_point__2018-2020__20251004T154206Z.json
+2025-10-05 17:40:12,603 - app.services.data_service - DEBUG - Loading file: bangalore_core_point__2024-2024__20251004T154211Z.json
+2025-10-05 17:40:12,604 - app.services.data_service - DEBUG - Loading file: bangalore_core_point__2015-2017__20251004T154204Z.json
+2025-10-05 17:40:12,606 - app.services.data_service - DEBUG - Loading file: bangalore_core_point__2009-2011__20251004T154159Z.json
+2025-10-05 17:40:12,610 - app.services.data_service - DEBUG - Loading file: bangalore_core_point__2006-2008__20251004T154156Z.json
+2025-10-05 17:40:12,613 - app.services.data_service - DEBUG - Loading file: bangalore_core_point__2003-2005__20251004T154154Z.json
+2025-10-05 17:40:12,615 - app.services.data_service - INFO - Loaded data for bangalore_core with 9 parameters
+2025-10-05 17:40:12,616 - app.services.data_service - DEBUG - Found 9132 daily data points for CLRSKY_SFC_SW_DWN
+2025-10-05 17:40:12,649 - app.services.data_service - INFO - Year 2025 out of available range 2000-2024. Falling back to all years.
+2025-10-05 17:40:12,649 - app.services.data_service - DEBUG - Using monthly aggregation for month 10, year=None
+2025-10-05 17:40:12,672 - app.services.data_service - DEBUG - Final aggregated value: 22.808387096774194
+2025-10-05 17:40:12,672 - app.api.routes.where - INFO - Grid data retrieved: 1 points
+2025-10-05 17:40:12,672 - app.api.routes.where - INFO - Processing grid points
+2025-10-05 17:40:12,672 - app.api.routes.where - DEBUG - Processing point 1/1: (12.972, 77.595)
+2025-10-05 17:40:12,672 - app.services.data_service - DEBUG - Getting all parameters ['CLRSKY_SFC_SW_DWN', 'RH2M', 'PRECTOTCORR'] at (12.972, 77.595), month=10, year=2025
+2025-10-05 17:40:12,672 - app.services.data_service - DEBUG - Getting parameter: CLRSKY_SFC_SW_DWN
+2025-10-05 17:40:12,672 - app.services.data_service - DEBUG - Getting value for CLRSKY_SFC_SW_DWN at (12.972, 77.595), month=10, year=2025, start_date=None, end_date=None
+2025-10-05 17:40:12,672 - app.services.data_service - DEBUG - Finding nearest location for (12.972, 77.595)
+2025-10-05 17:40:12,672 - app.services.data_service - DEBUG - Nearest location: bangalore_core (distance: 0.0000)
+2025-10-05 17:40:12,672 - app.services.data_service - DEBUG - Loading data for location: bangalore_core
+2025-10-05 17:40:12,672 - app.services.data_service - DEBUG - Using cached data for bangalore_core
+2025-10-05 17:40:12,672 - app.services.data_service - DEBUG - Found 9132 daily data points for CLRSKY_SFC_SW_DWN
+2025-10-05 17:40:12,695 - app.services.data_service - INFO - Year 2025 out of available range 2000-2024. Falling back to all years.
+2025-10-05 17:40:12,695 - app.services.data_service - DEBUG - Using monthly aggregation for month 10, year=None
+2025-10-05 17:40:12,718 - app.services.data_service - DEBUG - Final aggregated value: 22.808387096774194
+2025-10-05 17:40:12,718 - app.services.data_service - DEBUG - Got value for CLRSKY_SFC_SW_DWN: 22.808387096774194
+2025-10-05 17:40:12,718 - app.services.data_service - DEBUG - Getting parameter: RH2M
+2025-10-05 17:40:12,718 - app.services.data_service - DEBUG - Getting value for RH2M at (12.972, 77.595), month=10, year=2025, start_date=None, end_date=None
+2025-10-05 17:40:12,718 - app.services.data_service - DEBUG - Finding nearest location for (12.972, 77.595)
+2025-10-05 17:40:12,718 - app.services.data_service - DEBUG - Nearest location: bangalore_core (distance: 0.0000)
+2025-10-05 17:40:12,718 - app.services.data_service - DEBUG - Loading data for location: bangalore_core
+2025-10-05 17:40:12,718 - app.services.data_service - DEBUG - Using cached data for bangalore_core
+2025-10-05 17:40:12,718 - app.services.data_service - DEBUG - Found 9132 daily data points for RH2M
+2025-10-05 17:40:12,740 - app.services.data_service - INFO - Year 2025 out of available range 2000-2024. Falling back to all years.
+2025-10-05 17:40:12,740 - app.services.data_service - DEBUG - Using monthly aggregation for month 10, year=None
+2025-10-05 17:40:12,762 - app.services.data_service - DEBUG - Final aggregated value: 81.40443870967742
+2025-10-05 17:40:12,762 - app.services.data_service - DEBUG - Got value for RH2M: 81.40443870967742
+2025-10-05 17:40:12,762 - app.services.data_service - DEBUG - Getting parameter: PRECTOTCORR
+2025-10-05 17:40:12,762 - app.services.data_service - DEBUG - Getting value for PRECTOTCORR at (12.972, 77.595), month=10, year=2025, start_date=None, end_date=None
+2025-10-05 17:40:12,762 - app.services.data_service - DEBUG - Finding nearest location for (12.972, 77.595)
+2025-10-05 17:40:12,762 - app.services.data_service - DEBUG - Nearest location: bangalore_core (distance: 0.0000)
+2025-10-05 17:40:12,762 - app.services.data_service - DEBUG - Loading data for location: bangalore_core
+2025-10-05 17:40:12,762 - app.services.data_service - DEBUG - Using cached data for bangalore_core
+2025-10-05 17:40:12,762 - app.services.data_service - DEBUG - Found 9132 daily data points for PRECTOTCORR
+2025-10-05 17:40:12,784 - app.services.data_service - INFO - Year 2025 out of available range 2000-2024. Falling back to all years.
+2025-10-05 17:40:12,784 - app.services.data_service - DEBUG - Using monthly aggregation for month 10, year=None
+2025-10-05 17:40:12,806 - app.services.data_service - DEBUG - Final aggregated value: 4.732541935483871
+2025-10-05 17:40:12,806 - app.services.data_service - DEBUG - Got value for PRECTOTCORR: 4.732541935483871
+2025-10-05 17:40:12,806 - app.services.data_service - DEBUG - Final result: {'CLRSKY_SFC_SW_DWN': np.float64(22.808387096774194), 'RH2M': np.float64(81.40443870967742), 'PRECTOTCORR': np.float64(4.732541935483871)}
+2025-10-05 17:40:12,806 - app.api.routes.where - DEBUG - Parameter values for point 1: {'CLRSKY_SFC_SW_DWN': np.float64(22.808387096774194), 'RH2M': np.float64(81.40443870967742), 'PRECTOTCORR': np.float64(4.732541935483871)}
+2025-10-05 17:40:12,806 - app.api.routes.where - DEBUG - Calculated score for point 1: 73.68565161290323
+2025-10-05 17:40:12,806 - app.api.routes.where - INFO - Processed 1 valid scores
+2025-10-05 17:40:12,806 - app.api.routes.where - INFO - Calculating statistics
+2025-10-05 17:40:12,806 - app.api.routes.where - INFO - Score range: 73.68565161290323 - 73.68565161290323
+2025-10-05 17:40:12,806 - app.api.routes.where - INFO - Building metadata
+2025-10-05 17:40:12,806 - app.api.routes.where - INFO - Creating response
+2025-10-05 17:40:12,806 - app.api.routes.where - INFO - Where endpoint completed successfully. Returning 1 locations
+2025-10-05 17:40:23,961 - app.api.routes.when - INFO - When endpoint called with request: vibe='stargazing' lat=12.972 lon=77.595 year=None start_date=None end_date=None analysis_type='daily'
+2025-10-05 17:40:23,961 - app.api.routes.when - INFO - Initializing vibe engine and data service
+2025-10-05 17:40:23,961 - app.api.routes.when - INFO - Services initialized successfully
+2025-10-05 17:40:23,961 - app.api.routes.when - INFO - Getting vibe configuration
+2025-10-05 17:40:23,961 - app.api.routes.when - INFO - Vibe config: {'name': 'Perfect Stargazing Night', 'description': 'Clear skies with low humidity for optimal star viewing', 'parameters': [{'id': 'CLRSKY_SFC_SW_DWN', 'weight': 0.5, 'scoring': 'high_is_better', 'min': 0, 'max': 10}, {'id': 'RH2M', 'weight': 0.3, 'scoring': 'low_is_better', 'min': 0, 'max': 100}, {'id': 'PRECTOTCORR', 'weight': 0.2, 'scoring': 'low_is_better', 'min': 0, 'max': 50}]}
+2025-10-05 17:40:23,961 - app.api.routes.when - INFO - Required parameters: ['CLRSKY_SFC_SW_DWN', 'RH2M', 'PRECTOTCORR']
+2025-10-05 17:40:23,961 - app.api.routes.when - INFO - Analysis type: daily
+2025-10-05 17:40:23,961 - app.api.routes.when - INFO - Determining time parameters
+2025-10-05 17:40:23,961 - app.api.routes.when - INFO - Using year: None
+2025-10-05 17:40:23,961 - app.api.routes.when - INFO - Final time parameters - year: 2025, start_date: None, end_date: None
+2025-10-05 17:40:23,961 - app.api.routes.when - INFO - Calling daily analysis
+2025-10-05 17:40:30,668 - app.api.routes.when - INFO - When endpoint called with request: vibe='stargazing' lat=12.972 lon=77.595 year=None start_date=None end_date=None analysis_type='daily'
+2025-10-05 17:40:30,674 - app.api.routes.when - INFO - Initializing vibe engine and data service
+2025-10-05 17:40:30,675 - app.api.routes.when - INFO - Services initialized successfully
+2025-10-05 17:40:30,675 - app.api.routes.when - INFO - Getting vibe configuration
+2025-10-05 17:40:30,675 - app.api.routes.when - INFO - Vibe config: {'name': 'Perfect Stargazing Night', 'description': 'Clear skies with low humidity for optimal star viewing', 'parameters': [{'id': 'CLRSKY_SFC_SW_DWN', 'weight': 0.5, 'scoring': 'high_is_better', 'min': 0, 'max': 10}, {'id': 'RH2M', 'weight': 0.3, 'scoring': 'low_is_better', 'min': 0, 'max': 100}, {'id': 'PRECTOTCORR', 'weight': 0.2, 'scoring': 'low_is_better', 'min': 0, 'max': 50}]}
+2025-10-05 17:40:30,676 - app.api.routes.when - INFO - Required parameters: ['CLRSKY_SFC_SW_DWN', 'RH2M', 'PRECTOTCORR']
+2025-10-05 17:40:30,676 - app.api.routes.when - INFO - Analysis type: daily
+2025-10-05 17:40:30,676 - app.api.routes.when - INFO - Determining time parameters
+2025-10-05 17:40:30,676 - app.api.routes.when - INFO - Using year: None
+2025-10-05 17:40:30,676 - app.api.routes.when - INFO - Final time parameters - year: 2025, start_date: None, end_date: None
+2025-10-05 17:40:30,676 - app.api.routes.when - INFO - Calling daily analysis
+2025-10-05 17:40:56,069 - app.api.routes.where - INFO - Where endpoint called with request: vibe='stargazing' month=None year=None start_date='2025-08-01' end_date='2025-10-05' center_lat=12.9158948645401 center_lon=77.6784896850586 radius_km=100.0 resolution=5.0
+2025-10-05 17:40:56,072 - app.api.routes.where - INFO - Initializing vibe engine and data service
+2025-10-05 17:40:56,072 - app.api.routes.where - INFO - Services initialized successfully
+2025-10-05 17:40:56,072 - app.api.routes.where - INFO - Validating date parameters
+2025-10-05 17:40:56,072 - app.api.routes.where - INFO - Getting vibe configuration
+2025-10-05 17:40:56,073 - app.api.routes.where - INFO - Vibe config: {'name': 'Perfect Stargazing Night', 'description': 'Clear skies with low humidity for optimal star viewing', 'parameters': [{'id': 'CLRSKY_SFC_SW_DWN', 'weight': 0.5, 'scoring': 'high_is_better', 'min': 0, 'max': 10}, {'id': 'RH2M', 'weight': 0.3, 'scoring': 'low_is_better', 'min': 0, 'max': 100}, {'id': 'PRECTOTCORR', 'weight': 0.2, 'scoring': 'low_is_better', 'min': 0, 'max': 50}]}
+2025-10-05 17:40:56,073 - app.api.routes.where - INFO - Required parameters: ['CLRSKY_SFC_SW_DWN', 'RH2M', 'PRECTOTCORR']
+2025-10-05 17:40:56,073 - app.api.routes.where - INFO - Determining time parameters
+2025-10-05 17:40:56,073 - app.api.routes.where - INFO - Using date range mode: 2025-08-01 to 2025-10-05
+2025-10-05 17:40:56,075 - app.api.routes.where - INFO - Final time parameters - month: None, year: 2025, start_date: 2025-08-01 00:00:00, end_date: 2025-10-05 00:00:00
+2025-10-05 17:40:56,076 - app.api.routes.where - INFO - Getting grid data for first parameter
+2025-10-05 17:40:56,076 - app.api.routes.where - INFO - First parameter: CLRSKY_SFC_SW_DWN
+2025-10-05 17:40:56,077 - app.services.data_service - DEBUG - Getting value for CLRSKY_SFC_SW_DWN at (12.972, 77.595), month=None, year=2025, start_date=2025-08-01 00:00:00, end_date=2025-10-05 00:00:00
+2025-10-05 17:40:56,077 - app.services.data_service - DEBUG - Finding nearest location for (12.972, 77.595)
+2025-10-05 17:40:56,078 - app.services.data_service - DEBUG - Nearest location: bangalore_core (distance: 0.0000)
+2025-10-05 17:40:56,078 - app.services.data_service - DEBUG - Loading data for location: bangalore_core
+2025-10-05 17:40:56,078 - app.services.data_service - DEBUG - Using cached data for bangalore_core
+2025-10-05 17:40:56,078 - app.services.data_service - DEBUG - Found 9132 daily data points for CLRSKY_SFC_SW_DWN
+2025-10-05 17:40:56,120 - app.services.data_service - DEBUG - Using date range aggregation: start=2024-12-31 00:00:00, end=2024-12-31 00:00:00
+2025-10-05 17:40:56,165 - app.services.data_service - DEBUG - Final aggregated value: 20.91
+2025-10-05 17:40:56,165 - app.api.routes.where - INFO - Grid data retrieved: 1 points
+2025-10-05 17:40:56,165 - app.api.routes.where - INFO - Processing grid points
+2025-10-05 17:40:56,165 - app.api.routes.where - DEBUG - Processing point 1/1: (12.972, 77.595)
+2025-10-05 17:40:56,165 - app.services.data_service - DEBUG - Getting all parameters ['CLRSKY_SFC_SW_DWN', 'RH2M', 'PRECTOTCORR'] at (12.972, 77.595), month=None, year=2025
+2025-10-05 17:40:56,166 - app.services.data_service - DEBUG - Getting parameter: CLRSKY_SFC_SW_DWN
+2025-10-05 17:40:56,166 - app.services.data_service - DEBUG - Getting value for CLRSKY_SFC_SW_DWN at (12.972, 77.595), month=None, year=2025, start_date=2025-08-01 00:00:00, end_date=2025-10-05 00:00:00
+2025-10-05 17:40:56,166 - app.services.data_service - DEBUG - Finding nearest location for (12.972, 77.595)
+2025-10-05 17:40:56,166 - app.services.data_service - DEBUG - Nearest location: bangalore_core (distance: 0.0000)
+2025-10-05 17:40:56,166 - app.services.data_service - DEBUG - Loading data for location: bangalore_core
+2025-10-05 17:40:56,166 - app.services.data_service - DEBUG - Using cached data for bangalore_core
+2025-10-05 17:40:56,166 - app.services.data_service - DEBUG - Found 9132 daily data points for CLRSKY_SFC_SW_DWN
+2025-10-05 17:40:56,226 - app.services.data_service - DEBUG - Using date range aggregation: start=2024-12-31 00:00:00, end=2024-12-31 00:00:00
+2025-10-05 17:40:56,250 - app.services.data_service - DEBUG - Final aggregated value: 20.91
+2025-10-05 17:40:56,251 - app.services.data_service - DEBUG - Got value for CLRSKY_SFC_SW_DWN: 20.91
+2025-10-05 17:40:56,251 - app.services.data_service - DEBUG - Getting parameter: RH2M
+2025-10-05 17:40:56,251 - app.services.data_service - DEBUG - Getting value for RH2M at (12.972, 77.595), month=None, year=2025, start_date=2025-08-01 00:00:00, end_date=2025-10-05 00:00:00
+2025-10-05 17:40:56,251 - app.services.data_service - DEBUG - Finding nearest location for (12.972, 77.595)
+2025-10-05 17:40:56,251 - app.services.data_service - DEBUG - Nearest location: bangalore_core (distance: 0.0000)
+2025-10-05 17:40:56,251 - app.services.data_service - DEBUG - Loading data for location: bangalore_core
+2025-10-05 17:40:56,251 - app.services.data_service - DEBUG - Using cached data for bangalore_core
+2025-10-05 17:40:56,251 - app.services.data_service - DEBUG - Found 9132 daily data points for RH2M
+2025-10-05 17:40:56,273 - app.services.data_service - DEBUG - Using date range aggregation: start=2024-12-31 00:00:00, end=2024-12-31 00:00:00
+2025-10-05 17:40:56,297 - app.services.data_service - DEBUG - Final aggregated value: 75.91
+2025-10-05 17:40:56,298 - app.services.data_service - DEBUG - Got value for RH2M: 75.91
+2025-10-05 17:40:56,298 - app.services.data_service - DEBUG - Getting parameter: PRECTOTCORR
+2025-10-05 17:40:56,298 - app.services.data_service - DEBUG - Getting value for PRECTOTCORR at (12.972, 77.595), month=None, year=2025, start_date=2025-08-01 00:00:00, end_date=2025-10-05 00:00:00
+2025-10-05 17:40:56,298 - app.services.data_service - DEBUG - Finding nearest location for (12.972, 77.595)
+2025-10-05 17:40:56,298 - app.services.data_service - DEBUG - Nearest location: bangalore_core (distance: 0.0000)
+2025-10-05 17:40:56,298 - app.services.data_service - DEBUG - Loading data for location: bangalore_core
+2025-10-05 17:40:56,298 - app.services.data_service - DEBUG - Using cached data for bangalore_core
+2025-10-05 17:40:56,298 - app.services.data_service - DEBUG - Found 9132 daily data points for PRECTOTCORR
+2025-10-05 17:40:56,359 - app.services.data_service - DEBUG - Using date range aggregation: start=2024-12-31 00:00:00, end=2024-12-31 00:00:00
+2025-10-05 17:40:56,387 - app.services.data_service - DEBUG - Final aggregated value: 0.0
+2025-10-05 17:40:56,387 - app.services.data_service - DEBUG - Got value for PRECTOTCORR: 0.0
+2025-10-05 17:40:56,387 - app.services.data_service - DEBUG - Final result: {'CLRSKY_SFC_SW_DWN': np.float64(20.91), 'RH2M': np.float64(75.91), 'PRECTOTCORR': np.float64(0.0)}
+2025-10-05 17:40:56,387 - app.api.routes.where - DEBUG - Parameter values for point 1: {'CLRSKY_SFC_SW_DWN': np.float64(20.91), 'RH2M': np.float64(75.91), 'PRECTOTCORR': np.float64(0.0)}
+2025-10-05 17:40:56,387 - app.api.routes.where - DEBUG - Calculated score for point 1: 77.227
+2025-10-05 17:40:56,387 - app.api.routes.where - INFO - Processed 1 valid scores
+2025-10-05 17:40:56,387 - app.api.routes.where - INFO - Calculating statistics
+2025-10-05 17:40:56,387 - app.api.routes.where - INFO - Score range: 77.227 - 77.227
+2025-10-05 17:40:56,387 - app.api.routes.where - INFO - Building metadata
+2025-10-05 17:40:56,387 - app.api.routes.where - INFO - Creating response
+2025-10-05 17:40:56,387 - app.api.routes.where - INFO - Where endpoint completed successfully. Returning 1 locations
+2025-10-05 17:40:57,795 - app.api.routes.when - INFO - When endpoint called with request: vibe='stargazing' lat=12.972 lon=77.595 year=None start_date=None end_date=None analysis_type='monthly'
+2025-10-05 17:40:57,795 - app.api.routes.when - INFO - Initializing vibe engine and data service
+2025-10-05 17:40:57,796 - app.api.routes.when - INFO - Services initialized successfully
+2025-10-05 17:40:57,796 - app.api.routes.when - INFO - Getting vibe configuration
+2025-10-05 17:40:57,796 - app.api.routes.when - INFO - Vibe config: {'name': 'Perfect Stargazing Night', 'description': 'Clear skies with low humidity for optimal star viewing', 'parameters': [{'id': 'CLRSKY_SFC_SW_DWN', 'weight': 0.5, 'scoring': 'high_is_better', 'min': 0, 'max': 10}, {'id': 'RH2M', 'weight': 0.3, 'scoring': 'low_is_better', 'min': 0, 'max': 100}, {'id': 'PRECTOTCORR', 'weight': 0.2, 'scoring': 'low_is_better', 'min': 0, 'max': 50}]}
+2025-10-05 17:40:57,796 - app.api.routes.when - INFO - Required parameters: ['CLRSKY_SFC_SW_DWN', 'RH2M', 'PRECTOTCORR']
+2025-10-05 17:40:57,796 - app.api.routes.when - INFO - Analysis type: monthly
+2025-10-05 17:40:57,796 - app.api.routes.when - INFO - Determining time parameters
+2025-10-05 17:40:57,796 - app.api.routes.when - INFO - Using year: None
+2025-10-05 17:40:57,796 - app.api.routes.when - INFO - Final time parameters - year: 2025, start_date: None, end_date: None
+2025-10-05 17:40:57,797 - app.api.routes.when - INFO - Calling monthly analysis
+2025-10-05 17:40:57,797 - app.api.routes.when - INFO - Starting monthly analysis
+2025-10-05 17:40:57,797 - app.api.routes.when - INFO - Calculating scores for each month
+2025-10-05 17:40:57,797 - app.api.routes.when - DEBUG - Processing month 1
+2025-10-05 17:40:57,797 - app.services.data_service - DEBUG - Getting all parameters ['CLRSKY_SFC_SW_DWN', 'RH2M', 'PRECTOTCORR'] at (12.972, 77.595), month=1, year=2025
+2025-10-05 17:40:57,798 - app.services.data_service - DEBUG - Getting parameter: CLRSKY_SFC_SW_DWN
+2025-10-05 17:40:57,798 - app.services.data_service - DEBUG - Getting value for CLRSKY_SFC_SW_DWN at (12.972, 77.595), month=1, year=2025, start_date=None, end_date=None
+2025-10-05 17:40:57,798 - app.services.data_service - DEBUG - Finding nearest location for (12.972, 77.595)
+2025-10-05 17:40:57,798 - app.services.data_service - DEBUG - Nearest location: bangalore_core (distance: 0.0000)
+2025-10-05 17:40:57,798 - app.services.data_service - DEBUG - Loading data for location: bangalore_core
+2025-10-05 17:40:57,798 - app.services.data_service - DEBUG - Using cached data for bangalore_core
+2025-10-05 17:40:57,798 - app.services.data_service - DEBUG - Found 9132 daily data points for CLRSKY_SFC_SW_DWN
+2025-10-05 17:40:57,834 - app.services.data_service - INFO - Year 2025 out of available range 2000-2024. Falling back to all years.
+2025-10-05 17:40:57,834 - app.services.data_service - DEBUG - Using monthly aggregation for month 1, year=None
+2025-10-05 17:40:57,861 - app.services.data_service - DEBUG - Final aggregated value: 21.211032258064517
+2025-10-05 17:40:57,861 - app.services.data_service - DEBUG - Got value for CLRSKY_SFC_SW_DWN: 21.211032258064517
+2025-10-05 17:40:57,861 - app.services.data_service - DEBUG - Getting parameter: RH2M
+2025-10-05 17:40:57,861 - app.services.data_service - DEBUG - Getting value for RH2M at (12.972, 77.595), month=1, year=2025, start_date=None, end_date=None
+2025-10-05 17:40:57,861 - app.services.data_service - DEBUG - Finding nearest location for (12.972, 77.595)
+2025-10-05 17:40:57,861 - app.services.data_service - DEBUG - Nearest location: bangalore_core (distance: 0.0000)
+2025-10-05 17:40:57,861 - app.services.data_service - DEBUG - Loading data for location: bangalore_core
+2025-10-05 17:40:57,861 - app.services.data_service - DEBUG - Using cached data for bangalore_core
+2025-10-05 17:40:57,861 - app.services.data_service - DEBUG - Found 9132 daily data points for RH2M
+2025-10-05 17:40:57,884 - app.services.data_service - INFO - Year 2025 out of available range 2000-2024. Falling back to all years.
+2025-10-05 17:40:57,885 - app.services.data_service - DEBUG - Using monthly aggregation for month 1, year=None
+2025-10-05 17:40:57,906 - app.services.data_service - DEBUG - Final aggregated value: 64.42569032258065
+2025-10-05 17:40:57,907 - app.services.data_service - DEBUG - Got value for RH2M: 64.42569032258065
+2025-10-05 17:40:57,907 - app.services.data_service - DEBUG - Getting parameter: PRECTOTCORR
+2025-10-05 17:40:57,907 - app.services.data_service - DEBUG - Getting value for PRECTOTCORR at (12.972, 77.595), month=1, year=2025, start_date=None, end_date=None
+2025-10-05 17:40:57,907 - app.services.data_service - DEBUG - Finding nearest location for (12.972, 77.595)
+2025-10-05 17:40:57,907 - app.services.data_service - DEBUG - Nearest location: bangalore_core (distance: 0.0000)
+2025-10-05 17:40:57,907 - app.services.data_service - DEBUG - Loading data for location: bangalore_core
+2025-10-05 17:40:57,907 - app.services.data_service - DEBUG - Using cached data for bangalore_core
+2025-10-05 17:40:57,907 - app.services.data_service - DEBUG - Found 9132 daily data points for PRECTOTCORR
+2025-10-05 17:40:57,929 - app.services.data_service - INFO - Year 2025 out of available range 2000-2024. Falling back to all years.
+2025-10-05 17:40:57,929 - app.services.data_service - DEBUG - Using monthly aggregation for month 1, year=None
+2025-10-05 17:40:57,952 - app.services.data_service - DEBUG - Final aggregated value: 0.09778064516129033
+2025-10-05 17:40:57,952 - app.services.data_service - DEBUG - Got value for PRECTOTCORR: 0.09778064516129033
+2025-10-05 17:40:57,952 - app.services.data_service - DEBUG - Final result: {'CLRSKY_SFC_SW_DWN': np.float64(21.211032258064517), 'RH2M': np.float64(64.42569032258065), 'PRECTOTCORR': np.float64(0.09778064516129033)}
+2025-10-05 17:40:57,952 - app.api.routes.when - DEBUG - Parameter values for month 1: {'CLRSKY_SFC_SW_DWN': np.float64(21.211032258064517), 'RH2M': np.float64(64.42569032258065), 'PRECTOTCORR': np.float64(0.09778064516129033)}
+2025-10-05 17:40:57,952 - app.api.routes.when - DEBUG - Calculated score for month 1: 80.63318064516129
+2025-10-05 17:40:57,952 - app.api.routes.when - DEBUG - Processing month 2
+2025-10-05 17:40:57,952 - app.services.data_service - DEBUG - Getting all parameters ['CLRSKY_SFC_SW_DWN', 'RH2M', 'PRECTOTCORR'] at (12.972, 77.595), month=2, year=2025
+2025-10-05 17:40:57,952 - app.services.data_service - DEBUG - Getting parameter: CLRSKY_SFC_SW_DWN
+2025-10-05 17:40:57,952 - app.services.data_service - DEBUG - Getting value for CLRSKY_SFC_SW_DWN at (12.972, 77.595), month=2, year=2025, start_date=None, end_date=None
+2025-10-05 17:40:57,952 - app.services.data_service - DEBUG - Finding nearest location for (12.972, 77.595)
+2025-10-05 17:40:57,952 - app.services.data_service - DEBUG - Nearest location: bangalore_core (distance: 0.0000)
+2025-10-05 17:40:57,952 - app.services.data_service - DEBUG - Loading data for location: bangalore_core
+2025-10-05 17:40:57,952 - app.services.data_service - DEBUG - Using cached data for bangalore_core
+2025-10-05 17:40:57,952 - app.services.data_service - DEBUG - Found 9132 daily data points for CLRSKY_SFC_SW_DWN
+2025-10-05 17:40:57,974 - app.services.data_service - INFO - Year 2025 out of available range 2000-2024. Falling back to all years.
+2025-10-05 17:40:57,974 - app.services.data_service - DEBUG - Using monthly aggregation for month 2, year=None
+2025-10-05 17:40:57,997 - app.services.data_service - DEBUG - Final aggregated value: 23.712560113154172
+2025-10-05 17:40:57,997 - app.services.data_service - DEBUG - Got value for CLRSKY_SFC_SW_DWN: 23.712560113154172
+2025-10-05 17:40:57,997 - app.services.data_service - DEBUG - Getting parameter: RH2M
+2025-10-05 17:40:57,997 - app.services.data_service - DEBUG - Getting value for RH2M at (12.972, 77.595), month=2, year=2025, start_date=None, end_date=None
+2025-10-05 17:40:57,997 - app.services.data_service - DEBUG - Finding nearest location for (12.972, 77.595)
+2025-10-05 17:40:57,997 - app.services.data_service - DEBUG - Nearest location: bangalore_core (distance: 0.0000)
+2025-10-05 17:40:57,997 - app.services.data_service - DEBUG - Loading data for location: bangalore_core
+2025-10-05 17:40:57,997 - app.services.data_service - DEBUG - Using cached data for bangalore_core
+2025-10-05 17:40:57,997 - app.services.data_service - DEBUG - Found 9132 daily data points for RH2M
+2025-10-05 17:40:58,044 - app.services.data_service - INFO - Year 2025 out of available range 2000-2024. Falling back to all years.
+2025-10-05 17:40:58,044 - app.services.data_service - DEBUG - Using monthly aggregation for month 2, year=None
+2025-10-05 17:40:58,071 - app.services.data_service - DEBUG - Final aggregated value: 51.918203677510604
+2025-10-05 17:40:58,071 - app.services.data_service - DEBUG - Got value for RH2M: 51.918203677510604
+2025-10-05 17:40:58,071 - app.services.data_service - DEBUG - Getting parameter: PRECTOTCORR
+2025-10-05 17:40:58,071 - app.services.data_service - DEBUG - Getting value for PRECTOTCORR at (12.972, 77.595), month=2, year=2025, start_date=None, end_date=None
+2025-10-05 17:40:58,071 - app.services.data_service - DEBUG - Finding nearest location for (12.972, 77.595)
+2025-10-05 17:40:58,071 - app.services.data_service - DEBUG - Nearest location: bangalore_core (distance: 0.0000)
+2025-10-05 17:40:58,071 - app.services.data_service - DEBUG - Loading data for location: bangalore_core
+2025-10-05 17:40:58,071 - app.services.data_service - DEBUG - Using cached data for bangalore_core
+2025-10-05 17:40:58,071 - app.services.data_service - DEBUG - Found 9132 daily data points for PRECTOTCORR
+2025-10-05 17:40:58,097 - app.services.data_service - INFO - Year 2025 out of available range 2000-2024. Falling back to all years.
+2025-10-05 17:40:58,097 - app.services.data_service - DEBUG - Using monthly aggregation for month 2, year=None
+2025-10-05 17:40:58,119 - app.services.data_service - DEBUG - Final aggregated value: 0.22840169731258841
+2025-10-05 17:40:58,120 - app.services.data_service - DEBUG - Got value for PRECTOTCORR: 0.22840169731258841
+2025-10-05 17:40:58,120 - app.services.data_service - DEBUG - Final result: {'CLRSKY_SFC_SW_DWN': np.float64(23.712560113154172), 'RH2M': np.float64(51.918203677510604), 'PRECTOTCORR': np.float64(0.22840169731258841)}
+2025-10-05 17:40:58,120 - app.api.routes.when - DEBUG - Parameter values for month 2: {'CLRSKY_SFC_SW_DWN': np.float64(23.712560113154172), 'RH2M': np.float64(51.918203677510604), 'PRECTOTCORR': np.float64(0.22840169731258841)}
+2025-10-05 17:40:58,120 - app.api.routes.when - DEBUG - Calculated score for month 2: 84.3331782178218
+2025-10-05 17:40:58,120 - app.api.routes.when - DEBUG - Processing month 3
+2025-10-05 17:40:58,120 - app.services.data_service - DEBUG - Getting all parameters ['CLRSKY_SFC_SW_DWN', 'RH2M', 'PRECTOTCORR'] at (12.972, 77.595), month=3, year=2025
+2025-10-05 17:40:58,120 - app.services.data_service - DEBUG - Getting parameter: CLRSKY_SFC_SW_DWN
+2025-10-05 17:40:58,120 - app.services.data_service - DEBUG - Getting value for CLRSKY_SFC_SW_DWN at (12.972, 77.595), month=3, year=2025, start_date=None, end_date=None
+2025-10-05 17:40:58,120 - app.services.data_service - DEBUG - Finding nearest location for (12.972, 77.595)
+2025-10-05 17:40:58,120 - app.services.data_service - DEBUG - Nearest location: bangalore_core (distance: 0.0000)
+2025-10-05 17:40:58,120 - app.services.data_service - DEBUG - Loading data for location: bangalore_core
+2025-10-05 17:40:58,120 - app.services.data_service - DEBUG - Using cached data for bangalore_core
+2025-10-05 17:40:58,120 - app.services.data_service - DEBUG - Found 9132 daily data points for CLRSKY_SFC_SW_DWN
+2025-10-05 17:40:58,141 - app.services.data_service - INFO - Year 2025 out of available range 2000-2024. Falling back to all years.
+2025-10-05 17:40:58,141 - app.services.data_service - DEBUG - Using monthly aggregation for month 3, year=None
+2025-10-05 17:40:58,163 - app.services.data_service - DEBUG - Final aggregated value: 25.3356
+2025-10-05 17:40:58,163 - app.services.data_service - DEBUG - Got value for CLRSKY_SFC_SW_DWN: 25.3356
+2025-10-05 17:40:58,163 - app.services.data_service - DEBUG - Getting parameter: RH2M
+2025-10-05 17:40:58,163 - app.services.data_service - DEBUG - Getting value for RH2M at (12.972, 77.595), month=3, year=2025, start_date=None, end_date=None
+2025-10-05 17:40:58,163 - app.services.data_service - DEBUG - Finding nearest location for (12.972, 77.595)
+2025-10-05 17:40:58,163 - app.services.data_service - DEBUG - Nearest location: bangalore_core (distance: 0.0000)
+2025-10-05 17:40:58,163 - app.services.data_service - DEBUG - Loading data for location: bangalore_core
+2025-10-05 17:40:58,163 - app.services.data_service - DEBUG - Using cached data for bangalore_core
+2025-10-05 17:40:58,163 - app.services.data_service - DEBUG - Found 9132 daily data points for RH2M
+2025-10-05 17:40:58,185 - app.services.data_service - INFO - Year 2025 out of available range 2000-2024. Falling back to all years.
+2025-10-05 17:40:58,185 - app.services.data_service - DEBUG - Using monthly aggregation for month 3, year=None
+2025-10-05 17:40:58,209 - app.services.data_service - DEBUG - Final aggregated value: 43.75585806451613
+2025-10-05 17:40:58,209 - app.services.data_service - DEBUG - Got value for RH2M: 43.75585806451613
+2025-10-05 17:40:58,209 - app.services.data_service - DEBUG - Getting parameter: PRECTOTCORR
+2025-10-05 17:40:58,209 - app.services.data_service - DEBUG - Getting value for PRECTOTCORR at (12.972, 77.595), month=3, year=2025, start_date=None, end_date=None
+2025-10-05 17:40:58,209 - app.services.data_service - DEBUG - Finding nearest location for (12.972, 77.595)
+2025-10-05 17:40:58,209 - app.services.data_service - DEBUG - Nearest location: bangalore_core (distance: 0.0000)
+2025-10-05 17:40:58,209 - app.services.data_service - DEBUG - Loading data for location: bangalore_core
+2025-10-05 17:40:58,209 - app.services.data_service - DEBUG - Using cached data for bangalore_core
+2025-10-05 17:40:58,209 - app.services.data_service - DEBUG - Found 9132 daily data points for PRECTOTCORR
+2025-10-05 17:40:58,231 - app.services.data_service - INFO - Year 2025 out of available range 2000-2024. Falling back to all years.
+2025-10-05 17:40:58,231 - app.services.data_service - DEBUG - Using monthly aggregation for month 3, year=None
+2025-10-05 17:40:58,252 - app.services.data_service - DEBUG - Final aggregated value: 0.4984258064516129
+2025-10-05 17:40:58,252 - app.services.data_service - DEBUG - Got value for PRECTOTCORR: 0.4984258064516129
+2025-10-05 17:40:58,252 - app.services.data_service - DEBUG - Final result: {'CLRSKY_SFC_SW_DWN': np.float64(25.3356), 'RH2M': np.float64(43.75585806451613), 'PRECTOTCORR': np.float64(0.4984258064516129)}
+2025-10-05 17:40:58,252 - app.api.routes.when - DEBUG - Parameter values for month 3: {'CLRSKY_SFC_SW_DWN': np.float64(25.3356), 'RH2M': np.float64(43.75585806451613), 'PRECTOTCORR': np.float64(0.4984258064516129)}
+2025-10-05 17:40:58,252 - app.api.routes.when - DEBUG - Calculated score for month 3: 86.6738722580645
+2025-10-05 17:40:58,252 - app.api.routes.when - DEBUG - Processing month 4
+2025-10-05 17:40:58,252 - app.services.data_service - DEBUG - Getting all parameters ['CLRSKY_SFC_SW_DWN', 'RH2M', 'PRECTOTCORR'] at (12.972, 77.595), month=4, year=2025
+2025-10-05 17:40:58,252 - app.services.data_service - DEBUG - Getting parameter: CLRSKY_SFC_SW_DWN
+2025-10-05 17:40:58,252 - app.services.data_service - DEBUG - Getting value for CLRSKY_SFC_SW_DWN at (12.972, 77.595), month=4, year=2025, start_date=None, end_date=None
+2025-10-05 17:40:58,252 - app.services.data_service - DEBUG - Finding nearest location for (12.972, 77.595)
+2025-10-05 17:40:58,252 - app.services.data_service - DEBUG - Nearest location: bangalore_core (distance: 0.0000)
+2025-10-05 17:40:58,252 - app.services.data_service - DEBUG - Loading data for location: bangalore_core
+2025-10-05 17:40:58,252 - app.services.data_service - DEBUG - Using cached data for bangalore_core
+2025-10-05 17:40:58,252 - app.services.data_service - DEBUG - Found 9132 daily data points for CLRSKY_SFC_SW_DWN
+2025-10-05 17:40:58,274 - app.services.data_service - INFO - Year 2025 out of available range 2000-2024. Falling back to all years.
+2025-10-05 17:40:58,274 - app.services.data_service - DEBUG - Using monthly aggregation for month 4, year=None
+2025-10-05 17:40:58,297 - app.services.data_service - DEBUG - Final aggregated value: 25.897426666666668
+2025-10-05 17:40:58,297 - app.services.data_service - DEBUG - Got value for CLRSKY_SFC_SW_DWN: 25.897426666666668
+2025-10-05 17:40:58,297 - app.services.data_service - DEBUG - Getting parameter: RH2M
+2025-10-05 17:40:58,297 - app.services.data_service - DEBUG - Getting value for RH2M at (12.972, 77.595), month=4, year=2025, start_date=None, end_date=None
+2025-10-05 17:40:58,297 - app.services.data_service - DEBUG - Finding nearest location for (12.972, 77.595)
+2025-10-05 17:40:58,297 - app.services.data_service - DEBUG - Nearest location: bangalore_core (distance: 0.0000)
+2025-10-05 17:40:58,297 - app.services.data_service - DEBUG - Loading data for location: bangalore_core
+2025-10-05 17:40:58,297 - app.services.data_service - DEBUG - Using cached data for bangalore_core
+2025-10-05 17:40:58,297 - app.services.data_service - DEBUG - Found 9132 daily data points for RH2M
+2025-10-05 17:40:58,319 - app.services.data_service - INFO - Year 2025 out of available range 2000-2024. Falling back to all years.
+2025-10-05 17:40:58,319 - app.services.data_service - DEBUG - Using monthly aggregation for month 4, year=None
+2025-10-05 17:40:58,351 - app.services.data_service - DEBUG - Final aggregated value: 48.504960000000004
+2025-10-05 17:40:58,352 - app.services.data_service - DEBUG - Got value for RH2M: 48.504960000000004
+2025-10-05 17:40:58,352 - app.services.data_service - DEBUG - Getting parameter: PRECTOTCORR
+2025-10-05 17:40:58,352 - app.services.data_service - DEBUG - Getting value for PRECTOTCORR at (12.972, 77.595), month=4, year=2025, start_date=None, end_date=None
+2025-10-05 17:40:58,352 - app.services.data_service - DEBUG - Finding nearest location for (12.972, 77.595)
+2025-10-05 17:40:58,352 - app.services.data_service - DEBUG - Nearest location: bangalore_core (distance: 0.0000)
+2025-10-05 17:40:58,352 - app.services.data_service - DEBUG - Loading data for location: bangalore_core
+2025-10-05 17:40:58,352 - app.services.data_service - DEBUG - Using cached data for bangalore_core
+2025-10-05 17:40:58,352 - app.services.data_service - DEBUG - Found 9132 daily data points for PRECTOTCORR
+2025-10-05 17:40:58,394 - app.services.data_service - INFO - Year 2025 out of available range 2000-2024. Falling back to all years.
+2025-10-05 17:40:58,394 - app.services.data_service - DEBUG - Using monthly aggregation for month 4, year=None
+2025-10-05 17:40:58,417 - app.services.data_service - DEBUG - Final aggregated value: 1.7922133333333334
+2025-10-05 17:40:58,417 - app.services.data_service - DEBUG - Got value for PRECTOTCORR: 1.7922133333333334
+2025-10-05 17:40:58,417 - app.services.data_service - DEBUG - Final result: {'CLRSKY_SFC_SW_DWN': np.float64(25.897426666666668), 'RH2M': np.float64(48.504960000000004), 'PRECTOTCORR': np.float64(1.7922133333333334)}
+2025-10-05 17:40:58,417 - app.api.routes.when - DEBUG - Parameter values for month 4: {'CLRSKY_SFC_SW_DWN': np.float64(25.897426666666668), 'RH2M': np.float64(48.504960000000004), 'PRECTOTCORR': np.float64(1.7922133333333334)}
+2025-10-05 17:40:58,417 - app.api.routes.when - DEBUG - Calculated score for month 4: 84.73162666666667
+2025-10-05 17:40:58,417 - app.api.routes.when - DEBUG - Processing month 5
+2025-10-05 17:40:58,417 - app.services.data_service - DEBUG - Getting all parameters ['CLRSKY_SFC_SW_DWN', 'RH2M', 'PRECTOTCORR'] at (12.972, 77.595), month=5, year=2025
+2025-10-05 17:40:58,417 - app.services.data_service - DEBUG - Getting parameter: CLRSKY_SFC_SW_DWN
+2025-10-05 17:40:58,417 - app.services.data_service - DEBUG - Getting value for CLRSKY_SFC_SW_DWN at (12.972, 77.595), month=5, year=2025, start_date=None, end_date=None
+2025-10-05 17:40:58,417 - app.services.data_service - DEBUG - Finding nearest location for (12.972, 77.595)
+2025-10-05 17:40:58,417 - app.services.data_service - DEBUG - Nearest location: bangalore_core (distance: 0.0000)
+2025-10-05 17:40:58,417 - app.services.data_service - DEBUG - Loading data for location: bangalore_core
+2025-10-05 17:40:58,417 - app.services.data_service - DEBUG - Using cached data for bangalore_core
+2025-10-05 17:40:58,417 - app.services.data_service - DEBUG - Found 9132 daily data points for CLRSKY_SFC_SW_DWN
+2025-10-05 17:40:58,440 - app.services.data_service - INFO - Year 2025 out of available range 2000-2024. Falling back to all years.
+2025-10-05 17:40:58,441 - app.services.data_service - DEBUG - Using monthly aggregation for month 5, year=None
+2025-10-05 17:40:58,462 - app.services.data_service - DEBUG - Final aggregated value: 25.442722580645164
+2025-10-05 17:40:58,462 - app.services.data_service - DEBUG - Got value for CLRSKY_SFC_SW_DWN: 25.442722580645164
+2025-10-05 17:40:58,462 - app.services.data_service - DEBUG - Getting parameter: RH2M
+2025-10-05 17:40:58,462 - app.services.data_service - DEBUG - Getting value for RH2M at (12.972, 77.595), month=5, year=2025, start_date=None, end_date=None
+2025-10-05 17:40:58,462 - app.services.data_service - DEBUG - Finding nearest location for (12.972, 77.595)
+2025-10-05 17:40:58,462 - app.services.data_service - DEBUG - Nearest location: bangalore_core (distance: 0.0000)
+2025-10-05 17:40:58,462 - app.services.data_service - DEBUG - Loading data for location: bangalore_core
+2025-10-05 17:40:58,462 - app.services.data_service - DEBUG - Using cached data for bangalore_core
+2025-10-05 17:40:58,462 - app.services.data_service - DEBUG - Found 9132 daily data points for RH2M
+2025-10-05 17:40:58,483 - app.services.data_service - INFO - Year 2025 out of available range 2000-2024. Falling back to all years.
+2025-10-05 17:40:58,483 - app.services.data_service - DEBUG - Using monthly aggregation for month 5, year=None
+2025-10-05 17:40:58,505 - app.services.data_service - DEBUG - Final aggregated value: 64.56587096774194
+2025-10-05 17:40:58,505 - app.services.data_service - DEBUG - Got value for RH2M: 64.56587096774194
+2025-10-05 17:40:58,505 - app.services.data_service - DEBUG - Getting parameter: PRECTOTCORR
+2025-10-05 17:40:58,505 - app.services.data_service - DEBUG - Getting value for PRECTOTCORR at (12.972, 77.595), month=5, year=2025, start_date=None, end_date=None
+2025-10-05 17:40:58,505 - app.services.data_service - DEBUG - Finding nearest location for (12.972, 77.595)
+2025-10-05 17:40:58,505 - app.services.data_service - DEBUG - Nearest location: bangalore_core (distance: 0.0000)
+2025-10-05 17:40:58,505 - app.services.data_service - DEBUG - Loading data for location: bangalore_core
+2025-10-05 17:40:58,505 - app.services.data_service - DEBUG - Using cached data for bangalore_core
+2025-10-05 17:40:58,505 - app.services.data_service - DEBUG - Found 9132 daily data points for PRECTOTCORR
+2025-10-05 17:40:58,526 - app.services.data_service - INFO - Year 2025 out of available range 2000-2024. Falling back to all years.
+2025-10-05 17:40:58,526 - app.services.data_service - DEBUG - Using monthly aggregation for month 5, year=None
+2025-10-05 17:40:58,547 - app.services.data_service - DEBUG - Final aggregated value: 3.688477419354839
+2025-10-05 17:40:58,548 - app.services.data_service - DEBUG - Got value for PRECTOTCORR: 3.688477419354839
+2025-10-05 17:40:58,548 - app.services.data_service - DEBUG - Final result: {'CLRSKY_SFC_SW_DWN': np.float64(25.442722580645164), 'RH2M': np.float64(64.56587096774194), 'PRECTOTCORR': np.float64(3.688477419354839)}
+2025-10-05 17:40:58,548 - app.api.routes.when - DEBUG - Parameter values for month 5: {'CLRSKY_SFC_SW_DWN': np.float64(25.442722580645164), 'RH2M': np.float64(64.56587096774194), 'PRECTOTCORR': np.float64(3.688477419354839)}
+2025-10-05 17:40:58,548 - app.api.routes.when - DEBUG - Calculated score for month 5: 79.15484774193548
+2025-10-05 17:40:58,548 - app.api.routes.when - DEBUG - Processing month 6
+2025-10-05 17:40:58,548 - app.services.data_service - DEBUG - Getting all parameters ['CLRSKY_SFC_SW_DWN', 'RH2M', 'PRECTOTCORR'] at (12.972, 77.595), month=6, year=2025
+2025-10-05 17:40:58,548 - app.services.data_service - DEBUG - Getting parameter: CLRSKY_SFC_SW_DWN
+2025-10-05 17:40:58,548 - app.services.data_service - DEBUG - Getting value for CLRSKY_SFC_SW_DWN at (12.972, 77.595), month=6, year=2025, start_date=None, end_date=None
+2025-10-05 17:40:58,548 - app.services.data_service - DEBUG - Finding nearest location for (12.972, 77.595)
+2025-10-05 17:40:58,548 - app.services.data_service - DEBUG - Nearest location: bangalore_core (distance: 0.0000)
+2025-10-05 17:40:58,548 - app.services.data_service - DEBUG - Loading data for location: bangalore_core
+2025-10-05 17:40:58,548 - app.services.data_service - DEBUG - Using cached data for bangalore_core
+2025-10-05 17:40:58,548 - app.services.data_service - DEBUG - Found 9132 daily data points for CLRSKY_SFC_SW_DWN
+2025-10-05 17:40:58,569 - app.services.data_service - INFO - Year 2025 out of available range 2000-2024. Falling back to all years.
+2025-10-05 17:40:58,569 - app.services.data_service - DEBUG - Using monthly aggregation for month 6, year=None
+2025-10-05 17:40:58,590 - app.services.data_service - DEBUG - Final aggregated value: 25.430106666666664
+2025-10-05 17:40:58,590 - app.services.data_service - DEBUG - Got value for CLRSKY_SFC_SW_DWN: 25.430106666666664
+2025-10-05 17:40:58,590 - app.services.data_service - DEBUG - Getting parameter: RH2M
+2025-10-05 17:40:58,590 - app.services.data_service - DEBUG - Getting value for RH2M at (12.972, 77.595), month=6, year=2025, start_date=None, end_date=None
+2025-10-05 17:40:58,590 - app.services.data_service - DEBUG - Finding nearest location for (12.972, 77.595)
+2025-10-05 17:40:58,590 - app.services.data_service - DEBUG - Nearest location: bangalore_core (distance: 0.0000)
+2025-10-05 17:40:58,590 - app.services.data_service - DEBUG - Loading data for location: bangalore_core
+2025-10-05 17:40:58,590 - app.services.data_service - DEBUG - Using cached data for bangalore_core
+2025-10-05 17:40:58,590 - app.services.data_service - DEBUG - Found 9132 daily data points for RH2M
+2025-10-05 17:40:58,611 - app.services.data_service - INFO - Year 2025 out of available range 2000-2024. Falling back to all years.
+2025-10-05 17:40:58,611 - app.services.data_service - DEBUG - Using monthly aggregation for month 6, year=None
+2025-10-05 17:40:58,632 - app.services.data_service - DEBUG - Final aggregated value: 74.75872
+2025-10-05 17:40:58,632 - app.services.data_service - DEBUG - Got value for RH2M: 74.75872
+2025-10-05 17:40:58,632 - app.services.data_service - DEBUG - Getting parameter: PRECTOTCORR
+2025-10-05 17:40:58,632 - app.services.data_service - DEBUG - Getting value for PRECTOTCORR at (12.972, 77.595), month=6, year=2025, start_date=None, end_date=None
+2025-10-05 17:40:58,633 - app.services.data_service - DEBUG - Finding nearest location for (12.972, 77.595)
+2025-10-05 17:40:58,633 - app.services.data_service - DEBUG - Nearest location: bangalore_core (distance: 0.0000)
+2025-10-05 17:40:58,633 - app.services.data_service - DEBUG - Loading data for location: bangalore_core
+2025-10-05 17:40:58,633 - app.services.data_service - DEBUG - Using cached data for bangalore_core
+2025-10-05 17:40:58,633 - app.services.data_service - DEBUG - Found 9132 daily data points for PRECTOTCORR
+2025-10-05 17:40:58,653 - app.services.data_service - INFO - Year 2025 out of available range 2000-2024. Falling back to all years.
+2025-10-05 17:40:58,653 - app.services.data_service - DEBUG - Using monthly aggregation for month 6, year=None
+2025-10-05 17:40:58,674 - app.services.data_service - DEBUG - Final aggregated value: 2.7561066666666667
+2025-10-05 17:40:58,674 - app.services.data_service - DEBUG - Got value for PRECTOTCORR: 2.7561066666666667
+2025-10-05 17:40:58,674 - app.services.data_service - DEBUG - Final result: {'CLRSKY_SFC_SW_DWN': np.float64(25.430106666666664), 'RH2M': np.float64(74.75872), 'PRECTOTCORR': np.float64(2.7561066666666667)}
+2025-10-05 17:40:58,674 - app.api.routes.when - DEBUG - Parameter values for month 6: {'CLRSKY_SFC_SW_DWN': np.float64(25.430106666666664), 'RH2M': np.float64(74.75872), 'PRECTOTCORR': np.float64(2.7561066666666667)}
+2025-10-05 17:40:58,674 - app.api.routes.when - DEBUG - Calculated score for month 6: 76.46994133333334
+2025-10-05 17:40:58,674 - app.api.routes.when - DEBUG - Processing month 7
+2025-10-05 17:40:58,674 - app.services.data_service - DEBUG - Getting all parameters ['CLRSKY_SFC_SW_DWN', 'RH2M', 'PRECTOTCORR'] at (12.972, 77.595), month=7, year=2025
+2025-10-05 17:40:58,674 - app.services.data_service - DEBUG - Getting parameter: CLRSKY_SFC_SW_DWN
+2025-10-05 17:40:58,674 - app.services.data_service - DEBUG - Getting value for CLRSKY_SFC_SW_DWN at (12.972, 77.595), month=7, year=2025, start_date=None, end_date=None
+2025-10-05 17:40:58,674 - app.services.data_service - DEBUG - Finding nearest location for (12.972, 77.595)
+2025-10-05 17:40:58,674 - app.services.data_service - DEBUG - Nearest location: bangalore_core (distance: 0.0000)
+2025-10-05 17:40:58,674 - app.services.data_service - DEBUG - Loading data for location: bangalore_core
+2025-10-05 17:40:58,675 - app.services.data_service - DEBUG - Using cached data for bangalore_core
+2025-10-05 17:40:58,675 - app.services.data_service - DEBUG - Found 9132 daily data points for CLRSKY_SFC_SW_DWN
+2025-10-05 17:40:58,696 - app.services.data_service - INFO - Year 2025 out of available range 2000-2024. Falling back to all years.
+2025-10-05 17:40:58,696 - app.services.data_service - DEBUG - Using monthly aggregation for month 7, year=None
+2025-10-05 17:40:58,717 - app.services.data_service - DEBUG - Final aggregated value: 25.14956129032258
+2025-10-05 17:40:58,717 - app.services.data_service - DEBUG - Got value for CLRSKY_SFC_SW_DWN: 25.14956129032258
+2025-10-05 17:40:58,717 - app.services.data_service - DEBUG - Getting parameter: RH2M
+2025-10-05 17:40:58,717 - app.services.data_service - DEBUG - Getting value for RH2M at (12.972, 77.595), month=7, year=2025, start_date=None, end_date=None
+2025-10-05 17:40:58,717 - app.services.data_service - DEBUG - Finding nearest location for (12.972, 77.595)
+2025-10-05 17:40:58,717 - app.services.data_service - DEBUG - Nearest location: bangalore_core (distance: 0.0000)
+2025-10-05 17:40:58,717 - app.services.data_service - DEBUG - Loading data for location: bangalore_core
+2025-10-05 17:40:58,717 - app.services.data_service - DEBUG - Using cached data for bangalore_core
+2025-10-05 17:40:58,717 - app.services.data_service - DEBUG - Found 9132 daily data points for RH2M
+2025-10-05 17:40:58,738 - app.services.data_service - INFO - Year 2025 out of available range 2000-2024. Falling back to all years.
+2025-10-05 17:40:58,738 - app.services.data_service - DEBUG - Using monthly aggregation for month 7, year=None
+2025-10-05 17:40:58,765 - app.services.data_service - DEBUG - Final aggregated value: 77.09987096774192
+2025-10-05 17:40:58,765 - app.services.data_service - DEBUG - Got value for RH2M: 77.09987096774192
+2025-10-05 17:40:58,765 - app.services.data_service - DEBUG - Getting parameter: PRECTOTCORR
+2025-10-05 17:40:58,765 - app.services.data_service - DEBUG - Getting value for PRECTOTCORR at (12.972, 77.595), month=7, year=2025, start_date=None, end_date=None
+2025-10-05 17:40:58,766 - app.services.data_service - DEBUG - Finding nearest location for (12.972, 77.595)
+2025-10-05 17:40:58,766 - app.services.data_service - DEBUG - Nearest location: bangalore_core (distance: 0.0000)
+2025-10-05 17:40:58,766 - app.services.data_service - DEBUG - Loading data for location: bangalore_core
+2025-10-05 17:40:58,766 - app.services.data_service - DEBUG - Using cached data for bangalore_core
+2025-10-05 17:40:58,766 - app.services.data_service - DEBUG - Found 9132 daily data points for PRECTOTCORR
+2025-10-05 17:40:58,808 - app.services.data_service - INFO - Year 2025 out of available range 2000-2024. Falling back to all years.
+2025-10-05 17:40:58,809 - app.services.data_service - DEBUG - Using monthly aggregation for month 7, year=None
+2025-10-05 17:40:58,838 - app.services.data_service - DEBUG - Final aggregated value: 3.326025806451613
+2025-10-05 17:40:58,838 - app.services.data_service - DEBUG - Got value for PRECTOTCORR: 3.326025806451613
+2025-10-05 17:40:58,838 - app.services.data_service - DEBUG - Final result: {'CLRSKY_SFC_SW_DWN': np.float64(25.14956129032258), 'RH2M': np.float64(77.09987096774192), 'PRECTOTCORR': np.float64(3.326025806451613)}
+2025-10-05 17:40:58,838 - app.api.routes.when - DEBUG - Parameter values for month 7: {'CLRSKY_SFC_SW_DWN': np.float64(25.14956129032258), 'RH2M': np.float64(77.09987096774192), 'PRECTOTCORR': np.float64(3.326025806451613)}
+2025-10-05 17:40:58,838 - app.api.routes.when - DEBUG - Calculated score for month 7: 75.53962838709677
+2025-10-05 17:40:58,838 - app.api.routes.when - DEBUG - Processing month 8
+2025-10-05 17:40:58,838 - app.services.data_service - DEBUG - Getting all parameters ['CLRSKY_SFC_SW_DWN', 'RH2M', 'PRECTOTCORR'] at (12.972, 77.595), month=8, year=2025
+2025-10-05 17:40:58,838 - app.services.data_service - DEBUG - Getting parameter: CLRSKY_SFC_SW_DWN
+2025-10-05 17:40:58,838 - app.services.data_service - DEBUG - Getting value for CLRSKY_SFC_SW_DWN at (12.972, 77.595), month=8, year=2025, start_date=None, end_date=None
+2025-10-05 17:40:58,838 - app.services.data_service - DEBUG - Finding nearest location for (12.972, 77.595)
+2025-10-05 17:40:58,838 - app.services.data_service - DEBUG - Nearest location: bangalore_core (distance: 0.0000)
+2025-10-05 17:40:58,838 - app.services.data_service - DEBUG - Loading data for location: bangalore_core
+2025-10-05 17:40:58,838 - app.services.data_service - DEBUG - Using cached data for bangalore_core
+2025-10-05 17:40:58,838 - app.services.data_service - DEBUG - Found 9132 daily data points for CLRSKY_SFC_SW_DWN
+2025-10-05 17:40:58,866 - app.services.data_service - INFO - Year 2025 out of available range 2000-2024. Falling back to all years.
+2025-10-05 17:40:58,867 - app.services.data_service - DEBUG - Using monthly aggregation for month 8, year=None
+2025-10-05 17:40:58,889 - app.services.data_service - DEBUG - Final aggregated value: 25.39218064516129
+2025-10-05 17:40:58,889 - app.services.data_service - DEBUG - Got value for CLRSKY_SFC_SW_DWN: 25.39218064516129
+2025-10-05 17:40:58,889 - app.services.data_service - DEBUG - Getting parameter: RH2M
+2025-10-05 17:40:58,889 - app.services.data_service - DEBUG - Getting value for RH2M at (12.972, 77.595), month=8, year=2025, start_date=None, end_date=None
+2025-10-05 17:40:58,889 - app.services.data_service - DEBUG - Finding nearest location for (12.972, 77.595)
+2025-10-05 17:40:58,889 - app.services.data_service - DEBUG - Nearest location: bangalore_core (distance: 0.0000)
+2025-10-05 17:40:58,890 - app.services.data_service - DEBUG - Loading data for location: bangalore_core
+2025-10-05 17:40:58,890 - app.services.data_service - DEBUG - Using cached data for bangalore_core
+2025-10-05 17:40:58,890 - app.services.data_service - DEBUG - Found 9132 daily data points for RH2M
+2025-10-05 17:40:58,912 - app.services.data_service - INFO - Year 2025 out of available range 2000-2024. Falling back to all years.
+2025-10-05 17:40:58,912 - app.services.data_service - DEBUG - Using monthly aggregation for month 8, year=None
+2025-10-05 17:40:58,936 - app.services.data_service - DEBUG - Final aggregated value: 78.93095483870968
+2025-10-05 17:40:58,936 - app.services.data_service - DEBUG - Got value for RH2M: 78.93095483870968
+2025-10-05 17:40:58,936 - app.services.data_service - DEBUG - Getting parameter: PRECTOTCORR
+2025-10-05 17:40:58,936 - app.services.data_service - DEBUG - Getting value for PRECTOTCORR at (12.972, 77.595), month=8, year=2025, start_date=None, end_date=None
+2025-10-05 17:40:58,936 - app.services.data_service - DEBUG - Finding nearest location for (12.972, 77.595)
+2025-10-05 17:40:58,936 - app.services.data_service - DEBUG - Nearest location: bangalore_core (distance: 0.0000)
+2025-10-05 17:40:58,936 - app.services.data_service - DEBUG - Loading data for location: bangalore_core
+2025-10-05 17:40:58,936 - app.services.data_service - DEBUG - Using cached data for bangalore_core
+2025-10-05 17:40:58,936 - app.services.data_service - DEBUG - Found 9132 daily data points for PRECTOTCORR
+2025-10-05 17:40:58,958 - app.services.data_service - INFO - Year 2025 out of available range 2000-2024. Falling back to all years.
+2025-10-05 17:40:58,958 - app.services.data_service - DEBUG - Using monthly aggregation for month 8, year=None
+2025-10-05 17:40:58,982 - app.services.data_service - DEBUG - Final aggregated value: 4.255651612903226
+2025-10-05 17:40:58,982 - app.services.data_service - DEBUG - Got value for PRECTOTCORR: 4.255651612903226
+2025-10-05 17:40:58,982 - app.services.data_service - DEBUG - Final result: {'CLRSKY_SFC_SW_DWN': np.float64(25.39218064516129), 'RH2M': np.float64(78.93095483870968), 'PRECTOTCORR': np.float64(4.255651612903226)}
+2025-10-05 17:40:58,982 - app.api.routes.when - DEBUG - Parameter values for month 8: {'CLRSKY_SFC_SW_DWN': np.float64(25.39218064516129), 'RH2M': np.float64(78.93095483870968), 'PRECTOTCORR': np.float64(4.255651612903226)}
+2025-10-05 17:40:58,982 - app.api.routes.when - DEBUG - Calculated score for month 8: 74.6184529032258
+2025-10-05 17:40:58,982 - app.api.routes.when - DEBUG - Processing month 9
+2025-10-05 17:40:58,982 - app.services.data_service - DEBUG - Getting all parameters ['CLRSKY_SFC_SW_DWN', 'RH2M', 'PRECTOTCORR'] at (12.972, 77.595), month=9, year=2025
+2025-10-05 17:40:58,982 - app.services.data_service - DEBUG - Getting parameter: CLRSKY_SFC_SW_DWN
+2025-10-05 17:40:58,982 - app.services.data_service - DEBUG - Getting value for CLRSKY_SFC_SW_DWN at (12.972, 77.595), month=9, year=2025, start_date=None, end_date=None
+2025-10-05 17:40:58,982 - app.services.data_service - DEBUG - Finding nearest location for (12.972, 77.595)
+2025-10-05 17:40:58,982 - app.services.data_service - DEBUG - Nearest location: bangalore_core (distance: 0.0000)
+2025-10-05 17:40:58,982 - app.services.data_service - DEBUG - Loading data for location: bangalore_core
+2025-10-05 17:40:58,982 - app.services.data_service - DEBUG - Using cached data for bangalore_core
+2025-10-05 17:40:58,982 - app.services.data_service - DEBUG - Found 9132 daily data points for CLRSKY_SFC_SW_DWN
+2025-10-05 17:40:59,005 - app.services.data_service - INFO - Year 2025 out of available range 2000-2024. Falling back to all years.
+2025-10-05 17:40:59,006 - app.services.data_service - DEBUG - Using monthly aggregation for month 9, year=None
+2025-10-05 17:40:59,030 - app.services.data_service - DEBUG - Final aggregated value: 25.00197333333334
+2025-10-05 17:40:59,030 - app.services.data_service - DEBUG - Got value for CLRSKY_SFC_SW_DWN: 25.00197333333334
+2025-10-05 17:40:59,030 - app.services.data_service - DEBUG - Getting parameter: RH2M
+2025-10-05 17:40:59,030 - app.services.data_service - DEBUG - Getting value for RH2M at (12.972, 77.595), month=9, year=2025, start_date=None, end_date=None
+2025-10-05 17:40:59,030 - app.services.data_service - DEBUG - Finding nearest location for (12.972, 77.595)
+2025-10-05 17:40:59,030 - app.services.data_service - DEBUG - Nearest location: bangalore_core (distance: 0.0000)
+2025-10-05 17:40:59,030 - app.services.data_service - DEBUG - Loading data for location: bangalore_core
+2025-10-05 17:40:59,030 - app.services.data_service - DEBUG - Using cached data for bangalore_core
+2025-10-05 17:40:59,030 - app.services.data_service - DEBUG - Found 9132 daily data points for RH2M
+2025-10-05 17:40:59,055 - app.services.data_service - INFO - Year 2025 out of available range 2000-2024. Falling back to all years.
+2025-10-05 17:40:59,055 - app.services.data_service - DEBUG - Using monthly aggregation for month 9, year=None
+2025-10-05 17:40:59,078 - app.services.data_service - DEBUG - Final aggregated value: 80.59061333333334
+2025-10-05 17:40:59,078 - app.services.data_service - DEBUG - Got value for RH2M: 80.59061333333334
+2025-10-05 17:40:59,078 - app.services.data_service - DEBUG - Getting parameter: PRECTOTCORR
+2025-10-05 17:40:59,078 - app.services.data_service - DEBUG - Getting value for PRECTOTCORR at (12.972, 77.595), month=9, year=2025, start_date=None, end_date=None
+2025-10-05 17:40:59,078 - app.services.data_service - DEBUG - Finding nearest location for (12.972, 77.595)
+2025-10-05 17:40:59,078 - app.services.data_service - DEBUG - Nearest location: bangalore_core (distance: 0.0000)
+2025-10-05 17:40:59,078 - app.services.data_service - DEBUG - Loading data for location: bangalore_core
+2025-10-05 17:40:59,078 - app.services.data_service - DEBUG - Using cached data for bangalore_core
+2025-10-05 17:40:59,078 - app.services.data_service - DEBUG - Found 9132 daily data points for PRECTOTCORR
+2025-10-05 17:40:59,102 - app.services.data_service - INFO - Year 2025 out of available range 2000-2024. Falling back to all years.
+2025-10-05 17:40:59,102 - app.services.data_service - DEBUG - Using monthly aggregation for month 9, year=None
+2025-10-05 17:40:59,128 - app.services.data_service - DEBUG - Final aggregated value: 4.9945200000000005
+2025-10-05 17:40:59,129 - app.services.data_service - DEBUG - Got value for PRECTOTCORR: 4.9945200000000005
+2025-10-05 17:40:59,129 - app.services.data_service - DEBUG - Final result: {'CLRSKY_SFC_SW_DWN': np.float64(25.00197333333334), 'RH2M': np.float64(80.59061333333334), 'PRECTOTCORR': np.float64(4.9945200000000005)}
+2025-10-05 17:40:59,129 - app.api.routes.when - DEBUG - Parameter values for month 9: {'CLRSKY_SFC_SW_DWN': np.float64(25.00197333333334), 'RH2M': np.float64(80.59061333333334), 'PRECTOTCORR': np.float64(4.9945200000000005)}
+2025-10-05 17:40:59,129 - app.api.routes.when - DEBUG - Calculated score for month 9: 73.825008
+2025-10-05 17:40:59,129 - app.api.routes.when - DEBUG - Processing month 10
+2025-10-05 17:40:59,129 - app.services.data_service - DEBUG - Getting all parameters ['CLRSKY_SFC_SW_DWN', 'RH2M', 'PRECTOTCORR'] at (12.972, 77.595), month=10, year=2025
+2025-10-05 17:40:59,129 - app.services.data_service - DEBUG - Getting parameter: CLRSKY_SFC_SW_DWN
+2025-10-05 17:40:59,129 - app.services.data_service - DEBUG - Getting value for CLRSKY_SFC_SW_DWN at (12.972, 77.595), month=10, year=2025, start_date=None, end_date=None
+2025-10-05 17:40:59,129 - app.services.data_service - DEBUG - Finding nearest location for (12.972, 77.595)
+2025-10-05 17:40:59,129 - app.services.data_service - DEBUG - Nearest location: bangalore_core (distance: 0.0000)
+2025-10-05 17:40:59,129 - app.services.data_service - DEBUG - Loading data for location: bangalore_core
+2025-10-05 17:40:59,129 - app.services.data_service - DEBUG - Using cached data for bangalore_core
+2025-10-05 17:40:59,129 - app.services.data_service - DEBUG - Found 9132 daily data points for CLRSKY_SFC_SW_DWN
+2025-10-05 17:40:59,151 - app.services.data_service - INFO - Year 2025 out of available range 2000-2024. Falling back to all years.
+2025-10-05 17:40:59,151 - app.services.data_service - DEBUG - Using monthly aggregation for month 10, year=None
+2025-10-05 17:40:59,172 - app.services.data_service - DEBUG - Final aggregated value: 22.808387096774194
+2025-10-05 17:40:59,173 - app.services.data_service - DEBUG - Got value for CLRSKY_SFC_SW_DWN: 22.808387096774194
+2025-10-05 17:40:59,173 - app.services.data_service - DEBUG - Getting parameter: RH2M
+2025-10-05 17:40:59,173 - app.services.data_service - DEBUG - Getting value for RH2M at (12.972, 77.595), month=10, year=2025, start_date=None, end_date=None
+2025-10-05 17:40:59,173 - app.services.data_service - DEBUG - Finding nearest location for (12.972, 77.595)
+2025-10-05 17:40:59,173 - app.services.data_service - DEBUG - Nearest location: bangalore_core (distance: 0.0000)
+2025-10-05 17:40:59,173 - app.services.data_service - DEBUG - Loading data for location: bangalore_core
+2025-10-05 17:40:59,173 - app.services.data_service - DEBUG - Using cached data for bangalore_core
+2025-10-05 17:40:59,173 - app.services.data_service - DEBUG - Found 9132 daily data points for RH2M
+2025-10-05 17:40:59,194 - app.services.data_service - INFO - Year 2025 out of available range 2000-2024. Falling back to all years.
+2025-10-05 17:40:59,194 - app.services.data_service - DEBUG - Using monthly aggregation for month 10, year=None
+2025-10-05 17:40:59,232 - app.services.data_service - DEBUG - Final aggregated value: 81.40443870967742
+2025-10-05 17:40:59,233 - app.services.data_service - DEBUG - Got value for RH2M: 81.40443870967742
+2025-10-05 17:40:59,233 - app.services.data_service - DEBUG - Getting parameter: PRECTOTCORR
+2025-10-05 17:40:59,233 - app.services.data_service - DEBUG - Getting value for PRECTOTCORR at (12.972, 77.595), month=10, year=2025, start_date=None, end_date=None
+2025-10-05 17:40:59,233 - app.services.data_service - DEBUG - Finding nearest location for (12.972, 77.595)
+2025-10-05 17:40:59,233 - app.services.data_service - DEBUG - Nearest location: bangalore_core (distance: 0.0000)
+2025-10-05 17:40:59,233 - app.services.data_service - DEBUG - Loading data for location: bangalore_core
+2025-10-05 17:40:59,233 - app.services.data_service - DEBUG - Using cached data for bangalore_core
+2025-10-05 17:40:59,233 - app.services.data_service - DEBUG - Found 9132 daily data points for PRECTOTCORR
+2025-10-05 17:40:59,260 - app.services.data_service - INFO - Year 2025 out of available range 2000-2024. Falling back to all years.
+2025-10-05 17:40:59,260 - app.services.data_service - DEBUG - Using monthly aggregation for month 10, year=None
+2025-10-05 17:40:59,284 - app.services.data_service - DEBUG - Final aggregated value: 4.732541935483871
+2025-10-05 17:40:59,284 - app.services.data_service - DEBUG - Got value for PRECTOTCORR: 4.732541935483871
+2025-10-05 17:40:59,284 - app.services.data_service - DEBUG - Final result: {'CLRSKY_SFC_SW_DWN': np.float64(22.808387096774194), 'RH2M': np.float64(81.40443870967742), 'PRECTOTCORR': np.float64(4.732541935483871)}
+2025-10-05 17:40:59,284 - app.api.routes.when - DEBUG - Parameter values for month 10: {'CLRSKY_SFC_SW_DWN': np.float64(22.808387096774194), 'RH2M': np.float64(81.40443870967742), 'PRECTOTCORR': np.float64(4.732541935483871)}
+2025-10-05 17:40:59,284 - app.api.routes.when - DEBUG - Calculated score for month 10: 73.68565161290323
+2025-10-05 17:40:59,284 - app.api.routes.when - DEBUG - Processing month 11
+2025-10-05 17:40:59,284 - app.services.data_service - DEBUG - Getting all parameters ['CLRSKY_SFC_SW_DWN', 'RH2M', 'PRECTOTCORR'] at (12.972, 77.595), month=11, year=2025
+2025-10-05 17:40:59,284 - app.services.data_service - DEBUG - Getting parameter: CLRSKY_SFC_SW_DWN
+2025-10-05 17:40:59,284 - app.services.data_service - DEBUG - Getting value for CLRSKY_SFC_SW_DWN at (12.972, 77.595), month=11, year=2025, start_date=None, end_date=None
+2025-10-05 17:40:59,284 - app.services.data_service - DEBUG - Finding nearest location for (12.972, 77.595)
+2025-10-05 17:40:59,284 - app.services.data_service - DEBUG - Nearest location: bangalore_core (distance: 0.0000)
+2025-10-05 17:40:59,284 - app.services.data_service - DEBUG - Loading data for location: bangalore_core
+2025-10-05 17:40:59,284 - app.services.data_service - DEBUG - Using cached data for bangalore_core
+2025-10-05 17:40:59,284 - app.services.data_service - DEBUG - Found 9132 daily data points for CLRSKY_SFC_SW_DWN
+2025-10-05 17:40:59,306 - app.services.data_service - INFO - Year 2025 out of available range 2000-2024. Falling back to all years.
+2025-10-05 17:40:59,306 - app.services.data_service - DEBUG - Using monthly aggregation for month 11, year=None
+2025-10-05 17:40:59,328 - app.services.data_service - DEBUG - Final aggregated value: 20.910053333333334
+2025-10-05 17:40:59,328 - app.services.data_service - DEBUG - Got value for CLRSKY_SFC_SW_DWN: 20.910053333333334
+2025-10-05 17:40:59,328 - app.services.data_service - DEBUG - Getting parameter: RH2M
+2025-10-05 17:40:59,328 - app.services.data_service - DEBUG - Getting value for RH2M at (12.972, 77.595), month=11, year=2025, start_date=None, end_date=None
+2025-10-05 17:40:59,328 - app.services.data_service - DEBUG - Finding nearest location for (12.972, 77.595)
+2025-10-05 17:40:59,328 - app.services.data_service - DEBUG - Nearest location: bangalore_core (distance: 0.0000)
+2025-10-05 17:40:59,328 - app.services.data_service - DEBUG - Loading data for location: bangalore_core
+2025-10-05 17:40:59,328 - app.services.data_service - DEBUG - Using cached data for bangalore_core
+2025-10-05 17:40:59,328 - app.services.data_service - DEBUG - Found 9132 daily data points for RH2M
+2025-10-05 17:40:59,349 - app.services.data_service - INFO - Year 2025 out of available range 2000-2024. Falling back to all years.
+2025-10-05 17:40:59,349 - app.services.data_service - DEBUG - Using monthly aggregation for month 11, year=None
+2025-10-05 17:40:59,370 - app.services.data_service - DEBUG - Final aggregated value: 80.03445333333333
+2025-10-05 17:40:59,371 - app.services.data_service - DEBUG - Got value for RH2M: 80.03445333333333
+2025-10-05 17:40:59,371 - app.services.data_service - DEBUG - Getting parameter: PRECTOTCORR
+2025-10-05 17:40:59,371 - app.services.data_service - DEBUG - Getting value for PRECTOTCORR at (12.972, 77.595), month=11, year=2025, start_date=None, end_date=None
+2025-10-05 17:40:59,371 - app.services.data_service - DEBUG - Finding nearest location for (12.972, 77.595)
+2025-10-05 17:40:59,371 - app.services.data_service - DEBUG - Nearest location: bangalore_core (distance: 0.0000)
+2025-10-05 17:40:59,371 - app.services.data_service - DEBUG - Loading data for location: bangalore_core
+2025-10-05 17:40:59,371 - app.services.data_service - DEBUG - Using cached data for bangalore_core
+2025-10-05 17:40:59,371 - app.services.data_service - DEBUG - Found 9132 daily data points for PRECTOTCORR
+2025-10-05 17:40:59,392 - app.services.data_service - INFO - Year 2025 out of available range 2000-2024. Falling back to all years.
+2025-10-05 17:40:59,392 - app.services.data_service - DEBUG - Using monthly aggregation for month 11, year=None
+2025-10-05 17:40:59,413 - app.services.data_service - DEBUG - Final aggregated value: 2.0291866666666665
+2025-10-05 17:40:59,413 - app.services.data_service - DEBUG - Got value for PRECTOTCORR: 2.0291866666666665
+2025-10-05 17:40:59,413 - app.services.data_service - DEBUG - Final result: {'CLRSKY_SFC_SW_DWN': np.float64(20.910053333333334), 'RH2M': np.float64(80.03445333333333), 'PRECTOTCORR': np.float64(2.0291866666666665)}
+2025-10-05 17:40:59,413 - app.api.routes.when - DEBUG - Parameter values for month 11: {'CLRSKY_SFC_SW_DWN': np.float64(20.910053333333334), 'RH2M': np.float64(80.03445333333333), 'PRECTOTCORR': np.float64(2.0291866666666665)}
+2025-10-05 17:40:59,413 - app.api.routes.when - DEBUG - Calculated score for month 11: 75.17798933333333
+2025-10-05 17:40:59,413 - app.api.routes.when - DEBUG - Processing month 12
+2025-10-05 17:40:59,413 - app.services.data_service - DEBUG - Getting all parameters ['CLRSKY_SFC_SW_DWN', 'RH2M', 'PRECTOTCORR'] at (12.972, 77.595), month=12, year=2025
+2025-10-05 17:40:59,413 - app.services.data_service - DEBUG - Getting parameter: CLRSKY_SFC_SW_DWN
+2025-10-05 17:40:59,413 - app.services.data_service - DEBUG - Getting value for CLRSKY_SFC_SW_DWN at (12.972, 77.595), month=12, year=2025, start_date=None, end_date=None
+2025-10-05 17:40:59,413 - app.services.data_service - DEBUG - Finding nearest location for (12.972, 77.595)
+2025-10-05 17:40:59,413 - app.services.data_service - DEBUG - Nearest location: bangalore_core (distance: 0.0000)
+2025-10-05 17:40:59,413 - app.services.data_service - DEBUG - Loading data for location: bangalore_core
+2025-10-05 17:40:59,413 - app.services.data_service - DEBUG - Using cached data for bangalore_core
+2025-10-05 17:40:59,413 - app.services.data_service - DEBUG - Found 9132 daily data points for CLRSKY_SFC_SW_DWN
+2025-10-05 17:40:59,434 - app.services.data_service - INFO - Year 2025 out of available range 2000-2024. Falling back to all years.
+2025-10-05 17:40:59,434 - app.services.data_service - DEBUG - Using monthly aggregation for month 12, year=None
+2025-10-05 17:40:59,469 - app.services.data_service - DEBUG - Final aggregated value: 20.14113548387097
+2025-10-05 17:40:59,470 - app.services.data_service - DEBUG - Got value for CLRSKY_SFC_SW_DWN: 20.14113548387097
+2025-10-05 17:40:59,470 - app.services.data_service - DEBUG - Getting parameter: RH2M
+2025-10-05 17:40:59,470 - app.services.data_service - DEBUG - Getting value for RH2M at (12.972, 77.595), month=12, year=2025, start_date=None, end_date=None
+2025-10-05 17:40:59,470 - app.services.data_service - DEBUG - Finding nearest location for (12.972, 77.595)
+2025-10-05 17:40:59,470 - app.services.data_service - DEBUG - Nearest location: bangalore_core (distance: 0.0000)
+2025-10-05 17:40:59,470 - app.services.data_service - DEBUG - Loading data for location: bangalore_core
+2025-10-05 17:40:59,470 - app.services.data_service - DEBUG - Using cached data for bangalore_core
+2025-10-05 17:40:59,470 - app.services.data_service - DEBUG - Found 9132 daily data points for RH2M
+2025-10-05 17:40:59,513 - app.services.data_service - INFO - Year 2025 out of available range 2000-2024. Falling back to all years.
+2025-10-05 17:40:59,513 - app.services.data_service - DEBUG - Using monthly aggregation for month 12, year=None
+2025-10-05 17:40:59,536 - app.services.data_service - DEBUG - Final aggregated value: 74.73984516129032
+2025-10-05 17:40:59,537 - app.services.data_service - DEBUG - Got value for RH2M: 74.73984516129032
+2025-10-05 17:40:59,537 - app.services.data_service - DEBUG - Getting parameter: PRECTOTCORR
+2025-10-05 17:40:59,537 - app.services.data_service - DEBUG - Getting value for PRECTOTCORR at (12.972, 77.595), month=12, year=2025, start_date=None, end_date=None
+2025-10-05 17:40:59,537 - app.services.data_service - DEBUG - Finding nearest location for (12.972, 77.595)
+2025-10-05 17:40:59,537 - app.services.data_service - DEBUG - Nearest location: bangalore_core (distance: 0.0000)
+2025-10-05 17:40:59,537 - app.services.data_service - DEBUG - Loading data for location: bangalore_core
+2025-10-05 17:40:59,537 - app.services.data_service - DEBUG - Using cached data for bangalore_core
+2025-10-05 17:40:59,537 - app.services.data_service - DEBUG - Found 9132 daily data points for PRECTOTCORR
+2025-10-05 17:40:59,559 - app.services.data_service - INFO - Year 2025 out of available range 2000-2024. Falling back to all years.
+2025-10-05 17:40:59,559 - app.services.data_service - DEBUG - Using monthly aggregation for month 12, year=None
+2025-10-05 17:40:59,581 - app.services.data_service - DEBUG - Final aggregated value: 0.7021419354838709
+2025-10-05 17:40:59,581 - app.services.data_service - DEBUG - Got value for PRECTOTCORR: 0.7021419354838709
+2025-10-05 17:40:59,582 - app.services.data_service - DEBUG - Final result: {'CLRSKY_SFC_SW_DWN': np.float64(20.14113548387097), 'RH2M': np.float64(74.73984516129032), 'PRECTOTCORR': np.float64(0.7021419354838709)}
+2025-10-05 17:40:59,582 - app.api.routes.when - DEBUG - Parameter values for month 12: {'CLRSKY_SFC_SW_DWN': np.float64(20.14113548387097), 'RH2M': np.float64(74.73984516129032), 'PRECTOTCORR': np.float64(0.7021419354838709)}
+2025-10-05 17:40:59,582 - app.api.routes.when - DEBUG - Calculated score for month 12: 77.29718967741937
+2025-10-05 17:40:59,582 - app.api.routes.when - INFO - Monthly analysis completed. Generated 12 scores
+2025-10-05 17:40:59,582 - app.api.routes.when - INFO - Finding best and worst months
+2025-10-05 17:40:59,582 - app.api.routes.when - INFO - Best month: 3, Worst month: 10
+2025-10-05 17:40:59,582 - app.api.routes.when - INFO - Creating monthly response
+2025-10-05 17:40:59,582 - app.api.routes.when - INFO - Monthly analysis completed successfully
+2025-10-05 17:42:56,627 - app.main - INFO - ==================================================
+2025-10-05 17:42:56,627 - app.main - INFO - Starting Weather Vibes API...
+2025-10-05 17:42:56,627 - app.main - INFO - ==================================================
+2025-10-05 17:42:56,627 - app.main - INFO - Loading vibe dictionary...
+2025-10-05 17:42:56,627 - app.main - INFO - ✓ Loaded 8 vibes
+2025-10-05 17:42:56,627 - app.main - INFO - Initializing data service (path: ../data)...
+2025-10-05 17:42:56,627 - app.services.data_service - INFO - Initializing DataService with path: ../data
+2025-10-05 17:42:56,627 - app.services.data_service - INFO - Loading available locations
+2025-10-05 17:42:56,628 - app.services.data_service - DEBUG - Processing location: bangalore_core
+2025-10-05 17:42:56,628 - app.services.data_service - DEBUG - Found 9 JSON files for bangalore_core
+2025-10-05 17:42:56,629 - app.services.data_service - DEBUG - Processing location: mysore
+2025-10-05 17:42:56,630 - app.services.data_service - DEBUG - Found 9 JSON files for mysore
+2025-10-05 17:42:56,631 - app.services.data_service - DEBUG - Processing location: wayanad
+2025-10-05 17:42:56,632 - app.services.data_service - DEBUG - Found 9 JSON files for wayanad
+2025-10-05 17:42:56,633 - app.services.data_service - DEBUG - Processing location: chikmagalur
+2025-10-05 17:42:56,633 - app.services.data_service - DEBUG - Found 9 JSON files for chikmagalur
+2025-10-05 17:42:56,634 - app.services.data_service - DEBUG - Processing location: pondicherry
+2025-10-05 17:42:56,635 - app.services.data_service - DEBUG - Found 9 JSON files for pondicherry
+2025-10-05 17:42:56,637 - app.services.data_service - DEBUG - Processing location: kodaikanal
+2025-10-05 17:42:56,638 - app.services.data_service - DEBUG - Found 9 JSON files for kodaikanal
+2025-10-05 17:42:56,639 - app.services.data_service - DEBUG - Processing location: goa_coast
+2025-10-05 17:42:56,639 - app.services.data_service - DEBUG - Found 9 JSON files for goa_coast
+2025-10-05 17:42:56,642 - app.services.data_service - DEBUG - Processing location: hampi
+2025-10-05 17:42:56,642 - app.services.data_service - DEBUG - Found 9 JSON files for hampi
+2025-10-05 17:42:56,645 - app.services.data_service - DEBUG - Processing location: ooty
+2025-10-05 17:42:56,646 - app.services.data_service - DEBUG - Found 9 JSON files for ooty
+2025-10-05 17:42:56,648 - app.services.data_service - DEBUG - Processing location: bandipur
+2025-10-05 17:42:56,648 - app.services.data_service - DEBUG - Found 9 JSON files for bandipur
+2025-10-05 17:42:56,650 - app.services.data_service - DEBUG - Processing location: munnar
+2025-10-05 17:42:56,650 - app.services.data_service - DEBUG - Found 9 JSON files for munnar
+2025-10-05 17:42:56,652 - app.services.data_service - DEBUG - Processing location: coorg
+2025-10-05 17:42:56,652 - app.services.data_service - DEBUG - Found 9 JSON files for coorg
+2025-10-05 17:42:56,654 - app.services.data_service - INFO - Loaded 12 point locations
+2025-10-05 17:42:56,655 - app.services.data_service - INFO - DataService initialized with 12 locations
+2025-10-05 17:42:56,655 - app.main - INFO - ✓ Data service initialized
+2025-10-05 17:42:56,655 - app.main - INFO - ==================================================
+2025-10-05 17:42:56,655 - app.main - INFO - Server ready at http://0.0.0.0:8000
+2025-10-05 17:42:56,655 - app.main - INFO - API docs at http://0.0.0.0:8000/docs
+2025-10-05 17:42:56,655 - app.main - INFO - ==================================================
+2025-10-05 17:42:56,669 - app.main - INFO - Shutting down Weather Vibes API...
+2025-10-05 17:43:25,113 - app.main - INFO - ==================================================
+2025-10-05 17:43:25,113 - app.main - INFO - Starting Weather Vibes API...
+2025-10-05 17:43:25,113 - app.main - INFO - ==================================================
+2025-10-05 17:43:25,113 - app.main - INFO - Loading vibe dictionary...
+2025-10-05 17:43:25,113 - app.main - INFO - ✓ Loaded 8 vibes
+2025-10-05 17:43:25,113 - app.main - INFO - Initializing data service (path: ../data)...
+2025-10-05 17:43:25,113 - app.services.data_service - INFO - Initializing DataService with path: ../data
+2025-10-05 17:43:25,113 - app.services.data_service - INFO - Loading available locations
+2025-10-05 17:43:25,114 - app.services.data_service - DEBUG - Processing location: bangalore_core
+2025-10-05 17:43:25,114 - app.services.data_service - DEBUG - Found 9 JSON files for bangalore_core
+2025-10-05 17:43:25,115 - app.services.data_service - DEBUG - Processing location: mysore
+2025-10-05 17:43:25,116 - app.services.data_service - DEBUG - Found 9 JSON files for mysore
+2025-10-05 17:43:25,117 - app.services.data_service - DEBUG - Processing location: wayanad
+2025-10-05 17:43:25,117 - app.services.data_service - DEBUG - Found 9 JSON files for wayanad
+2025-10-05 17:43:25,118 - app.services.data_service - DEBUG - Processing location: chikmagalur
+2025-10-05 17:43:25,118 - app.services.data_service - DEBUG - Found 9 JSON files for chikmagalur
+2025-10-05 17:43:25,120 - app.services.data_service - DEBUG - Processing location: pondicherry
+2025-10-05 17:43:25,120 - app.services.data_service - DEBUG - Found 9 JSON files for pondicherry
+2025-10-05 17:43:25,122 - app.services.data_service - DEBUG - Processing location: kodaikanal
+2025-10-05 17:43:25,122 - app.services.data_service - DEBUG - Found 9 JSON files for kodaikanal
+2025-10-05 17:43:25,123 - app.services.data_service - DEBUG - Processing location: goa_coast
+2025-10-05 17:43:25,123 - app.services.data_service - DEBUG - Found 9 JSON files for goa_coast
+2025-10-05 17:43:25,124 - app.services.data_service - DEBUG - Processing location: hampi
+2025-10-05 17:43:25,125 - app.services.data_service - DEBUG - Found 9 JSON files for hampi
+2025-10-05 17:43:25,126 - app.services.data_service - DEBUG - Processing location: ooty
+2025-10-05 17:43:25,126 - app.services.data_service - DEBUG - Found 9 JSON files for ooty
+2025-10-05 17:43:25,128 - app.services.data_service - DEBUG - Processing location: bandipur
+2025-10-05 17:43:25,128 - app.services.data_service - DEBUG - Found 9 JSON files for bandipur
+2025-10-05 17:43:25,130 - app.services.data_service - DEBUG - Processing location: munnar
+2025-10-05 17:43:25,130 - app.services.data_service - DEBUG - Found 9 JSON files for munnar
+2025-10-05 17:43:25,132 - app.services.data_service - DEBUG - Processing location: coorg
+2025-10-05 17:43:25,132 - app.services.data_service - DEBUG - Found 9 JSON files for coorg
+2025-10-05 17:43:25,133 - app.services.data_service - INFO - Loaded 12 point locations
+2025-10-05 17:43:25,133 - app.services.data_service - INFO - DataService initialized with 12 locations
+2025-10-05 17:43:25,134 - app.main - INFO - ✓ Data service initialized
+2025-10-05 17:43:25,134 - app.main - INFO - ==================================================
+2025-10-05 17:43:25,134 - app.main - INFO - Server ready at http://0.0.0.0:8000
+2025-10-05 17:43:25,134 - app.main - INFO - API docs at http://0.0.0.0:8000/docs
+2025-10-05 17:43:25,134 - app.main - INFO - ==================================================
+2025-10-05 17:43:29,641 - app.main - INFO - Health check endpoint accessed
+2025-10-05 17:43:36,494 - app.main - INFO - ==================================================
+2025-10-05 17:43:36,494 - app.main - INFO - Starting Weather Vibes API...
+2025-10-05 17:43:36,494 - app.main - INFO - ==================================================
+2025-10-05 17:43:36,494 - app.main - INFO - Loading vibe dictionary...
+2025-10-05 17:43:36,495 - app.main - INFO - ✓ Loaded 8 vibes
+2025-10-05 17:43:36,495 - app.main - INFO - Initializing data service (path: ../data)...
+2025-10-05 17:43:36,495 - app.services.data_service - INFO - Initializing DataService with path: ../data
+2025-10-05 17:43:36,495 - app.services.data_service - INFO - Loading available locations
+2025-10-05 17:43:36,496 - app.services.data_service - DEBUG - Processing location: bangalore_core
+2025-10-05 17:43:36,497 - app.services.data_service - DEBUG - Found 9 JSON files for bangalore_core
+2025-10-05 17:43:36,500 - app.services.data_service - DEBUG - Processing location: mysore
+2025-10-05 17:43:36,500 - app.services.data_service - DEBUG - Found 9 JSON files for mysore
+2025-10-05 17:43:36,502 - app.services.data_service - DEBUG - Processing location: wayanad
+2025-10-05 17:43:36,503 - app.services.data_service - DEBUG - Found 9 JSON files for wayanad
+2025-10-05 17:43:36,504 - app.services.data_service - DEBUG - Processing location: chikmagalur
+2025-10-05 17:43:36,504 - app.services.data_service - DEBUG - Found 9 JSON files for chikmagalur
+2025-10-05 17:43:36,506 - app.services.data_service - DEBUG - Processing location: pondicherry
+2025-10-05 17:43:36,506 - app.services.data_service - DEBUG - Found 9 JSON files for pondicherry
+2025-10-05 17:43:36,508 - app.services.data_service - DEBUG - Processing location: kodaikanal
+2025-10-05 17:43:36,509 - app.services.data_service - DEBUG - Found 9 JSON files for kodaikanal
+2025-10-05 17:43:36,510 - app.services.data_service - DEBUG - Processing location: goa_coast
+2025-10-05 17:43:36,512 - app.services.data_service - DEBUG - Found 9 JSON files for goa_coast
+2025-10-05 17:43:36,514 - app.services.data_service - DEBUG - Processing location: hampi
+2025-10-05 17:43:36,515 - app.services.data_service - DEBUG - Found 9 JSON files for hampi
+2025-10-05 17:43:36,517 - app.services.data_service - DEBUG - Processing location: ooty
+2025-10-05 17:43:36,517 - app.services.data_service - DEBUG - Found 9 JSON files for ooty
+2025-10-05 17:43:36,519 - app.services.data_service - DEBUG - Processing location: bandipur
+2025-10-05 17:43:36,519 - app.services.data_service - DEBUG - Found 9 JSON files for bandipur
+2025-10-05 17:43:36,522 - app.services.data_service - DEBUG - Processing location: munnar
+2025-10-05 17:43:36,522 - app.services.data_service - DEBUG - Found 9 JSON files for munnar
+2025-10-05 17:43:36,524 - app.services.data_service - DEBUG - Processing location: coorg
+2025-10-05 17:43:36,525 - app.services.data_service - DEBUG - Found 9 JSON files for coorg
+2025-10-05 17:43:36,527 - app.services.data_service - INFO - Loaded 12 point locations
+2025-10-05 17:43:36,528 - app.services.data_service - INFO - DataService initialized with 12 locations
+2025-10-05 17:43:36,528 - app.main - INFO - ✓ Data service initialized
+2025-10-05 17:43:36,528 - app.main - INFO - ==================================================
+2025-10-05 17:43:36,528 - app.main - INFO - Server ready at http://0.0.0.0:8000
+2025-10-05 17:43:36,528 - app.main - INFO - API docs at http://0.0.0.0:8000/docs
+2025-10-05 17:43:36,528 - app.main - INFO - ==================================================
+2025-10-05 17:43:36,535 - app.main - INFO - Shutting down Weather Vibes API...
+2025-10-05 17:44:02,332 - app.main - INFO - ==================================================
+2025-10-05 17:44:02,332 - app.main - INFO - Starting Weather Vibes API...
+2025-10-05 17:44:02,332 - app.main - INFO - ==================================================
+2025-10-05 17:44:02,332 - app.main - INFO - Loading vibe dictionary...
+2025-10-05 17:44:02,332 - app.main - INFO - ✓ Loaded 8 vibes
+2025-10-05 17:44:02,332 - app.main - INFO - Initializing data service (path: ../data)...
+2025-10-05 17:44:02,332 - app.services.data_service - INFO - Initializing DataService with path: ../data
+2025-10-05 17:44:02,332 - app.services.data_service - INFO - Loading available locations
+2025-10-05 17:44:02,333 - app.services.data_service - DEBUG - Processing location: bangalore_core
+2025-10-05 17:44:02,333 - app.services.data_service - DEBUG - Found 9 JSON files for bangalore_core
+2025-10-05 17:44:02,335 - app.services.data_service - DEBUG - Processing location: mysore
+2025-10-05 17:44:02,335 - app.services.data_service - DEBUG - Found 9 JSON files for mysore
+2025-10-05 17:44:02,338 - app.services.data_service - DEBUG - Processing location: wayanad
+2025-10-05 17:44:02,338 - app.services.data_service - DEBUG - Found 9 JSON files for wayanad
+2025-10-05 17:44:02,339 - app.services.data_service - DEBUG - Processing location: chikmagalur
+2025-10-05 17:44:02,340 - app.services.data_service - DEBUG - Found 9 JSON files for chikmagalur
+2025-10-05 17:44:02,341 - app.services.data_service - DEBUG - Processing location: pondicherry
+2025-10-05 17:44:02,342 - app.services.data_service - DEBUG - Found 9 JSON files for pondicherry
+2025-10-05 17:44:02,343 - app.services.data_service - DEBUG - Processing location: kodaikanal
+2025-10-05 17:44:02,343 - app.services.data_service - DEBUG - Found 9 JSON files for kodaikanal
+2025-10-05 17:44:02,344 - app.services.data_service - DEBUG - Processing location: goa_coast
+2025-10-05 17:44:02,345 - app.services.data_service - DEBUG - Found 9 JSON files for goa_coast
+2025-10-05 17:44:02,346 - app.services.data_service - DEBUG - Processing location: hampi
+2025-10-05 17:44:02,347 - app.services.data_service - DEBUG - Found 9 JSON files for hampi
+2025-10-05 17:44:02,348 - app.services.data_service - DEBUG - Processing location: ooty
+2025-10-05 17:44:02,349 - app.services.data_service - DEBUG - Found 9 JSON files for ooty
+2025-10-05 17:44:02,351 - app.services.data_service - DEBUG - Processing location: bandipur
+2025-10-05 17:44:02,351 - app.services.data_service - DEBUG - Found 9 JSON files for bandipur
+2025-10-05 17:44:02,353 - app.services.data_service - DEBUG - Processing location: munnar
+2025-10-05 17:44:02,353 - app.services.data_service - DEBUG - Found 9 JSON files for munnar
+2025-10-05 17:44:02,355 - app.services.data_service - DEBUG - Processing location: coorg
+2025-10-05 17:44:02,355 - app.services.data_service - DEBUG - Found 9 JSON files for coorg
+2025-10-05 17:44:02,357 - app.services.data_service - INFO - Loaded 12 point locations
+2025-10-05 17:44:02,357 - app.services.data_service - INFO - DataService initialized with 12 locations
+2025-10-05 17:44:02,357 - app.main - INFO - ✓ Data service initialized
+2025-10-05 17:44:02,357 - app.main - INFO - ==================================================
+2025-10-05 17:44:02,357 - app.main - INFO - Server ready at http://0.0.0.0:8000
+2025-10-05 17:44:02,357 - app.main - INFO - API docs at http://0.0.0.0:8000/docs
+2025-10-05 17:44:02,357 - app.main - INFO - ==================================================
+2025-10-05 17:44:06,035 - app.main - INFO - Health check endpoint accessed
+2025-10-05 17:44:11,993 - app.main - INFO - ==================================================
+2025-10-05 17:44:11,993 - app.main - INFO - Starting Weather Vibes API...
+2025-10-05 17:44:11,993 - app.main - INFO - ==================================================
+2025-10-05 17:44:11,993 - app.main - INFO - Loading vibe dictionary...
+2025-10-05 17:44:11,993 - app.main - INFO - ✓ Loaded 8 vibes
+2025-10-05 17:44:11,993 - app.main - INFO - Initializing data service (path: ../data)...
+2025-10-05 17:44:11,994 - app.services.data_service - INFO - Initializing DataService with path: ../data
+2025-10-05 17:44:11,994 - app.services.data_service - INFO - Loading available locations
+2025-10-05 17:44:11,994 - app.services.data_service - DEBUG - Processing location: bangalore_core
+2025-10-05 17:44:11,994 - app.services.data_service - DEBUG - Found 9 JSON files for bangalore_core
+2025-10-05 17:44:11,996 - app.services.data_service - DEBUG - Processing location: mysore
+2025-10-05 17:44:11,997 - app.services.data_service - DEBUG - Found 9 JSON files for mysore
+2025-10-05 17:44:11,999 - app.services.data_service - DEBUG - Processing location: wayanad
+2025-10-05 17:44:11,999 - app.services.data_service - DEBUG - Found 9 JSON files for wayanad
+2025-10-05 17:44:12,000 - app.services.data_service - DEBUG - Processing location: chikmagalur
+2025-10-05 17:44:12,000 - app.services.data_service - DEBUG - Found 9 JSON files for chikmagalur
+2025-10-05 17:44:12,002 - app.services.data_service - DEBUG - Processing location: pondicherry
+2025-10-05 17:44:12,002 - app.services.data_service - DEBUG - Found 9 JSON files for pondicherry
+2025-10-05 17:44:12,004 - app.services.data_service - DEBUG - Processing location: kodaikanal
+2025-10-05 17:44:12,004 - app.services.data_service - DEBUG - Found 9 JSON files for kodaikanal
+2025-10-05 17:44:12,005 - app.services.data_service - DEBUG - Processing location: goa_coast
+2025-10-05 17:44:12,005 - app.services.data_service - DEBUG - Found 9 JSON files for goa_coast
+2025-10-05 17:44:12,007 - app.services.data_service - DEBUG - Processing location: hampi
+2025-10-05 17:44:12,007 - app.services.data_service - DEBUG - Found 9 JSON files for hampi
+2025-10-05 17:44:12,009 - app.services.data_service - DEBUG - Processing location: ooty
+2025-10-05 17:44:12,010 - app.services.data_service - DEBUG - Found 9 JSON files for ooty
+2025-10-05 17:44:12,013 - app.services.data_service - DEBUG - Processing location: bandipur
+2025-10-05 17:44:12,013 - app.services.data_service - DEBUG - Found 9 JSON files for bandipur
+2025-10-05 17:44:12,015 - app.services.data_service - DEBUG - Processing location: munnar
+2025-10-05 17:44:12,015 - app.services.data_service - DEBUG - Found 9 JSON files for munnar
+2025-10-05 17:44:12,017 - app.services.data_service - DEBUG - Processing location: coorg
+2025-10-05 17:44:12,017 - app.services.data_service - DEBUG - Found 9 JSON files for coorg
+2025-10-05 17:44:12,019 - app.services.data_service - INFO - Loaded 12 point locations
+2025-10-05 17:44:12,019 - app.services.data_service - INFO - DataService initialized with 12 locations
+2025-10-05 17:44:12,019 - app.main - INFO - ✓ Data service initialized
+2025-10-05 17:44:12,019 - app.main - INFO - ==================================================
+2025-10-05 17:44:12,019 - app.main - INFO - Server ready at http://0.0.0.0:8000
+2025-10-05 17:44:12,019 - app.main - INFO - API docs at http://0.0.0.0:8000/docs
+2025-10-05 17:44:12,019 - app.main - INFO - ==================================================
+2025-10-05 17:44:12,022 - app.main - INFO - Shutting down Weather Vibes API...
+2025-10-05 17:44:38,863 - app.main - INFO - ==================================================
+2025-10-05 17:44:38,864 - app.main - INFO - Starting Weather Vibes API...
+2025-10-05 17:44:38,864 - app.main - INFO - ==================================================
+2025-10-05 17:44:38,864 - app.main - INFO - Loading vibe dictionary...
+2025-10-05 17:44:38,864 - app.main - INFO - ✓ Loaded 8 vibes
+2025-10-05 17:44:38,864 - app.main - INFO - Initializing data service (path: ../data)...
+2025-10-05 17:44:38,864 - app.services.data_service - INFO - Initializing DataService with path: ../data
+2025-10-05 17:44:38,864 - app.services.data_service - INFO - Loading available locations
+2025-10-05 17:44:38,864 - app.services.data_service - DEBUG - Processing location: bangalore_core
+2025-10-05 17:44:38,864 - app.services.data_service - DEBUG - Found 9 JSON files for bangalore_core
+2025-10-05 17:44:38,866 - app.services.data_service - DEBUG - Processing location: mysore
+2025-10-05 17:44:38,866 - app.services.data_service - DEBUG - Found 9 JSON files for mysore
+2025-10-05 17:44:38,868 - app.services.data_service - DEBUG - Processing location: wayanad
+2025-10-05 17:44:38,868 - app.services.data_service - DEBUG - Found 9 JSON files for wayanad
+2025-10-05 17:44:38,869 - app.services.data_service - DEBUG - Processing location: chikmagalur
+2025-10-05 17:44:38,870 - app.services.data_service - DEBUG - Found 9 JSON files for chikmagalur
+2025-10-05 17:44:38,871 - app.services.data_service - DEBUG - Processing location: pondicherry
+2025-10-05 17:44:38,871 - app.services.data_service - DEBUG - Found 9 JSON files for pondicherry
+2025-10-05 17:44:38,873 - app.services.data_service - DEBUG - Processing location: kodaikanal
+2025-10-05 17:44:38,873 - app.services.data_service - DEBUG - Found 9 JSON files for kodaikanal
+2025-10-05 17:44:38,874 - app.services.data_service - DEBUG - Processing location: goa_coast
+2025-10-05 17:44:38,874 - app.services.data_service - DEBUG - Found 9 JSON files for goa_coast
+2025-10-05 17:44:38,876 - app.services.data_service - DEBUG - Processing location: hampi
+2025-10-05 17:44:38,876 - app.services.data_service - DEBUG - Found 9 JSON files for hampi
+2025-10-05 17:44:38,879 - app.services.data_service - DEBUG - Processing location: ooty
+2025-10-05 17:44:38,879 - app.services.data_service - DEBUG - Found 9 JSON files for ooty
+2025-10-05 17:44:38,881 - app.services.data_service - DEBUG - Processing location: bandipur
+2025-10-05 17:44:38,882 - app.services.data_service - DEBUG - Found 9 JSON files for bandipur
+2025-10-05 17:44:38,884 - app.services.data_service - DEBUG - Processing location: munnar
+2025-10-05 17:44:38,884 - app.services.data_service - DEBUG - Found 9 JSON files for munnar
+2025-10-05 17:44:38,886 - app.services.data_service - DEBUG - Processing location: coorg
+2025-10-05 17:44:38,886 - app.services.data_service - DEBUG - Found 9 JSON files for coorg
+2025-10-05 17:44:38,887 - app.services.data_service - INFO - Loaded 12 point locations
+2025-10-05 17:44:38,888 - app.services.data_service - INFO - DataService initialized with 12 locations
+2025-10-05 17:44:38,888 - app.main - INFO - ✓ Data service initialized
+2025-10-05 17:44:38,888 - app.main - INFO - ==================================================
+2025-10-05 17:44:38,888 - app.main - INFO - Server ready at http://0.0.0.0:8000
+2025-10-05 17:44:38,888 - app.main - INFO - API docs at http://0.0.0.0:8000/docs
+2025-10-05 17:44:38,888 - app.main - INFO - ==================================================

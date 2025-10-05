@@ -7,6 +7,7 @@ from app.core import vibe_engine as vibe_engine_module
 from app.services import data_service as data_service_module
 import logging
 import sys
+import os
 
 # Configure logging
 logging.basicConfig(
@@ -43,6 +44,23 @@ async def lifespan(app: FastAPI):
     except Exception as e:
         logger.error(f"Failed to initialize vibe engine: {e}")
         raise
+
+    # Download data from Azure Blob Storage
+    logger.info("Downloading climate data from Azure Blob Storage...")
+    try:
+        from app.services.azure_storage import AzureDataService
+        
+        azure_data_service = AzureDataService(
+            account_name=os.getenv("AZURE_STORAGE_ACCOUNT", "weathervibesdata"),
+            container_name=os.getenv("AZURE_STORAGE_CONTAINER", "climate-data")
+        )
+        
+        azure_data_service.download_data(settings.data_path)
+        logger.info("✓ Climate data downloaded successfully")
+    except Exception as e:
+        logger.error(f"Failed to download climate data: {e}")
+        logger.warning("Continuing without climate data - some features may not work")
+        # Continue without data for now - you might want to handle this differently
 
     # Initialize data service
     logger.info(f"Initializing data service (path: {settings.data_path})...")
