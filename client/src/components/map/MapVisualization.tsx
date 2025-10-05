@@ -3,6 +3,9 @@
 import { Marker, Popup, CircleMarker } from 'react-leaflet';
 import L from 'leaflet';
 import { WhereResponse, WhenResponse, AdvisorResponse } from '../../types/api';
+import { useVibeStore } from '../../stores/useVibeStore';
+import { whenService } from '../../services/whenService';
+import { toaster } from '../ui/toaster';
 
 // Fix for default markers in Leaflet with Next.js
 import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png';
@@ -24,10 +27,59 @@ interface MapVisualizationProps {
 }
 
 export default function MapVisualization({ whereData, whenData, advisorData }: MapVisualizationProps) {
+  const { selectedVibe, setWhenData } = useVibeStore();
+
   // Ensure we're on the client side
   if (typeof window === 'undefined') {
     return null;
   }
+
+  // Function to handle "when" analysis from popup
+  const handleWhenAnalysis = async (
+    lat: number,
+    lon: number,
+    analysisType: 'monthly' | 'daily' | 'hourly' = 'monthly'
+  ) => {
+    if (!selectedVibe) {
+      toaster.create({
+        title: 'No vibe selected',
+        description: 'Please select a vibe first',
+        type: 'warning',
+        duration: 3000,
+        closable: true,
+      });
+      return;
+    }
+
+    try {
+      const request = {
+        vibe: selectedVibe.id,
+        lat,
+        lon,
+        analysis_type: analysisType,
+      };
+
+      const response = await whenService.getMonthlyScores(request);
+      setWhenData(response);
+
+      toaster.create({
+        title: 'When analysis complete!',
+        description: `Found best times for ${selectedVibe.name} at this location`,
+        type: 'success',
+        duration: 5000,
+        closable: true,
+      });
+    } catch (error) {
+      console.error('Error analyzing when:', error);
+      toaster.create({
+        title: 'Analysis failed',
+        description: 'Failed to analyze best times for this location',
+        type: 'error',
+        duration: 5000,
+        closable: true,
+      });
+    }
+  };
 
   // Get score color based on normalized score (0-1)
   const getScoreColor = (score: number, maxScore: number, minScore: number) => {
@@ -78,6 +130,55 @@ export default function MapVisualization({ whereData, whenData, advisorData }: M
                 <p style={{ margin: '4px 0', fontSize: '12px', color: '#666' }}>
                   Month: {whereData.metadata.center.lat ? 'Current' : 'Selected'}
                 </p>
+
+                {/* When Analysis Buttons */}
+                <div style={{ marginTop: '12px', display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                  <button
+                    onClick={() => handleWhenAnalysis(location.lat, location.lon, 'monthly')}
+                    style={{
+                      padding: '6px 12px',
+                      backgroundColor: '#3b82f6',
+                      color: 'white',
+                      border: 'none',
+                      borderRadius: '4px',
+                      fontSize: '12px',
+                      cursor: 'pointer',
+                      fontWeight: '500',
+                    }}
+                  >
+                    📅 Analyze Best Months
+                  </button>
+                  <button
+                    onClick={() => handleWhenAnalysis(location.lat, location.lon, 'daily')}
+                    style={{
+                      padding: '6px 12px',
+                      backgroundColor: '#10b981',
+                      color: 'white',
+                      border: 'none',
+                      borderRadius: '4px',
+                      fontSize: '12px',
+                      cursor: 'pointer',
+                      fontWeight: '500',
+                    }}
+                  >
+                    📆 Analyze Best Days
+                  </button>
+                  <button
+                    onClick={() => handleWhenAnalysis(location.lat, location.lon, 'hourly')}
+                    style={{
+                      padding: '6px 12px',
+                      backgroundColor: '#f59e0b',
+                      color: 'white',
+                      border: 'none',
+                      borderRadius: '4px',
+                      fontSize: '12px',
+                      cursor: 'pointer',
+                      fontWeight: '500',
+                    }}
+                  >
+                    🕐 Analyze Best Hours
+                  </button>
+                </div>
               </div>
             </Popup>
           </CircleMarker>
@@ -93,12 +194,12 @@ export default function MapVisualization({ whereData, whenData, advisorData }: M
               </h3>
               <p style={{ margin: '4px 0', fontSize: '14px' }}>
                 <strong>Best Month:</strong>{' '}
-                {whenData.monthly_scores.find((m) => m.month === whenData.best_month)?.month_name} (
+                {whenData.monthly_scores?.find((m) => m.month === whenData.best_month)?.month_name} (
                 {whenData.best_month})
               </p>
               <p style={{ margin: '4px 0', fontSize: '14px' }}>
                 <strong>Worst Month:</strong>{' '}
-                {whenData.monthly_scores.find((m) => m.month === whenData.worst_month)?.month_name} (
+                {whenData.monthly_scores?.find((m) => m.month === whenData.worst_month)?.month_name} (
                 {whenData.worst_month})
               </p>
               <p style={{ margin: '4px 0', fontSize: '14px' }}>
@@ -107,7 +208,7 @@ export default function MapVisualization({ whereData, whenData, advisorData }: M
               <div style={{ marginTop: '8px' }}>
                 <h4 style={{ margin: '0 0 4px 0', fontSize: '14px' }}>Monthly Scores:</h4>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '4px', fontSize: '12px' }}>
-                  {whenData.monthly_scores.map((month) => (
+                  {whenData.monthly_scores?.map((month) => (
                     <div
                       key={month.month}
                       style={{

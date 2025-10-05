@@ -1,20 +1,23 @@
 'use client';
 
 import { Box, VStack, Heading, Text, Button } from '@chakra-ui/react';
-import { NativeSelectRoot, NativeSelectField } from '@chakra-ui/react';
 import { useState } from 'react';
 import { useVibeStore } from '../../../stores/useVibeStore';
-import { useTimeStore } from '../../../stores/useTimeStore';
 import { useLocationStore } from '../../../stores/useLocationStore';
 import { whereService } from '../../../services/whereService';
 import { WhereRequest } from '../../../types/api';
 import { toaster } from '../../ui/toaster';
+import DateRangePicker from '../../ui/DateRangePicker';
 
 export default function WherePanel() {
   const { selectedVibe, whereData, setWhereData } = useVibeStore();
-  const { selectedMonth, setSelectedMonth } = useTimeStore();
   const { center } = useLocationStore();
   const [isLoading, setIsLoading] = useState(false);
+  const [dateRange, setDateRange] = useState<{
+    startDate?: string;
+    endDate?: string;
+    month?: number;
+  }>({});
 
   const handleFindLocations = async () => {
     if (!selectedVibe) {
@@ -28,10 +31,11 @@ export default function WherePanel() {
       return;
     }
 
-    if (!selectedMonth) {
+    // Check if we have either month or date range selected
+    if (!dateRange.month && !dateRange.startDate && !dateRange.endDate) {
       toaster.create({
-        title: 'No month selected',
-        description: 'Please select a month to find locations',
+        title: 'No time period selected',
+        description: 'Please select a month or date range to find locations',
         type: 'warning',
         duration: 3000,
         closable: true,
@@ -44,7 +48,9 @@ export default function WherePanel() {
     try {
       const request: WhereRequest = {
         vibe: selectedVibe.id,
-        month: selectedMonth,
+        month: dateRange.month,
+        start_date: dateRange.startDate,
+        end_date: dateRange.endDate,
         center_lat: center[1], // center is [lon, lat]
         center_lon: center[0],
         radius_km: 100, // Default radius
@@ -105,31 +111,14 @@ export default function WherePanel() {
           Find the best locations for your selected vibe
         </Text>
 
-        <Box>
-          <Text fontSize="sm" fontWeight="medium" mb={2} color="gray.500">
-            Month
-          </Text>
-          <NativeSelectRoot>
-            <NativeSelectField
-              value={selectedMonth || ''}
-              onChange={(e) => setSelectedMonth(Number(e.target.value))}
-              color="gray.700"
-            >
-              <option value="1">January</option>
-              <option value="2">February</option>
-              <option value="3">March</option>
-              <option value="4">April</option>
-              <option value="5">May</option>
-              <option value="6">June</option>
-              <option value="7">July</option>
-              <option value="8">August</option>
-              <option value="9">September</option>
-              <option value="10">October</option>
-              <option value="11">November</option>
-              <option value="12">December</option>
-            </NativeSelectField>
-          </NativeSelectRoot>
-        </Box>
+        <DateRangePicker
+          onDateRangeChange={(startDate, endDate, month) => {
+            setDateRange({ startDate, endDate, month });
+          }}
+          selectedMonth={dateRange.month}
+          selectedStartDate={dateRange.startDate}
+          selectedEndDate={dateRange.endDate}
+        />
 
         <Button colorScheme="brand" onClick={handleFindLocations} loading={isLoading} disabled={!selectedVibe}>
           Find Best Locations
@@ -158,6 +147,17 @@ export default function WherePanel() {
               <Text fontSize="xs" color="gray.600">
                 <strong>Resolution:</strong> {whereData.metadata.resolution_km}km
               </Text>
+              {whereData.month && (
+                <Text fontSize="xs" color="gray.600">
+                  <strong>Month:</strong>{' '}
+                  {new Date(2024, whereData.month - 1).toLocaleString('default', { month: 'long' })}
+                </Text>
+              )}
+              {whereData.start_date && whereData.end_date && (
+                <Text fontSize="xs" color="gray.600">
+                  <strong>Date Range:</strong> {whereData.start_date} to {whereData.end_date}
+                </Text>
+              )}
             </VStack>
           </Box>
         )}

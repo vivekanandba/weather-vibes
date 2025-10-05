@@ -2,8 +2,10 @@
 
 export interface WhereRequest {
   vibe: string;
-  month: number;
+  month?: number;
   year?: number;
+  start_date?: string; // YYYY-MM-DD format
+  end_date?: string; // YYYY-MM-DD format
   center_lat: number;
   center_lon: number;
   radius_km: number;
@@ -18,7 +20,10 @@ export interface LocationScore {
 
 export interface WhereResponse {
   vibe: string;
-  month: number;
+  month?: number;
+  year?: number;
+  start_date?: string;
+  end_date?: string;
   scores: LocationScore[];
   max_score: number;
   min_score: number;
@@ -28,6 +33,10 @@ export interface WhereResponse {
     resolution_km: number;
     num_points: number;
     vibe_name: string;
+    date_range?: {
+      start: string;
+      end: string;
+    };
   };
 }
 
@@ -36,6 +45,9 @@ export interface WhenRequest {
   lat: number;
   lon: number;
   year?: number;
+  start_date?: string; // YYYY-MM-DD format
+  end_date?: string; // YYYY-MM-DD format
+  analysis_type?: 'monthly' | 'daily' | 'hourly'; // New field for analysis type
 }
 
 export interface MonthlyScore {
@@ -44,16 +56,39 @@ export interface MonthlyScore {
   score: number;
 }
 
+export interface DailyScore {
+  date: string; // YYYY-MM-DD format
+  score: number;
+}
+
+export interface HourlyScore {
+  hour: number;
+  score: number;
+}
+
 export interface WhenResponse {
   vibe: string;
   location: { lat: number; lon: number };
-  monthly_scores: MonthlyScore[];
-  best_month: number;
-  worst_month: number;
+  monthly_scores?: MonthlyScore[];
+  daily_scores?: DailyScore[];
+  hourly_scores?: HourlyScore[];
+  best_month?: number;
+  worst_month?: number;
+  best_date?: string;
+  worst_date?: string;
+  best_hour?: number;
+  worst_hour?: number;
+  analysis_type: 'monthly' | 'daily' | 'hourly';
   metadata: {
     year?: number;
-    num_months: number;
+    num_months?: number;
+    num_days?: number;
+    num_hours?: number;
     vibe_name: string;
+    date_range?: {
+      start: string;
+      end: string;
+    };
   };
 }
 
