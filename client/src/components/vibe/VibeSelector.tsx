@@ -1,21 +1,17 @@
-'use client';
+"use client";
 
-import {
-  Box,
-  Text,
-  HStack,
-} from '@chakra-ui/react';
+import { Box, Text, HStack } from "@chakra-ui/react";
 import {
   MenuRoot,
   MenuTrigger,
   MenuContent,
   MenuItem,
   MenuSeparator,
-} from '@chakra-ui/react';
-import { Button } from '@chakra-ui/react';
-import { ChevronDownIcon } from '@chakra-ui/icons';
-import { useVibeStore } from '../stores/useVibeStore';
-import { getStandardVibes, getAdvisorVibes } from '../config/vibes';
+} from "@chakra-ui/react";
+import { Button } from "@chakra-ui/react";
+import { ChevronDownIcon } from "@chakra-ui/icons";
+import { useVibeStore } from "../../stores/useVibeStore";
+import { getStandardVibes, getAdvisorVibes } from "../../config/vibes";
 
 export default function VibeSelector() {
   const { selectedVibe, setSelectedVibe } = useVibeStore();
@@ -33,7 +29,7 @@ export default function VibeSelector() {
               <Text>{selectedVibe.name}</Text>
             </HStack>
           ) : (
-            'Select a vibe...'
+            "Select a vibe..."
           )}
           <ChevronDownIcon />
         </Button>

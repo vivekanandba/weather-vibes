@@ -1,16 +1,9 @@
-'use client';
+"use client";
 
-import {
-  Box,
-  VStack,
-  Heading,
-  Text,
-  Button,
-  
-} from '@chakra-ui/react';
-import { useState } from 'react';
-import { useVibeStore } from '../stores/useVibeStore';
-import { useLocationStore } from '../stores/useLocationStore';
+import { Box, VStack, Heading, Text, Button } from "@chakra-ui/react";
+import { useState } from "react";
+import { useVibeStore } from "../../../stores/useVibeStore";
+import { useLocationStore } from "../../../stores/useLocationStore";
 
 export default function AdvisorPanel() {
   const { selectedVibe } = useVibeStore();
@@ -18,14 +11,16 @@ export default function AdvisorPanel() {
   const [isLoading, setIsLoading] = useState(false);
 
   const handleGetAdvice = async () => {
-    if (!selectedVibe || selectedVibe.type !== 'advisor') {
-      alert('Please select an AI advisor from the vibe menu');
+    if (!selectedVibe || selectedVibe.type !== "advisor") {
+      alert("Please select an AI advisor from the vibe menu");
       return;
     }
 
     setIsLoading(true);
     // TODO: Call advisorService.getRecommendations() with API integration
-    console.log('Feature in progress: This will show AI-powered recommendations');
+    console.log(
+      "Feature in progress: This will show AI-powered recommendations"
+    );
     setIsLoading(false);
   };
 
@@ -58,7 +53,7 @@ export default function AdvisorPanel() {
           </Text>
         </Box>
 
-        {selectedVibe?.type === 'advisor' && (
+        {selectedVibe?.type === "advisor" && (
           <Box bg="brand.50" p={3} borderRadius="md">
             <Text fontSize="sm" fontWeight="medium">
               {selectedVibe.icon} {selectedVibe.name}
@@ -73,7 +68,7 @@ export default function AdvisorPanel() {
           colorScheme="brand"
           onClick={handleGetAdvice}
           loading={isLoading}
-          disabled={!selectedVibe || selectedVibe.type !== 'advisor'}
+          disabled={!selectedVibe || selectedVibe.type !== "advisor"}
         >
           Get Recommendations
         </Button>

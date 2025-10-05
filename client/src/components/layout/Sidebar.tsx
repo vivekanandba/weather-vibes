@@ -1,15 +1,9 @@
-'use client';
+"use client";
 
-import {
-  Box,
-  VStack,
-  Text,
-  Button,
-  Separator,
-} from '@chakra-ui/react';
-import { useUIStore } from '../stores/useUIStore';
-import { useVibeStore } from '../stores/useVibeStore';
-import VibeSelector from '@/components/vibe/VibeSelector';
+import { Box, VStack, Text, Button, Separator } from "@chakra-ui/react";
+import { useUIStore } from "../../stores/useUIStore";
+import { useVibeStore } from "../../stores/useVibeStore";
+import VibeSelector from "@/components/vibe/VibeSelector";
 
 export default function Sidebar() {
   const { isSidebarOpen } = useUIStore();
@@ -45,25 +39,31 @@ export default function Sidebar() {
           <VStack gap={2}>
             <Button
               width="full"
-              variant={activeFeature === 'where' ? 'solid' : 'outline'}
+              variant={activeFeature === "where" ? "solid" : "outline"}
               colorPalette="blue"
-              onClick={() => setActiveFeature(activeFeature === 'where' ? null : 'where')}
+              onClick={() =>
+                setActiveFeature(activeFeature === "where" ? null : "where")
+              }
             >
               📍 Where
             </Button>
             <Button
               width="full"
-              variant={activeFeature === 'when' ? 'solid' : 'outline'}
+              variant={activeFeature === "when" ? "solid" : "outline"}
               colorPalette="blue"
-              onClick={() => setActiveFeature(activeFeature === 'when' ? null : 'when')}
+              onClick={() =>
+                setActiveFeature(activeFeature === "when" ? null : "when")
+              }
             >
               📅 When
             </Button>
             <Button
               width="full"
-              variant={activeFeature === 'advisor' ? 'solid' : 'outline'}
+              variant={activeFeature === "advisor" ? "solid" : "outline"}
               colorPalette="blue"
-              onClick={() => setActiveFeature(activeFeature === 'advisor' ? null : 'advisor')}
+              onClick={() =>
+                setActiveFeature(activeFeature === "advisor" ? null : "advisor")
+              }
             >
               🤖 Advisors
             </Button>

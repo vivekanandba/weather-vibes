@@ -1,17 +1,10 @@
-'use client';
+"use client";
 
-import {
-  Box,
-  VStack,
-  Heading,
-  Text,
-  Button,
-  
-} from '@chakra-ui/react';
-import { useState } from 'react';
-import { useVibeStore } from '../stores/useVibeStore';
-import { useLocationStore } from '../stores/useLocationStore';
-import { useUIStore } from '../stores/useUIStore';
+import { Box, VStack, Heading, Text, Button } from "@chakra-ui/react";
+import { useState } from "react";
+import { useVibeStore } from "../../../stores/useVibeStore";
+import { useLocationStore } from "../../../stores/useLocationStore";
+import { useUIStore } from "../../../stores/useUIStore";
 
 export default function WhenPanel() {
   const { selectedVibe } = useVibeStore();
@@ -21,13 +14,15 @@ export default function WhenPanel() {
 
   const handleFindBestTimes = async () => {
     if (!selectedVibe) {
-      alert('Please select a vibe to find best times');
+      alert("Please select a vibe to find best times");
       return;
     }
 
     setIsLoading(true);
     // TODO: Call whenService.getMonthlyScores() with API integration
-    console.log('Feature in progress: This will show monthly scores in a calendar');
+    console.log(
+      "Feature in progress: This will show monthly scores in a calendar"
+    );
     setIsLoading(false);
     setCalendarModalOpen(true);
   };

@@ -1,17 +1,11 @@
-'use client';
+"use client";
 
-import {
-  Box,
-  VStack,
-  Heading,
-  Text,
-  Button,
-} from '@chakra-ui/react';
-import { NativeSelectRoot, NativeSelectField } from '@chakra-ui/react';
-import { useState } from 'react';
-import { useVibeStore } from '../stores/useVibeStore';
-import { useTimeStore } from '../stores/useTimeStore';
-import { useLocationStore } from '../stores/useLocationStore';
+import { Box, VStack, Heading, Text, Button } from "@chakra-ui/react";
+import { NativeSelectRoot, NativeSelectField } from "@chakra-ui/react";
+import { useState } from "react";
+import { useVibeStore } from "../../../stores/useVibeStore";
+import { useTimeStore } from "../../../stores/useTimeStore";
+import { useLocationStore } from "../../../stores/useLocationStore";
 
 export default function WherePanel() {
   const { selectedVibe } = useVibeStore();
@@ -21,18 +15,20 @@ export default function WherePanel() {
 
   const handleFindLocations = async () => {
     if (!selectedVibe) {
-      alert('Please select a vibe to find locations');
+      alert("Please select a vibe to find locations");
       return;
     }
 
     if (!bounds) {
-      alert('Please wait for the map to load');
+      alert("Please wait for the map to load");
       return;
     }
 
     setIsLoading(true);
     // TODO: Call whereService.getHeatmap() with API integration
-    console.log('Feature in progress: This will show a heatmap of best locations');
+    console.log(
+      "Feature in progress: This will show a heatmap of best locations"
+    );
     setIsLoading(false);
   };
 
@@ -60,7 +56,7 @@ export default function WherePanel() {
           </Text>
           <NativeSelectRoot>
             <NativeSelectField
-              value={selectedMonth || ''}
+              value={selectedMonth || ""}
               onChange={(e) => setSelectedMonth(Number(e.target.value))}
             >
               <option value="1">January</option>
