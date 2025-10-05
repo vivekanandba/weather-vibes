@@ -11,7 +11,7 @@ import { WhereRequest } from '../../../types/api';
 import { toaster } from '../../ui/toaster';
 
 export default function WherePanel() {
-  const { selectedVibe } = useVibeStore();
+  const { selectedVibe, whereData, setWhereData } = useVibeStore();
   const { selectedMonth, setSelectedMonth } = useTimeStore();
   const { center } = useLocationStore();
   const [isLoading, setIsLoading] = useState(false);
@@ -52,6 +52,7 @@ export default function WherePanel() {
       };
 
       const response = await whereService.getHeatmap(request);
+      setWhereData(response);
 
       toaster.create({
         title: 'Locations found!',
@@ -92,6 +93,8 @@ export default function WherePanel() {
       borderRadius="md"
       boxShadow="lg"
       w="300px"
+      maxH="80vh"
+      overflowY="auto"
       zIndex={1000}
     >
       <VStack gap={4} alignItems="stretch">
@@ -135,6 +138,29 @@ export default function WherePanel() {
         <Text fontSize="xs" color="gray.500">
           A heatmap will appear on the map showing the best locations
         </Text>
+
+        {/* Results Display */}
+        {whereData && (
+          <Box mt={4} p={3} bg="gray.50" borderRadius="md" border="1px" borderColor="gray.200">
+            <Text fontSize="sm" fontWeight="bold" mb={2} color="gray.700">
+              📊 Results Summary
+            </Text>
+            <VStack gap={2} alignItems="stretch">
+              <Text fontSize="xs" color="gray.600">
+                <strong>Locations Found:</strong> {whereData.scores.length}
+              </Text>
+              <Text fontSize="xs" color="gray.600">
+                <strong>Score Range:</strong> {whereData.min_score.toFixed(1)} - {whereData.max_score.toFixed(1)}
+              </Text>
+              <Text fontSize="xs" color="gray.600">
+                <strong>Search Radius:</strong> {whereData.metadata.radius_km}km
+              </Text>
+              <Text fontSize="xs" color="gray.600">
+                <strong>Resolution:</strong> {whereData.metadata.resolution_km}km
+              </Text>
+            </VStack>
+          </Box>
+        )}
       </VStack>
     </Box>
   );

@@ -13,7 +13,7 @@ class Settings(BaseSettings):
     debug: bool = False
 
     # Data Configuration
-    data_path: str = "./data"
+    data_path: str = "../data"
     geotiff_cache_size: int = 100
 
     # CORS Configuration

@@ -4,18 +4,25 @@
     "description": "Clear skies with low humidity for optimal star viewing",
     "parameters": [
       {
-        "id": "CLOUD_AMT",
-        "weight": 0.6,
+        "id": "CLRSKY_SFC_SW_DWN",
+        "weight": 0.5,
+        "scoring": "high_is_better",
+        "min": 0,
+        "max": 10
+      },
+      {
+        "id": "RH2M",
+        "weight": 0.3,
         "scoring": "low_is_better",
         "min": 0,
         "max": 100
       },
       {
-        "id": "RH2M",
-        "weight": 0.4,
+        "id": "PRECTOTCORR",
+        "weight": 0.2,
         "scoring": "low_is_better",
         "min": 0,
-        "max": 100
+        "max": 50
       }
     ]
   },

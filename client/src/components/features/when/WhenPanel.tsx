@@ -10,9 +10,9 @@ import { WhenRequest } from '../../../types/api';
 import { toaster } from '../../ui/toaster';
 
 export default function WhenPanel() {
-  const { selectedVibe } = useVibeStore();
+  const { selectedVibe, whenData, setWhenData } = useVibeStore();
   const { center } = useLocationStore();
-  const { setCalendarModalOpen } = useUIStore();
+  const { setCalendarModalOpen, isSidebarOpen } = useUIStore();
   const [isLoading, setIsLoading] = useState(false);
 
   const handleFindBestTimes = async () => {
@@ -37,6 +37,7 @@ export default function WhenPanel() {
       };
 
       const response = await whenService.getMonthlyScores(request);
+      setWhenData(response);
 
       toaster.create({
         title: 'Best times found!',
@@ -72,12 +73,14 @@ export default function WhenPanel() {
     <Box
       position="absolute"
       top={4}
-      right={4}
+      right={isSidebarOpen ? 4 : 4}
       bg="white"
       p={4}
       borderRadius="md"
       boxShadow="lg"
       w="300px"
+      maxH="80vh"
+      overflowY="auto"
       zIndex={1000}
     >
       <VStack gap={4} alignItems="stretch">
@@ -104,6 +107,56 @@ export default function WhenPanel() {
         <Text fontSize="xs" color="gray.500">
           View monthly scores for the year to plan your perfect moment
         </Text>
+
+        {/* Monthly Scores Visualization */}
+        {whenData && (
+          <Box
+            mt={4}
+            p={3}
+            bg="gray.50"
+            borderRadius="md"
+            border="1px"
+            borderColor="gray.200"
+            maxH="400px"
+            overflowY="auto"
+          >
+            <Text fontSize="sm" fontWeight="bold" mb={2} color="gray.700">
+              📊 Monthly Scores
+            </Text>
+            <VStack gap={1} alignItems="stretch">
+              {whenData.monthly_scores.map((month) => {
+                const isBest = month.month === whenData.best_month;
+                const isWorst = month.month === whenData.worst_month;
+                const scoreColor = month.score >= 80 ? 'green.500' : month.score >= 70 ? 'yellow.500' : 'red.500';
+
+                return (
+                  <Box
+                    key={month.month}
+                    p={2}
+                    bg={isBest ? 'green.50' : isWorst ? 'red.50' : 'white'}
+                    borderRadius="sm"
+                    border={isBest ? '2px solid' : isWorst ? '2px solid' : '1px solid'}
+                    borderColor={isBest ? 'green.200' : isWorst ? 'red.200' : 'gray.200'}
+                  >
+                    <Box display="flex" justifyContent="space-between" alignItems="center">
+                      <Text fontSize="xs" fontWeight={isBest || isWorst ? 'bold' : 'medium'} color="gray.700">
+                        {month.month_name}
+                        {isBest && ' 🏆'}
+                        {isWorst && ' ⚠️'}
+                      </Text>
+                      <Text fontSize="xs" fontWeight="bold" color={scoreColor}>
+                        {month.score.toFixed(1)}
+                      </Text>
+                    </Box>
+                    <Box mt={1} h={2} bg="gray.200" borderRadius="full" overflow="hidden">
+                      <Box h="100%" bg={scoreColor} width={`${(month.score / 100) * 100}%`} borderRadius="full" />
+                    </Box>
+                  </Box>
+                );
+              })}
+            </VStack>
+          </Box>
+        )}
       </VStack>
     </Box>
   );

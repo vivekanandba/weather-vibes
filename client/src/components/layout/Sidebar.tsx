@@ -12,7 +12,17 @@ export default function Sidebar() {
   if (!isSidebarOpen) return null;
 
   return (
-    <Box as="aside" w="320px" bg="white" borderRight="1px" borderColor="gray.200" p={4} overflowY="auto" h="100%">
+    <Box
+      as="aside"
+      w="320px"
+      flexShrink={0}
+      bg="white"
+      borderRight="1px"
+      borderColor="gray.200"
+      p={4}
+      overflowY="auto"
+      h="100%"
+    >
       <VStack gap={4} alignItems="stretch">
         <Box>
           <Text fontSize="sm" fontWeight="bold" mb={2} color="gray.600">

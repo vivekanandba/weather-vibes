@@ -1,10 +1,9 @@
-"use client";
+'use client';
 
 import { useEffect, useState } from 'react';
-import { Box, Spinner, Center, Text } from '@chakra-ui/react';
+import { Box, Spinner, Center } from '@chakra-ui/react';
 import dynamic from 'next/dynamic';
 import { useLocationStore } from '../../stores/useLocationStore';
-import { MAP_CONFIG } from '../../config/mapbox';
 
 // Dynamically import the actual map component to avoid SSR issues
 const DynamicMap = dynamic(() => import('./MapComponent'), {
@@ -30,7 +29,7 @@ export default function MapView() {
   }, []);
 
   return (
-    <Box position="relative" w="100%" h="100%">
+    <Box position="relative" w="100%" h="100%" minH="100%" minW="100%">
       {isLoading && (
         <Center position="absolute" top={0} left={0} right={0} bottom={0} bg="white" zIndex={10}>
           <Spinner size="xl" color="brand.500" />

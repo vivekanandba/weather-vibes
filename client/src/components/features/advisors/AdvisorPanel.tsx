@@ -10,7 +10,7 @@ import { AdvisorRequest } from '../../../types/api';
 import { toaster } from '../../ui/toaster';
 
 export default function AdvisorPanel() {
-  const { selectedVibe } = useVibeStore();
+  const { selectedVibe, advisorData, setAdvisorData } = useVibeStore();
   const { center } = useLocationStore();
   const { selectedMonth } = useTimeStore();
   const [isLoading, setIsLoading] = useState(false);
@@ -61,6 +61,7 @@ export default function AdvisorPanel() {
       };
 
       const response = await advisorService.getRecommendations(request);
+      setAdvisorData(response);
 
       toaster.create({
         title: 'Recommendations ready!',
@@ -144,7 +145,44 @@ export default function AdvisorPanel() {
           AI advisors provide context-aware suggestions
         </Text>
 
-        {/* TODO: Render recommendations here after API integration */}
+        {/* Recommendations Display */}
+        {advisorData && (
+          <Box mt={4} p={3} bg="gray.50" borderRadius="md" border="1px" borderColor="gray.200">
+            <Text fontSize="sm" fontWeight="bold" mb={3} color="gray.700">
+              🤖 {advisorData.metadata.advisor_name} Recommendations
+            </Text>
+            <VStack gap={3} alignItems="stretch">
+              {advisorData.recommendations.map((rec, index) => (
+                <Box key={index} p={3} bg="white" borderRadius="md" border="1px" borderColor="gray.200" boxShadow="sm">
+                  <Box display="flex" alignItems="center" mb={2}>
+                    <Text fontSize="lg" mr={2}>
+                      {rec.icon}
+                    </Text>
+                    <Text fontSize="sm" fontWeight="bold" color="gray.800">
+                      {rec.item}
+                    </Text>
+                  </Box>
+                  <Text fontSize="xs" color="gray.600" lineHeight="1.4">
+                    {rec.description}
+                  </Text>
+                </Box>
+              ))}
+            </VStack>
+
+            {/* Weather Data Summary */}
+            <Box mt={3} p={2} bg="blue.50" borderRadius="sm" border="1px" borderColor="blue.200">
+              <Text fontSize="xs" fontWeight="bold" color="blue.700" mb={1}>
+                📊 Weather Context
+              </Text>
+              <Box display="grid" gridTemplateColumns="repeat(2, 1fr)" gap={1} fontSize="xs" color="blue.600">
+                <Text>Temp: {(advisorData.raw_data?.T2M as number)?.toFixed(1)}°C</Text>
+                <Text>Rain: {(advisorData.raw_data?.PRECTOTCORR as number)?.toFixed(1)}mm</Text>
+                <Text>Sun: {(advisorData.raw_data?.ALLSKY_SFC_SW_DWN as number)?.toFixed(1)} MJ/m²</Text>
+                <Text>Wind: {(advisorData.raw_data?.WS2M as number)?.toFixed(1)} m/s</Text>
+              </Box>
+            </Box>
+          </Box>
+        )}
       </VStack>
     </Box>
   );
