@@ -159,6 +159,25 @@ async def list_vibes():
         raise
 
 
+@app.get("/version")
+async def get_version():
+    """Get API version and deployment info."""
+    return {
+        "version": "2.1.2-azure-working",
+        "build": "2025-10-05T14:12:00Z",
+        "environment": "azure-container-apps",
+        "status": "operational",
+        "features": [
+            "climate-data-download",
+            "azure-blob-storage",
+            "debug-endpoints",
+            "symlink-handling"
+        ],
+        "data_status": "loaded",
+        "locations_available": 12
+    }
+
+
 if __name__ == "__main__":
     import uvicorn
 
