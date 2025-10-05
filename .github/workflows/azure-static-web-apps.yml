@@ -49,7 +49,6 @@ jobs:
           app_location: "/client"
           api_location: ""
           output_location: "out"
-          skip_app_build: true
       - name: Deployment Summary
         run: |
           echo "## 🌐 Frontend Deployment Complete" >> $GITHUB_STEP_SUMMARY
