@@ -1,0 +1,61 @@
+name: Azure Container Apps CI/CD
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'server/**'
+      - '.github/workflows/azure-container-apps.yml'
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+    branches:
+      - main
+    paths:
+      - 'server/**'
+      - '.github/workflows/azure-container-apps.yml'
+
+jobs:
+  build_and_deploy_backend:
+    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
+    runs-on: ubuntu-latest
+    name: Build and Deploy Backend
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      - name: Login to Azure Container Registry
+        run: |
+          az acr login --name weathervibesacr
+      - name: Build and push Docker image
+        run: |
+          cd server
+          docker buildx build --platform linux/amd64 -t weathervibesacr.azurecr.io/weather-vibes-api:${{ github.sha }} .
+          docker buildx build --platform linux/amd64 -t weathervibesacr.azurecr.io/weather-vibes-api:latest .
+          docker push weathervibesacr.azurecr.io/weather-vibes-api:${{ github.sha }}
+          docker push weathervibesacr.azurecr.io/weather-vibes-api:latest
+      - name: Deploy to Azure Container Apps
+        run: |
+          az containerapp update \
+            --name weather-vibes-api \
+            --resource-group weather-vibes-rg \
+            --image weathervibesacr.azurecr.io/weather-vibes-api:${{ github.sha }} \
+            --revision-suffix ${{ github.run_number }}
+      - name: Verify deployment
+        run: |
+          echo "Waiting for deployment to complete..."
+          sleep 30
+          curl -f https://weather-vibes-api.whitewave-6eaae7b5.eastus.azurecontainerapps.io/health || exit 1
+          echo "✅ Backend deployment successful!"
+      - name: Deployment Summary
+        run: |
+          echo "## 🚀 Backend Deployment Complete" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Backend URL:** https://weather-vibes-api.whitewave-6eaae7b5.eastus.azurecontainerapps.io" >> $GITHUB_STEP_SUMMARY
+          echo "**API Docs:** https://weather-vibes-api.whitewave-6eaae7b5.eastus.azurecontainerapps.io/docs" >> $GITHUB_STEP_SUMMARY
+          echo "**Health Check:** https://weather-vibes-api.whitewave-6eaae7b5.eastus.azurecontainerapps.io/health" >> $GITHUB_STEP_SUMMARY
+          echo "**Version:** https://weather-vibes-api.whitewave-6eaae7b5.eastus.azurecontainerapps.io/version" >> $GITHUB_STEP_SUMMARY

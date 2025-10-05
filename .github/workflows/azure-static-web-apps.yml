@@ -4,16 +4,22 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'client/**'
+      - '.github/workflows/azure-static-web-apps.yml'
   pull_request:
     types: [opened, synchronize, reopened, closed]
     branches:
       - main
+    paths:
+      - 'client/**'
+      - '.github/workflows/azure-static-web-apps.yml'
 
 jobs:
   build_and_deploy_job:
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
-    name: Build and Deploy Job
+    name: Build and Deploy Frontend
     steps:
       - uses: actions/checkout@v4
         with:
@@ -44,3 +50,10 @@ jobs:
           api_location: ""
           output_location: "out"
           skip_app_build: true
+      - name: Deployment Summary
+        run: |
+          echo "## 🌐 Frontend Deployment Complete" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Frontend URL:** https://victorious-forest-09f551a0f.1.azurestaticapps.net" >> $GITHUB_STEP_SUMMARY
+          echo "**Backend API:** https://weather-vibes-api.whitewave-6eaae7b5.eastus.azurecontainerapps.io" >> $GITHUB_STEP_SUMMARY
+          echo "**API Docs:** https://weather-vibes-api.whitewave-6eaae7b5.eastus.azurecontainerapps.io/docs" >> $GITHUB_STEP_SUMMARY
