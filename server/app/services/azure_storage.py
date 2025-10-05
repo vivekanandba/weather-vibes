@@ -33,8 +33,11 @@ class AzureDataService:
         """Download all data files from blob storage."""
         logger.info(f"Downloading data to {local_path}")
         
-        # Create local directory
-        Path(local_path).mkdir(parents=True, exist_ok=True)
+        # Create local directory (handle existing directory)
+        try:
+            Path(local_path).mkdir(parents=True, exist_ok=True)
+        except FileExistsError:
+            logger.info(f"Directory {local_path} already exists, continuing...")
         
         # List and download all blobs
         container_client = self.blob_service.get_container_client(self.container_name)
