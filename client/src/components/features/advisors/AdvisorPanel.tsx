@@ -104,7 +104,18 @@ export default function AdvisorPanel() {
   };
 
   const renderSpecializedAdvisorContent = () => {
-    if (!advisorData?.raw_data) {
+    if (!advisorData) {
+      return (
+        <Box p={3} bg="gray.50" borderRadius="md">
+          <Text fontSize="sm" color="gray.600">
+            Select an advisor and get recommendations to see results here.
+          </Text>
+        </Box>
+      );
+    }
+
+    // Show basic recommendations if no raw_data or if raw_data doesn't have specialized content
+    if (!advisorData.raw_data || !advisorData.raw_data.outfit_recommendations) {
       return (
         <Box
           p={3}

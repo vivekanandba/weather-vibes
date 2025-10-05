@@ -1,13 +1,20 @@
-'use client';
+"use client";
 
-import { Box, VStack, Text, Button, Separator } from '@chakra-ui/react';
-import { useUIStore } from '../../stores/useUIStore';
-import { useVibeStore } from '../../stores/useVibeStore';
-import VibeSelector from '@/components/vibe/VibeSelector';
+import {
+  Box,
+  VStack,
+  Text,
+  Button,
+  Separator,
+} from "@chakra-ui/react";
+import { TooltipRoot, TooltipTrigger, TooltipContent } from "@chakra-ui/react";
+import { useUIStore } from "../../stores/useUIStore";
+import { useVibeStore } from "../../stores/useVibeStore";
+import VibeSelector from "@/components/vibe/VibeSelector";
 
 export default function Sidebar() {
   const { isSidebarOpen } = useUIStore();
-  const { activeFeature, setActiveFeature } = useVibeStore();
+  const { selectedVibe, activeFeature, setActiveFeature } = useVibeStore();
 
   if (!isSidebarOpen) return null;
 
@@ -38,30 +45,68 @@ export default function Sidebar() {
             FEATURES
           </Text>
           <VStack gap={2}>
-            <Button
-              width="full"
-              variant={activeFeature === 'where' ? 'solid' : 'outline'}
-              colorPalette="brand"
-              onClick={() => setActiveFeature(activeFeature === 'where' ? null : 'where')}
-            >
-              📍 Where
-            </Button>
-            <Button
-              width="full"
-              variant={activeFeature === 'when' ? 'solid' : 'outline'}
-              colorPalette="brand"
-              onClick={() => setActiveFeature(activeFeature === 'when' ? null : 'when')}
-            >
-              📅 When
-            </Button>
-            <Button
-              width="full"
-              variant={activeFeature === 'advisor' ? 'solid' : 'outline'}
-              colorPalette="brand"
-              onClick={() => setActiveFeature(activeFeature === 'advisor' ? null : 'advisor')}
-            >
-              🤖 Advisors
-            </Button>
+            <TooltipRoot>
+              <TooltipTrigger asChild>
+                <Button
+                  width="full"
+                  variant={activeFeature === "where" ? "solid" : "outline"}
+                  colorPalette="brand"
+                  disabled={selectedVibe?.type === "advisor"}
+                  onClick={() => {
+                    if (selectedVibe?.type === "advisor") {
+                      setActiveFeature("advisor");
+                    } else {
+                      setActiveFeature(activeFeature === "where" ? null : "where");
+                    }
+                  }}
+                >
+                  📍 Where
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent>
+                {selectedVibe?.type === "advisor" ? "Use Advisors feature for AI advisors" : "Find best locations for this vibe"}
+              </TooltipContent>
+            </TooltipRoot>
+            <TooltipRoot>
+              <TooltipTrigger asChild>
+                <Button
+                  width="full"
+                  variant={activeFeature === "when" ? "solid" : "outline"}
+                  colorPalette="brand"
+                  disabled={selectedVibe?.type === "advisor"}
+                  onClick={() => {
+                    if (selectedVibe?.type === "advisor") {
+                      setActiveFeature("advisor");
+                    } else {
+                      setActiveFeature(activeFeature === "when" ? null : "when");
+                    }
+                  }}
+                >
+                  📅 When
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent>
+                {selectedVibe?.type === "advisor" ? "Use Advisors feature for AI advisors" : "Find best times for this vibe"}
+              </TooltipContent>
+            </TooltipRoot>
+            <TooltipRoot>
+              <TooltipTrigger asChild>
+                <Button
+                  width="full"
+                  variant={activeFeature === "advisor" ? "solid" : "outline"}
+                  colorPalette="brand"
+                  disabled={selectedVibe?.type !== "advisor"}
+                  onClick={() =>
+                    setActiveFeature(activeFeature === "advisor" ? null : "advisor")
+                  }
+                >
+                  🤖 Advisors
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent>
+                {selectedVibe?.type !== "advisor" ? "Select an AI advisor to use this feature" : "Get personalized recommendations"}
+              </TooltipContent>
+            </TooltipRoot>
           </VStack>
         </Box>
 
