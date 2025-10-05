@@ -80,3 +80,6 @@ share/python-wheels/
 *.swp
 *.swo
 *~
+
+# Log files
+weather_vibes.log
