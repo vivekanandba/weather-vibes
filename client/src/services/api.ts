@@ -1,7 +1,17 @@
 import axios from 'axios';
 
+// Determine API base URL based on environment
+const getApiBaseUrl = () => {
+  // In production (static export), use the Azure backend
+  if (typeof window !== 'undefined' && window.location.hostname !== 'localhost') {
+    return 'https://weather-vibes-api.whitewave-6eaae7b5.eastus.azurecontainerapps.io';
+  }
+  // For local development
+  return process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:8000';
+};
+
 const api = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:8000',
+  baseURL: getApiBaseUrl(),
   timeout: 30000,
   headers: {
     'Content-Type': 'application/json',
@@ -9,7 +19,7 @@ const api = axios.create({
 });
 
 // Debug logging
-console.log('API Base URL:', process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:8000');
+console.log('API Base URL:', getApiBaseUrl());
 
 // Request interceptor
 api.interceptors.request.use(
