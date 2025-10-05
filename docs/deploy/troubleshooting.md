@@ -28,6 +28,26 @@ az acr repository list --name weathervibesacr
 2. **Port configuration**: Ensure app listens on 0.0.0.0:8000
 3. **Environment variables**: Verify all required env vars are set
 
+### ⚠️ **CRITICAL: Docker Platform Mismatch**
+
+**Problem**: Container built for ARM64 (Apple Silicon) but Azure requires AMD64
+```bash
+ERROR: no child with platform linux/amd64 in index weathervibesacr.azurecr.io/weather-vibes-api:latest
+```
+
+**Root Cause**: Docker buildx defaults to host architecture (ARM64 on Apple Silicon)
+
+**Solution**: Force AMD64 platform build
+```bash
+# Build for AMD64 platform specifically
+docker buildx build --platform linux/amd64 -t weathervibesacr.azurecr.io/weather-vibes-api:latest . --push
+
+# Verify platform
+docker buildx imagetools inspect weathervibesacr.azurecr.io/weather-vibes-api:latest
+```
+
+**Prevention**: Always use `--platform linux/amd64` for Azure deployments
+
 ### Data Loading Issues
 
 **Symptoms:**
@@ -48,6 +68,52 @@ az containerapp show --name weather-vibes-api --resource-group weather-vibes-rg 
 1. Check Azure storage account access
 2. Verify data download on container startup
 3. Test data service initialization locally
+
+### ⚠️ **CRITICAL: Symlink Data Directory Issue**
+
+**Problem**: `/app/data` is a symlink but target directory doesn't exist
+```bash
+ERROR: [Errno 17] File exists: '/app/data'
+```
+
+**Root Cause**: Docker creates `/app/data` as symlink to `../data`, but target doesn't exist
+
+**Solution**: Update Azure storage service to handle symlinks
+```python
+# In azure_storage.py
+if Path(local_path).is_symlink():
+    target_path = Path(local_path).resolve()
+    target_path.mkdir(parents=True, exist_ok=True)
+```
+
+**Verification**:
+```bash
+# Test data directory creation
+curl https://YOUR_API_URL/api/debug/create-data-dir
+
+# Check data status
+curl https://YOUR_API_URL/api/debug/data-status
+```
+
+### ⚠️ **CRITICAL: Azure Storage Authentication**
+
+**Problem**: DefaultAzureCredential fails in container environment
+```bash
+ERROR: DefaultAzureCredential failed to retrieve a token from the included credentials
+```
+
+**Root Cause**: Container doesn't have managed identity configured
+
+**Solution**: Prioritize connection string over managed identity
+```python
+# In azure_storage.py - try connection string first
+connection_string = os.getenv("AZURE_STORAGE_CONNECTION_STRING")
+if connection_string:
+    self.blob_service = BlobServiceClient.from_connection_string(connection_string)
+else:
+    # Fallback to managed identity
+    self.blob_service = BlobServiceClient(account_url=..., credential=DefaultAzureCredential())
+```
 
 ### CORS Errors
 
@@ -137,6 +203,40 @@ ls -la out/
    ```
 
 3. **Check CORS configuration** on backend
+
+### ⚠️ **CRITICAL: Frontend Environment Variables in Static Export**
+
+**Problem**: `process.env` variables not available in static Next.js exports
+```javascript
+// This doesn't work in static export
+const apiUrl = process.env.NEXT_PUBLIC_API_BASE_URL; // undefined
+```
+
+**Root Cause**: Static exports don't have access to build-time environment variables at runtime
+
+**Solution**: Runtime environment detection
+```typescript
+// In api.ts - detect environment at runtime
+const getApiBaseUrl = () => {
+  // In production (static export), use hardcoded Azure backend
+  if (typeof window !== 'undefined' && window.location.hostname !== 'localhost') {
+    return 'https://weather-vibes-api.whitewave-6eaae7b5.eastus.azurecontainerapps.io';
+  }
+  // For local development
+  return process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:8000';
+};
+```
+
+**Alternative Solution**: Use build-time environment variables in GitHub Actions
+```yaml
+# In .github/workflows/azure-static-web-apps.yml
+- name: Build app
+  run: |
+    cd client
+    npm run build
+  env:
+    NEXT_PUBLIC_API_BASE_URL: https://weather-vibes-api.whitewave-6eaae7b5.eastus.azurecontainerapps.io
+```
 
 ### Map Loading Issues
 
