@@ -10,8 +10,15 @@ on:
   pull_request_review:
     types: [submitted]
 
+# One agent run per issue or PR at a time; a second waits.
+concurrency:
+  group: claude-${{ github.event.issue.number || github.event.pull_request.number }}
+  cancel-in-progress: false
+
 jobs:
   claude:
+    # An interactive agent run; 30 bounds it well below the 6-hour default.
+    timeout-minutes: 30
     if: |
       (github.event_name == 'issue_comment' && contains(github.event.comment.body, '@claude')) ||
       (github.event_name == 'pull_request_review_comment' && contains(github.event.comment.body, '@claude')) ||

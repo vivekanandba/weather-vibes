@@ -1,5 +1,6 @@
 name: Azure Static Web Apps CI/CD
 
+# double-run-ok: public repo, so hosted minutes are free; the PR run builds a preview environment, the push run deploys production.
 on:
   push:
     branches:
@@ -15,8 +16,15 @@ on:
       - 'client/**'
       - '.github/workflows/azure-static-web-apps.yml'
 
+# A superseded PR preview is cancelled; a deploy from main always finishes.
+concurrency:
+  group: swa-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
 jobs:
   build_and_deploy_job:
+    # No run in 2026-10 to size from; 20 bounds a static build and upload well below the 6-hour default.
+    timeout-minutes: 20
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
     name: Build and Deploy Frontend
