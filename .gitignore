@@ -83,3 +83,5 @@ share/python-wheels/
 
 # Log files
 weather_vibes.log
+# personal values the house-gates hook refuses to commit; never tracked
+.house-gates.denylist
